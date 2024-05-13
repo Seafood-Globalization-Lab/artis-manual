@@ -1,6 +1,7 @@
-
-# Our Model
-
+---
+title: "Our Model"
+subtitle: "Everything in the ARTIS-verse"
+---
 
 ## Section {#section-url-link-name}
 
