@@ -52,6 +52,17 @@ website:
           - our-model/disagg-trade.qmd
           - our-model/est-trade-net.qmd
           - our-model/est-consumption.qmd
+      - section: run-model/index.qmd
+        contents:
+          - run-model/run-aws.qmd
+          - run-model/run-locally.qmd
+      - section: infrastructure/index.qmd
+        contents: 
+          - infrastructure/sql.qmd
+          - infrastructure/api.qmd
+          - infrastructure/archive.qmd
+      - href: artis-faq.qmd
+        text: FAQs
 
 
 format:
