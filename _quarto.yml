@@ -47,6 +47,7 @@ website:
       - href: artis-about.qmd
         text: About us
       - section: our-model/index.qmd
+        contents:
           - our-model/data-inputs.qmd
 
 
