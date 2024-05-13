@@ -50,7 +50,8 @@ website:
         contents:
           - our-model/data-inputs.qmd
           - our-model/disagg-trade.qmd
-          - our-model/Est-trade-net.qmd
+          - our-model/est-trade-net.qmd
+          - our-model/est-consumption.qmd
 
 
 format:
