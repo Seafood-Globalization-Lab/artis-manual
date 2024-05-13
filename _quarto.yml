@@ -49,6 +49,8 @@ website:
       - section: our-model/index.qmd
         contents:
           - our-model/data-inputs.qmd
+          - our-model/disagg-trade.qmd
+          - our-model/Est-trade-net.qmd
 
 
 format:
