@@ -42,6 +42,12 @@ website:
       - learning-more.qmd
       - href: transition-from-rmarkdown.qmd
         text: Transition from Rmd
+      - href: artis-index.qmd
+        text: Artis Welcome
+      - href: artis-about.qmd
+        text: About us
+      - section: our-model/index.qmd
+          - our-model/data-inputs.qmd
 
 
 format:
