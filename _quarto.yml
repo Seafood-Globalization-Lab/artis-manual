@@ -46,21 +46,21 @@ website:
         text: Artis Welcome
       - href: artis-about.qmd
         text: About us
-      - section: our-model/index.qmd
+      - section: artis-our-model/index.qmd
         contents:
-          - our-model/data-inputs.qmd
-          - our-model/disagg-trade.qmd
-          - our-model/est-trade-net.qmd
-          - our-model/est-consumption.qmd
-      - section: run-model/index.qmd
+          - artis-our-model/data-inputs.qmd
+          - artis-our-model/disagg-trade.qmd
+          - artis-our-model/est-trade-net.qmd
+          - artis-our-model/est-consumption.qmd
+      - section: artis-run-model/index.qmd
         contents:
-          - run-model/run-aws.qmd
-          - run-model/run-locally.qmd
-      - section: infrastructure/index.qmd
+          - artis-run-model/run-aws.qmd
+          - artis-run-model/run-locally.qmd
+      - section: artis-infrastructure/index.qmd
         contents: 
-          - infrastructure/sql.qmd
-          - infrastructure/api.qmd
-          - infrastructure/archive.qmd
+          - artis-infrastructure/sql.qmd
+          - artis-infrastructure/api.qmd
+          - artis-infrastructure/archive.qmd
       - href: artis-faq.qmd
         text: FAQs
 
