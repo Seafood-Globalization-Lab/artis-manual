@@ -1,6 +1,6 @@
 ---
-title: "Making shareable documents with Quarto"
-subtitle: "Create open-source tutorials, onboarding docs, and much more"
+title: "Aquatic Resource Trade in Species (ARTIS) Manual"
+subtitle: "Everything about the data and pipeline"
 ---
 
 ## Welcome {#welcome}

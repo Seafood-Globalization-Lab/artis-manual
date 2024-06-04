@@ -3,19 +3,20 @@ project:
   
 website: 
   page-navigation: true
-  title: "Making sharable documents with Quarto" 
-  site-url: "https://openscapes.github.io/quarto-website-tutorial" 
-  repo-url: https://github.com/openscapes/quarto-website-tutorial 
+  title: "ARTIS Manual" 
+  site-url: "https://artisdata.weebly.com/" 
+  repo-url: https://github.com/Seafood-Globalization-Lab/artis-manual
   repo-actions: [edit, issue]
   
   page-footer:
-    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+    right: "This page is built with :fish [Quarto](https://quarto.org/)."
     left: "&copy; CC-By Openscapes, 2024"
     
   sidebar:
-    logo: "images/openscapes_hex.png"
+    logo: "images/Seafood-Globalization-Lab_Logo_Full-color_Square.png"
     pinned: true
     align: center
+    image-width: 20em
     tools: 
       - icon: globe
         href: https://openscapes.org
@@ -33,17 +34,6 @@ website:
     contents:
       - href: index.qmd
         text: Welcome
-      - explore.qmd
-      - section: quarto-workflows/index.qmd
-        contents: 
-          - quarto-workflows/browser.md
-          - quarto-workflows/rstudio.qmd
-          - quarto-workflows/jupyter.md 
-      - learning-more.qmd
-      - href: transition-from-rmarkdown.qmd
-        text: Transition from Rmd
-      - href: artis-index.qmd
-        text: Artis Welcome
       - href: artis-about.qmd
         text: About us
       - section: artis-our-model/index.qmd
