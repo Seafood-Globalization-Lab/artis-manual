@@ -11,3 +11,7 @@
 
 # Why are there sudden spikes?
 There are two common causes of artificial spikes. The first is related to improved resolution in a country's production data. If a country previously reported production at the genus level, for example, but then starts reporting production at the species level, it could create a spike in the trade associated with the species name. In this case, one could look for a corresponding drop in the genus level data. The second reason is related to change in the HS code system. HS codes are updated every 5 years. To create a continuous time series, we default to providing
+
+# Why are there multiple rows for a single HS product code in the code descriptions metadata file? 
+Products table check why there are duplicates (usually caused by multiple presentations or states associated with one code, 030719, H5 probably HS12, 20 codes with 2 states or duplicates). 
+Need to remove duplicates when joining. 
