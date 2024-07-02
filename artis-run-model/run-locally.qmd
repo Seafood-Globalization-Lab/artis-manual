@@ -1,1 +1,3 @@
 # Running Locally
+
+Pull from https://github.com/Seafood-Globalization-Lab/artis-model/blob/main/README.md
