@@ -1,5 +1,6 @@
 
-
+######## 
+# Get images from @Seafood-Globalization-Lab/artis-model repo
 # Create a temporary directory for the sparse checkout
 if mkdir temp-repo; then
     cd temp-repo
@@ -30,7 +31,7 @@ mkdir -p ../images
 
 # Move the files from the images directory to your R project directory
 if [ -d "images" ] && [ "$(ls -A images)" ]; then
-    mv images/* ../external-content/images
+    mv images/* ../artis-run-model/images/
     echo "Files moved successfully."
 else
     echo "No files found in the images directory."
@@ -40,5 +41,6 @@ fi
 cd ..
 rm -rf temp-repo
 
-
+#######
+# Get ima
 
