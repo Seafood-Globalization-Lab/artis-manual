@@ -181,11 +181,61 @@
     ]
   },
   {
-    "objectID": "artis-faq.html",
-    "href": "artis-faq.html",
-    "title": "What does it mean when a scientific name is not a true species name?",
-    "section": "",
-    "text": "What does it mean when a scientific name is not a true species name?\n\n\nWhy don’t the trade totals match what a country reports?\n\n\nHow is distant water fishing captured?\n\n\nWhat is the effect of underreported catch?\n\n\nWhat is the effect of products in transit through an intermediate country?\n\n\nWhy are there sudden spikes?\nThere are two common causes of artificial spikes. The first is related to improved resolution in a country’s production data. If a country previously reported production at the genus level, for example, but then starts reporting production at the species level, it could create a spike in the trade associated with the species name. In this case, one could look for a corresponding drop in the genus level data. The second reason is related to change in the HS code system. HS codes are updated every 5 years. To create a continuous time series, we default to providing\n\n\nWhy are there multiple rows for a single HS product code in the code descriptions metadata file?\nProducts table check why there are duplicates (usually caused by multiple presentations or states associated with one code, 030719, H5 probably HS12, 20 codes with 2 states or duplicates). Need to remove duplicates when joining.",
+    "objectID": "artis-faq.html#why-dont-the-trade-totals-match-what-a-country-reports",
+    "href": "artis-faq.html#why-dont-the-trade-totals-match-what-a-country-reports",
+    "title": "ARTIS Manual",
+    "section": "Why don’t the trade totals match what a country reports?",
+    "text": "Why don’t the trade totals match what a country reports?",
+    "crumbs": [
+      "FAQs"
+    ]
+  },
+  {
+    "objectID": "artis-faq.html#how-is-distant-water-fishing-captured",
+    "href": "artis-faq.html#how-is-distant-water-fishing-captured",
+    "title": "ARTIS Manual",
+    "section": "How is distant water fishing captured?",
+    "text": "How is distant water fishing captured?",
+    "crumbs": [
+      "FAQs"
+    ]
+  },
+  {
+    "objectID": "artis-faq.html#what-is-the-effect-of-underreported-catch",
+    "href": "artis-faq.html#what-is-the-effect-of-underreported-catch",
+    "title": "ARTIS Manual",
+    "section": "What is the effect of underreported catch?",
+    "text": "What is the effect of underreported catch?",
+    "crumbs": [
+      "FAQs"
+    ]
+  },
+  {
+    "objectID": "artis-faq.html#what-is-the-effect-of-products-in-transit-through-an-intermediate-country",
+    "href": "artis-faq.html#what-is-the-effect-of-products-in-transit-through-an-intermediate-country",
+    "title": "ARTIS Manual",
+    "section": "What is the effect of products in transit through an intermediate country?",
+    "text": "What is the effect of products in transit through an intermediate country?",
+    "crumbs": [
+      "FAQs"
+    ]
+  },
+  {
+    "objectID": "artis-faq.html#why-are-there-sudden-spikes",
+    "href": "artis-faq.html#why-are-there-sudden-spikes",
+    "title": "ARTIS Manual",
+    "section": "Why are there sudden spikes?",
+    "text": "Why are there sudden spikes?\nThere are two common causes of artificial spikes. The first is related to improved resolution in a country’s production data. If a country previously reported production at the genus level, for example, but then starts reporting production at the species level, it could create a spike in the trade associated with the species name. In this case, one could look for a corresponding drop in the genus level data. The second reason is related to change in the HS code system. HS codes are updated every 5 years. To create a continuous time series, we default to providing",
+    "crumbs": [
+      "FAQs"
+    ]
+  },
+  {
+    "objectID": "artis-faq.html#why-are-there-multiple-rows-for-a-single-hs-product-code-in-the-code-descriptions-metadata-file",
+    "href": "artis-faq.html#why-are-there-multiple-rows-for-a-single-hs-product-code-in-the-code-descriptions-metadata-file",
+    "title": "ARTIS Manual",
+    "section": "Why are there multiple rows for a single HS product code in the code descriptions metadata file?",
+    "text": "Why are there multiple rows for a single HS product code in the code descriptions metadata file?\nProducts table check why there are duplicates (usually caused by multiple presentations or states associated with one code, 030719, H5 probably HS12, 20 codes with 2 states or duplicates). Need to remove duplicates when joining.",
     "crumbs": [
       "FAQs"
     ]
@@ -354,7 +404,7 @@
     "href": "artis-about.html",
     "title": "About Us",
     "section": "",
-    "text": "Ut ut condimentum augue, nec eleifend nisl. Sed facilisis egestas odio ac pretium. Pellentesque consequat magna sed venenatis sagittis. Vivamus feugiat lobortis magna vitae accumsan. Pellentesque euismod malesuada hendrerit. Ut non mauris non arcu condimentum sodales vitae vitae dolor. Nullam dapibus, velit eget lacinia rutrum, ipsum justo malesuada odio, et lobortis sapien magna vel lacus. Nulla purus neque, hendrerit non malesuada eget, mattis vel erat. Suspendisse potenti.",
+    "text": "Praesent ornare dolor turpis, sed tincidunt nisl pretium eget. Curabitur sed iaculis ex, vitae tristique sapien. Quisque nec ex dolor. Quisque ut nisl a libero egestas molestie. Nulla vel porta nulla. Phasellus id pretium arcu. Etiam sed mi pellentesque nibh scelerisque elementum sed at urna. Ut congue molestie nibh, sit amet pretium ligula consectetur eu. Integer consectetur augue justo, at placerat erat posuere at. Ut elementum urna lectus, vitae bibendum neque pulvinar quis. Suspendisse vulputate cursus eros id maximus. Duis pulvinar facilisis massa, et condimentum est viverra congue. Curabitur ornare convallis nisl. Morbi dictum scelerisque turpis quis pellentesque. Etiam lectus risus, luctus lobortis risus ut, rutrum vulputate justo. Nulla facilisi.",
     "crumbs": [
       "About us"
     ]
@@ -364,7 +414,7 @@
     "href": "artis-about.html#section",
     "title": "About Us",
     "section": "Section",
-    "text": "Section\nEtiam maximus accumsan gravida. Maecenas at nunc dignissim, euismod enim ac, bibendum ipsum. Maecenas vehicula velit in nisl aliquet ultricies. Nam eget massa interdum, maximus arcu vel, pretium erat. Maecenas sit amet tempor purus, vitae aliquet nunc. Vivamus cursus urna velit, eleifend dictum magna laoreet ut. Duis eu erat mollis, blandit magna id, tincidunt ipsum. Integer massa nibh, commodo eu ex vel, venenatis efficitur ligula. Integer convallis lacus elit, maximus eleifend lacus ornare ac. Vestibulum scelerisque viverra urna id lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean eget enim at diam bibendum tincidunt eu non purus. Nullam id magna ultrices, sodales metus viverra, tempus turpis.\nDuis ornare ex ac iaculis pretium. Maecenas sagittis odio id erat pharetra, sit amet consectetur quam sollicitudin. Vivamus pharetra quam purus, nec sagittis risus pretium at. Nullam feugiat, turpis ac accumsan interdum, sem tellus blandit neque, id vulputate diam quam semper nisl. Donec sit amet enim at neque porttitor aliquet. Phasellus facilisis nulla eget placerat eleifend. Vestibulum non egestas eros, eget lobortis ipsum. Nulla rutrum massa eget enim aliquam, id porttitor erat luctus. Nunc sagittis quis eros eu sagittis. Pellentesque dictum, erat at pellentesque sollicitudin, justo augue pulvinar metus, quis rutrum est mi nec felis. Vestibulum efficitur mi lorem, at elementum purus tincidunt a. Aliquam finibus enim magna, vitae pellentesque erat faucibus at. Nulla mauris tellus, imperdiet id lobortis et, dignissim condimentum ipsum. Morbi nulla orci, varius at aliquet sed, facilisis id tortor. Donec ut urna nisi.",
+    "text": "Section\nProin sodales neque erat, varius cursus diam tincidunt sit amet. Etiam scelerisque fringilla nisl eu venenatis. Donec sem ipsum, scelerisque ac venenatis quis, hendrerit vel mauris. Praesent semper erat sit amet purus condimentum, sit amet auctor mi feugiat. In hac habitasse platea dictumst. Nunc ac mauris in massa feugiat bibendum id in dui. Praesent accumsan urna at lacinia aliquet. Proin ultricies eu est quis pellentesque. In vel lorem at nisl rhoncus cursus eu quis mi. In eu rutrum ante, quis placerat justo. Etiam euismod nibh nibh, sed elementum nunc imperdiet in. Praesent gravida nunc vel odio lacinia, at tempus nisl placerat. Aenean id ipsum sed est sagittis hendrerit non in tortor.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
     "crumbs": [
       "About us"
     ]
