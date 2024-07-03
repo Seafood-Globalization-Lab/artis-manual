@@ -1,5 +1,4 @@
 # Running Locally
 
-
-{{< include ./external-content/artis-model-readme.md >}}
+{{< include ../external-content/artis-model-readme.md >}}
 
