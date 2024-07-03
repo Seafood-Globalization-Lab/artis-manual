@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.654">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>ARTIS Manual – data-inputs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../artis-our-model/disagg-trade.html" rel="next">
+<link href="../artis-our-model/index.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">(Untitled)</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../" class="sidebar-logo-link">
+      <img src="../images/Lab_Logo_Full_Color_Icon.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="http://seafood-globalization-lab.weebly.com/" title="Lab website" class="sidebar-tool px-1"><i class="bi bi-globe"></i></a>
+    <a href="https://github.com/Seafood-Globalization-Lab" title="Lab Github" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Welcome</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../artis-about.html" class="sidebar-item-text sidebar-link">About us</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a href="../artis-our-model/index.html" class="sidebar-item-text sidebar-link">Our Model</a>
+      <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../artis-our-model/data-inputs.html" class="sidebar-item-text sidebar-link active">Production</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../artis-our-model/disagg-trade.html" class="sidebar-item-text sidebar-link">Disaggregating Reported Trade</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../artis-our-model/est-trade-net.html" class="sidebar-item-text sidebar-link">National mass-balance</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../artis-our-model/est-consumption.html" class="sidebar-item-text sidebar-link">Estimating Consuption</a>
+  </div>
+</li>
+    </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a href="../artis-run-model/index.html" class="sidebar-item-text sidebar-link">Running the Model</a>
+      <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../artis-run-model/run-aws.html" class="sidebar-item-text sidebar-link">Running on AWS</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../artis-run-model/run-locally.html" class="sidebar-item-text sidebar-link">Running Locally</a>
+  </div>
+</li>
+    </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+    <div class="sidebar-item-container"> 
+        <a href="../artis-infrastructure/index.html" class="sidebar-item-text sidebar-link">Distribution Infrastructure</a>
+      <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+        <i class="bi bi-chevron-right ms-2"></i>
+      </a>
+    </div>
+    <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../artis-infrastructure/sql.html" class="sidebar-item-text sidebar-link">SQL Database</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../artis-infrastructure/api.html" class="sidebar-item-text sidebar-link">API</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../artis-infrastructure/archive.html" class="sidebar-item-text sidebar-link">Archiveed Versions (KNB)</a>
+  </div>
+</li>
+    </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../artis-faq.html" class="sidebar-item-text sidebar-link">FAQs</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#production" id="toc-production" class="nav-link active" data-scroll-target="#production">Production</a></li>
+  <li><a href="#bilateral-trade-data" id="toc-bilateral-trade-data" class="nav-link" data-scroll-target="#bilateral-trade-data">Bilateral trade data</a></li>
+  <li><a href="#live-weight-conversions" id="toc-live-weight-conversions" class="nav-link" data-scroll-target="#live-weight-conversions">Live weight conversions</a></li>
+  <li><a href="#taxonomic-group-to-commodity-assignment" id="toc-taxonomic-group-to-commodity-assignment" class="nav-link" data-scroll-target="#taxonomic-group-to-commodity-assignment">Taxonomic group to commodity assignment</a></li>
+  <li><a href="#commodity-to-commodity-processing-assignment" id="toc-commodity-to-commodity-processing-assignment" class="nav-link" data-scroll-target="#commodity-to-commodity-processing-assignment">Commodity to commodity processing assignment</a></li>
+  <li><a href="#country-standardization-and-regions" id="toc-country-standardization-and-regions" class="nav-link" data-scroll-target="#country-standardization-and-regions">Country standardization and regions</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/edit/main/artis-our-model/data-inputs.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="production" class="level1">
+<h1>Production</h1>
+<p>Aquatic resource production comes from the Food and Agriculture Organization (FAO), which provides national capture and aquaculture production5. The Food and Agriculture Organization provides annual capture and aquaculture production data for around 240 countries, territories, or land areas from 1950 to 2020. The FAO data reports production in tonnes (live weight equivalent) of around 550 farmed and 1600 wild capture species and species groups. FAO production data consists primarily of official national statistics, with some verifiable supplemental information from academic reviews, consultant reports, and other specialist literature. Data reported by nations are checked by the FAO for consistency and questionable values are verified with the reporting offices. When countries fail to report production, FAO uses past values to estimate production. For the purposes of this analysis, we do not distinguish between nationally reported, and FAO estimated values.</p>
+<p>According to the Coordinating Working Party on Fishery Statistics, catch and landings should be assigned to the country of the flag flown by the fishing vessel irrespective of the location of the fishing. This means that production resulting from a country operating a fishing vessel in a foreign country’s territory should be recorded in the national statistics of the foreign fishing vessel. However, if the vessel is chartered by a company based in the home country or the vessel is fishing for the country under a joint venture contract or similar agreement and the operation is integral to the economy of the host country, this does not apply. Consequently, our estimates of source country generally represent who harvested or caught the aquatic resource regardless of where it was produced (i.e., distant water fishing would generally be attributed to the flag state). In cases of exceptions related to select chartered foreign vessels, joint ventures, or other similar agreements, catch by a foreign vessel but reported by the host country may not match trade reporting if catch does not move through the customs boundary. These instances generate excess apparent consumption.</p>
+</section>
+<section id="bilateral-trade-data" class="level1">
+<h1>Bilateral trade data</h1>
+<p>We use the CEPII BACI world trade database, which is a reconciled version of the UN Comtrade database49. Trade data are reported to the UN by both importers and exporters following the Harmonized System (HS) codes. The HS trade code system organizes traded goods into a hierarchy, with the highest level represented by two-digit codes (e.g., Chapter 03 covers “Fish and Crustaceans, Molluscs and Other Aquatic Invertebrates”), which are broken down into 4-digit headings (e.g., heading 0301 covers “Live fish”), which are then subdivided into 6-digit subheadings (e.g., subheading 030111 covers “Live ornamental freshwater fish”). National statistics offices may further subdivide HS codes into 7- to 12-digit codes but since these are not standard across countries, the HS 6-digit codes are the most highly resolved trade codes available globally. HS codes are administered by the World Customs Organization, which updates the codes every five years. HS versions can be used from their introduction through the present, meaning that the HS 2002 version provides a time series of trade from 2002 to the present whereas the HS 2017 version only provides a time series back to 2017. Notably, HS version 2012 included major revisions to the HS codes relevant to fisheries and aquaculture products. CEPII reconciles discrepancies in mirror trade records, which occur in around 35% of observations (for all traded commodities), by first removing transportation costs and using a weighting scheme based on each country’s reporting reliability to average discrepancies in reported mirror flows. BACI data focuses on trade flows between individual countries since 1994 and therefore drops flows within some groups of countries (e.g., Belgium-Luxembourg) to ensure consistent geographies. The resulting data set covers trade for over 200 countries and 5,000 products. Further details on the BACI data set are available in49. While BACI resolves many data issues contained in the raw UN Comtrade database, it does not correct for all implausible trade flows, which can especially arise if one country misreports a value and the partner country does not report a value50. Further, there are instances where one country reports on trade that is optional to report, and the partner country does not. Here, we do not identify and re-estimate any values reported in BACI. Excessively large exports will generally result in high error terms, while high imports will result in high apparent consumption.</p>
+<p>Trade statistics are managed by each territory and generally guided by the Kyoto Convention. For the purposes of trade data reporting, imports and exports represent all goods which add or subtract, respectively, from the stock of material resources within an economic territory, but not goods which merely pass through a country’s economic territory. The economic territory generally coincides with the customs territory, which refers to the territory in which the country’s custom laws apply. Goods which enter a country for processing are included within trade statistics. Goods which pass through a country “in transit,” including those which are transshipped, are not recommended to be reported in trade statistics, though there are exceptions51 and known instances where one country reports trade which is “in transit” but the partner does not, which creates discrepancies that are not corrected for within BACI. Fishery products from within the country, the country’s waters, or obtained by a vessel of that country are considered goods wholly produced in that country. Catch by foreign vessels and catch by national vessels on the high seas landed in a country’s ports are recorded as imports by the country the products are landed in and as exports by the foreign nation, where economically or environmentally significant. For further trade statistic guideline details, see51.</p>
+</section>
+<section id="live-weight-conversions" class="level1">
+<h1>Live weight conversions</h1>
+<p>Global trade data is reported in terms of the product weight. To convert from product weight (i.e., net weight) to the live weight equivalent, a live weight conversion factor must be applied for each HS code. Live weight conversion factors are sourced from the European Market Observatory for Fisheries and Aquaculture Products (EUMOFA)52, along with various national and international governmental report values. EUMOFA data reports live weight conversion factors by CN-8 codes, so the mean of the live weight conversion factors falling within each HS 6-digit code are used. The EUMOFA data assigns products primarily destined for industrial purposes (e.g., fish meal and fish oil), co-products (e.g., caviar) and live trade a value of zero. In this analysis, co-products retained a live weight conversion factor value of zero to avoid double counting, but live animal trade was assigned a live weight conversion factor of 1 and fish meal and fish oil was assigned an average value of 2.9853. Data compiled from national and international reports were categorized into taxa types (mollusks, crustaceans, fishes, and other aquatic invertebrates), FAO ISSCAAP groups, species or taxon name, type of processing, and country of processing.</p>
+<p>Live weight conversion factors applied to trade data introduce a source of uncertainty and error due to uncertainty in conversion factors is not reported and a single live weight conversion factor is often presented per code, regardless of the species or region of origin. This is a limitation given that there are geographical and temporal variation in live weight conversion factors due to differences in processing technology. Despite this limitation, EUMOFA data offers better documentation and alignment with HS commodity codes than other live weight conversion factor data sources18 and is updated annually, providing documentation for changes in live weight conversion factors. Additionally, by supplementing the EUMOFA data with the other reported values we can better capture specific species processing into various product forms and some regional variability.</p>
+<p>All conversion factors were reported as live weight to product weight ratios. These conversion factors were mapped onto possible species to commodity or commodity to commodity conversions, described below. For commodity-to-commodity conversions, we estimate the conversion factors (i.e., processing loss rate) as the additional mass lost when converting from the live weight to the original product form relative to converting from live weight to the processed product form. This can be calculated as the live weight conversion factor for the original product form divided by the live weight factor for the processed product form. We assume that mass cannot be gained through processing and therefore impose a maximum value of one to this ratio. Seafood production and commodity conversion For each country-year-HS version combination, we estimate the proportion of each species going into each commodity and the proportion of each imported commodity processed into each other commodity. Each species can only be converted into a subset of the commodities. For example, Atlantic salmon, Salmo salar, can be converted into whole frozen salmon or frozen salmon filets, but cannot be converted to a frozen tilapia filet. Similarly, each commodity can only be converted to a subset of other commodities through processing. For example, whole frozen salmon can be processed into frozen salmon filets, but not vice versa and neither salmon commodity can be converted to a tilapia commodity through processing. Defining possible conversions restricts the solution space to realistic results and improves estimation by reducing the number of unknowns. We describe this assignment process in detail below.</p>
+</section>
+<section id="taxonomic-group-to-commodity-assignment" class="level1">
+<h1>Taxonomic group to commodity assignment</h1>
+<p>Species production to commodity assignment is a many-to-many matching problem, wherein one commodity can consist of multiple species and one species can be converted to multiple commodities. All taxonomic names reported in the FAO production data were matched to HS 6-digit codes based on the code descriptions and HS system hierarchy. The first matching step required dividing all taxonomic groups into the broad commodity groups at the 4-digit level (fish, crustaceans, molluscs and aquatic invertebrates). Within each of these groups, taxonomic groups were matched based on 6 types of matching categories:<br>
+1. Explicit taxa match - Scientific names are matched based on taxonomic information provided in the code description 2. NEC match - All remaining unmatched species within the 4-digit level are assigned to the “not elsewhere considered” (NEC) code 3. NEC by taxa match - When a code description signifies an NEC group, but limits this based on a taxonomic category (e.g., Salmonidae, N.E.C.), the NEC grouping occurs at this level, rather than the broad NEC match 4. Broad commodity match - Only the broad taxonomic groups inform this assignment since no further taxonomic information is provided 5. Aquarium trade match - Assigned to ornamental species trade based on species found in the aquarium/ornamental trade54 6. Fishmeal - Assigned to fishmeal codes if at least 1% of production goes to fishmeal production globally during the study period based on the end use designation from Sea Around Us production data55. Although an estimated 27% of fishmeal is derived from processing by-products3, the species, geographical, and temporal variation in that estimate is currently unknown. Consequently, fishmeal is currently treated as sourced from whole fish reduction. This does not affect the total trade or trade patterns of fishmeal but does result in an overestimate of the proportion of production going to fishmeal in cases where by-products are used.</p>
+<p>After all species are matched to the appropriate HS codes, we use the list of species to define codes as inland, marine, diadromous, or mixed. Higher order taxonomic groups are then only matched with HS codes that include their habitat. For example, production of inland actinopterygii is matched with codes that include inland species that fall within actinopterygii, but not with exclusively marine codes, even if they contain species that fall within actinopterygii.</p>
+</section>
+<section id="commodity-to-commodity-processing-assignment" class="level1">
+<h1>Commodity to commodity processing assignment</h1>
+<p>As with the species to commodity assignment, the commodity-to-commodity assignment is a many-to-many data problem. Here, one commodity can be processed into multiple other commodities (i.e., frozen salmon can be processed into salmon filets or canned salmon), which also means one commodity could have come from multiple other commodities. To create these assignments, we established rules for which product transformations are technically possible. First, a product cannot transfer outside of its broad commodity group (e.g., fish, crustaceans, mollusc, aquatic invertebrate). Second, where a more refined species or species group was given (e.g., tunas, salmons, etc.) a product cannot be transformed outside that group. Third, products are classified in terms of their state (e.g., alive, fresh, frozen, etc.) and presentation (e.g., e.g., whole, fileted, salted/dried/preserved meats, reductions such as fish meal and fish oil, etc.) and cannot be converted into less processed forms (e.g., frozen salmon filets cannot turn into a frozen whole salmon). Fourth, specific commodities (i.e.&nbsp;mentioning specific species) and NEC commodities can become broad commodities (where appropriate), however broad commodities cannot become more specific or NEC commodities.</p>
+</section>
+<section id="country-standardization-and-regions" class="level1">
+<h1>Country standardization and regions</h1>
+<p>The FAO production and BACI trade datasets do not share the same set of countries and territories. For the production and trade data to balance, it is important for the set of territories falling under a given name to align across the datasets. To avoid instances where, for example, production is reported under a territory, but trade is reported under the sovereign nation, we generally group all territories with the sovereign nation. As countries gain independence, they are added as a trade partner in the database. Due to this country standardization circular flows may occur when a sovereign nation trades with their territory. These circular flows are filtered out of the standardized BACI trade flows (i.e., internal trade is not included).</p>
+<p>Note: The original text this section is based on is from Gephart et al.&nbsp;(2024) <em>Nature Communications</em> [add link]. Please reference that paper when referencing this information: [Insert reference]</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+    } else {
+      disableStylesheet(alternateStylesheets);
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../artis-our-model/index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Our Model</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../artis-our-model/disagg-trade.html" class="pagination-link">
+        <span class="nav-page-text">Disaggregating Reported Trade</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© CC-By Openscapes, 2024</div>   
+    <div class="nav-footer-right">This page is built with :fish <a href="https://quarto.org/">Quarto</a>.</div>
+  </div>
+</footer>
+
+
+
+</body></html>
