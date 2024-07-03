@@ -30,7 +30,7 @@ mkdir -p ../images
 
 # Move the files from the images directory to your R project directory
 if [ -d "images" ] && [ "$(ls -A images)" ]; then
-    mv images/* ../images
+    mv images/* ../external-content/images
     echo "Files moved successfully."
 else
     echo "No files found in the images directory."
