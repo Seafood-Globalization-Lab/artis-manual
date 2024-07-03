@@ -1,4 +1,0 @@
-# Archiveed Versions (KNB)
-
-Pull from https://github.com/Seafood-Globalization-Lab/knb-submit/blob/main/README.md
-(Note: this README is not currently populated)

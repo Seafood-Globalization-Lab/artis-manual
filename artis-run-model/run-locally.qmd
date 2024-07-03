@@ -1,5 +1,0 @@
-# Running Locally
-
-
-{{< include ./external-content/artis-model-readme.md >}}
-

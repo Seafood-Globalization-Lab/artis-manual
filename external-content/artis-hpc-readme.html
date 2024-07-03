@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>run-locally – ARTIS Manual</title>
+<title>artis-hpc-readme – ARTIS Manual</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../artis-infrastructure/index.html" rel="next">
-<link href="../artis-run-model/run-aws.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../artis-run-model/index.html">Running the Model</a></li><li class="breadcrumb-item"><a href="../artis-run-model/run-locally.html">Running Locally</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -163,11 +161,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../artis-run-model/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Running the Model</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../artis-run-model/run-aws.html" class="sidebar-item-text sidebar-link">
@@ -176,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../artis-run-model/run-locally.html" class="sidebar-item-text sidebar-link active">
+  <a href="../artis-run-model/run-locally.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Running Locally</span></a>
   </div>
 </li>
@@ -227,23 +225,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#running-locally" id="toc-running-locally" class="nav-link active" data-scroll-target="#running-locally">Running Locally</a></li>
-  <li><a href="#artis-model" id="toc-artis-model" class="nav-link" data-scroll-target="#artis-model">artis-model</a></li>
-  <li><a href="#system-requirements" id="toc-system-requirements" class="nav-link" data-scroll-target="#system-requirements">System Requirements</a></li>
-  <li><a href="#installation-guide" id="toc-installation-guide" class="nav-link" data-scroll-target="#installation-guide">Installation Guide</a>
+  <li><a href="#artis-hpc" id="toc-artis-hpc" class="nav-link active" data-scroll-target="#artis-hpc">ARTIS HPC</a>
   <ul class="collapse">
-  <li><a href="#creating-python-virtual-environment" id="toc-creating-python-virtual-environment" class="nav-link" data-scroll-target="#creating-python-virtual-environment">Creating python virtual environment</a></li>
-  </ul></li>
-  <li><a href="#r-installation-instructions" id="toc-r-installation-instructions" class="nav-link" data-scroll-target="#r-installation-instructions">R installation instructions</a></li>
-  <li><a href="#running-the-model" id="toc-running-the-model" class="nav-link" data-scroll-target="#running-the-model">Running the model</a></li>
-  <li><a href="#outputs" id="toc-outputs" class="nav-link" data-scroll-target="#outputs">Outputs</a></li>
-  <li><a href="#methods-and-workflow" id="toc-methods-and-workflow" class="nav-link" data-scroll-target="#methods-and-workflow">Methods and Workflow</a>
+  <li><a href="#update-artis-model-scripts-and-model-inputs" id="toc-update-artis-model-scripts-and-model-inputs" class="nav-link" data-scroll-target="#update-artis-model-scripts-and-model-inputs">Update ARTIS model scripts and model inputs</a></li>
+  <li><a href="#technologies-used" id="toc-technologies-used" class="nav-link" data-scroll-target="#technologies-used">Technologies used</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a>
   <ul class="collapse">
-  <li><a href="#high-level-overview" id="toc-high-level-overview" class="nav-link" data-scroll-target="#high-level-overview">High level overview</a></li>
-  <li><a href="#code-workflows" id="toc-code-workflows" class="nav-link" data-scroll-target="#code-workflows">Code workflows</a></li>
+  <li><a href="#homebrew-installation" id="toc-homebrew-installation" class="nav-link" data-scroll-target="#homebrew-installation">Homebrew installation</a></li>
+  <li><a href="#aws-cli-installation" id="toc-aws-cli-installation" class="nav-link" data-scroll-target="#aws-cli-installation">AWS CLI installation</a></li>
+  <li><a href="#terraform-cli-installation" id="toc-terraform-cli-installation" class="nav-link" data-scroll-target="#terraform-cli-installation">Terraform CLI installation</a></li>
   </ul></li>
+  <li><a href="#assumptions" id="toc-assumptions" class="nav-link" data-scroll-target="#assumptions">Assumptions:</a></li>
+  <li><a href="#aws-cli-setup" id="toc-aws-cli-setup" class="nav-link" data-scroll-target="#aws-cli-setup">AWS CLI Setup</a></li>
+  <li><a href="#python-installation" id="toc-python-installation" class="nav-link" data-scroll-target="#python-installation">Python Installation</a></li>
+  <li><a href="#creating-aws-infrastructure-with-a-setup-file" id="toc-creating-aws-infrastructure-with-a-setup-file" class="nav-link" data-scroll-target="#creating-aws-infrastructure-with-a-setup-file">Creating AWS Infrastructure with a setup file</a></li>
+  </ul></li>
+  <li><a href="#download-results-clean-up-aws-and-docker-environments" id="toc-download-results-clean-up-aws-and-docker-environments" class="nav-link" data-scroll-target="#download-results-clean-up-aws-and-docker-environments">Download results, Clean up AWS and Docker environments</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/edit/main/artis-run-model/run-locally.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/edit/main/external-content/artis-hpc-readme.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -251,115 +250,143 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="running-locally" class="level1">
-<h1>Running Locally</h1>
+<section id="artis-hpc" class="level1">
+<h1>ARTIS HPC</h1>
+<p>This repository outlines the instructions and scripts needed to create the ARTIS High Performance Computer (HPC) on Amazon Web Services (AWS).</p>
+<section id="update-artis-model-scripts-and-model-inputs" class="level2">
+<h2 class="anchored" data-anchor-id="update-artis-model-scripts-and-model-inputs">Update ARTIS model scripts and model inputs</h2>
+<ol type="1">
+<li>Copy the most up-to-date set of model inputs to the project root directory <code>artis-hpc</code></li>
+<li>Copy the most up-to-date ARTIS R package folder and place within <code>artis-hpc/docker_image_files_original/</code></li>
+<li>Copy the most up-to-date ARTIS R package NAMESPACE file and place within <code>artis-hpc/docker_image_files_original/</code></li>
+<li>Copy the most up-to-date ARTIS R package DESCRIPTION file and place within <code>artis-hpc/docker_image_files_original/</code></li>
+</ol>
+<p>If running on a new Apple chip arm64: 1. Copy arm64_venv_requirements.txt file from the root directory to the <code>artis-hpc/docker_image_files_original/</code> 2. Rename the file <code>artis-hpc/docker_image_files_original/arm64_venv_requirements.txt</code> to <code>artis-hpc/docker_image_files_original/requirements.txt</code> 3. Open <code>artis-hpc/docker_image_files_original/run_artis_hs12.R</code> and uncomment line 20.</p>
 </section>
-<section id="artis-model" class="level1">
-<h1>artis-model</h1>
-</section>
-<section id="system-requirements" class="level1">
-<h1>System Requirements</h1>
+<section id="technologies-used" class="level2">
+<h2 class="anchored" data-anchor-id="technologies-used">Technologies used</h2>
 <ul>
-<li>Platform: x86_64-apple-darwin17.0 (64-bit)</li>
-<li>Running under: macOS Ventura 13.3.1</li>
-<li>R version 4.2.2</li>
-<li>R packages:
+<li>Terraform
 <ul>
-<li>readxl 1.4.1</li>
-<li>janitor 2.1.0</li>
-<li>countrycode 1.4.0</li>
-<li>doParallel 1.0.17</li>
-<li>iterators 1.0.14</li>
-<li>foreach 1.5.2</li>
-<li>slam 0.1-50</li>
-<li>Matrix 1.5-1</li>
-<li>magrittr 2.0.3</li>
-<li>data.table 1.14.6</li>
-<li>forcats 0.5.2</li>
-<li>stringr 1.5.0</li>
-<li>dplyr 1.0.10</li>
-<li>purrr 1.0.1</li>
-<li>readr 2.1.3</li>
-<li>tidyr 1.2.1</li>
-<li>tibble 3.1.8</li>
-<li>ggplot2 3.4.0</li>
-<li>tidyverse 1.3.2</li>
-<li>reticulate 1.26</li>
+<li>This is a set of code scripts that create all the AWS infrastructure needed for the ARTIS HPC</li>
+<li>Destroy all AWS infrastructure for the ARTIS HPC after the ARTIS model has finished (save on unnecessary costs)</li>
 </ul></li>
-<li>Python version 3.10.9</li>
-<li>Python packages:
+<li>Docker
 <ul>
-<li>cvxopt 1.3.0</li>
-<li>daqp 0.5.1</li>
-<li>ecos 2.0.12</li>
-<li>numpy 1.24.3</li>
-<li>osqp 0.6.2.post9</li>
-<li>pip 22.3.1</li>
-<li>qdldl 0.1.7</li>
-<li>qpsolvers 3.4.0</li>
-<li>quadprog 0.1.11</li>
-<li>scipy 1.10.1</li>
-<li>scs 3.2.3</li>
-<li>setuptools 65.6.3</li>
+<li>This is used to create a docker image that our HPC jobs will use to run the ARTIS model code</li>
+</ul></li>
+<li>Python
+<ul>
+<li>Through the docker and AWS python (boto3) clients, this will provide code that:
+<ul>
+<li>Push all model input data to AWS S3</li>
+<li>Build docker image needed that the AWS Batch jobs will need to run ARTIS model</li>
+<li>Push docker image to AWS ECR</li>
+<li>Submit jobs to ARTIS HPC</li>
+<li>Pull all model outputs data</li>
+</ul></li>
 </ul></li>
 </ul>
 </section>
-<section id="installation-guide" class="level1">
-<h1>Installation Guide</h1>
-<p>This project uses Python 3.10.9 which can be downloaded <a href="https://www.python.org/downloads/release/python-3109/">here</a> and RStudio which can be downloaded <a href="https://posit.co/download/rstudio-desktop/">here</a>.</p>
-<p>It should take approximately 10 minutes to run this full installation.</p>
-<section id="creating-python-virtual-environment" class="level2">
-<h2 class="anchored" data-anchor-id="creating-python-virtual-environment">Creating python virtual environment</h2>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<ul>
+<li>Homebrew</li>
+<li>AWS CLI</li>
+<li>Terraform CLI</li>
+<li>Python
+<ul>
+<li>Python packages
+<ul>
+<li>docker</li>
+<li>boto3</li>
+</ul></li>
+</ul></li>
+</ul>
+<section id="homebrew-installation" class="level3">
+<h3 class="anchored" data-anchor-id="homebrew-installation">Homebrew installation</h3>
 <ol type="1">
-<li>Open the artis-model repository in RStudio.</li>
-<li>Click on the terminal tab.</li>
-<li>Type “pwd” in the terminal.</li>
-<li>Copy the result of the “pwd” terminal command.</li>
-<li>Type “python3 -m venv [RESULT FROM pwd]/venv” (ie. “python3 -m venv /home/artis-model/venv”)</li>
-<li>Type “source venv/bin/activate” in terminal.</li>
-<li>Type “pip3 install qpsolvers” in terminal.</li>
-<li>Type “pip3 install quadprog” in terminal.</li>
-<li>Type “pip3 install cvxopt” in terminal.</li>
-<li>Confirm you have successfully installed the packages qpsolvers, quadprog, cvxopt by running “pip list”.</li>
-<li>Type “deactivate” in terminal.</li>
-<li>Click on the Console tab.</li>
+<li>Install homebrew by running the terminal command <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></li>
+<li>Close existing terminal window where installation command was run and open a new terminal window</li>
+<li>Confirm homebrew has been installed, run terminal command <code>brew --version</code>, no error messsage should appear.</li>
 </ol>
-<p>Note that you only need to install the solvers the first time you run this code. Warnings about the latest version of pip may also appear during the installation - these are okay, but errors are not.</p>
+<p>If after homebrew installation you get a message stating <code>brew command not found</code>: 1. Edit zsh config file, run terminal command: <code>vim ~/.zshrc</code> 2. Type “i” to enter edit mode 3. Copy paste this line into the file you opened: <code>export PATH=/opt/homebrew/bin:$PATH</code> 4. Press Shift and : 5. Type “wq” 6. Press enter 7. Source new config file, run terminal command <code>source ~/.zshrc</code></p>
+</section>
+<section id="aws-cli-installation" class="level3">
+<h3 class="anchored" data-anchor-id="aws-cli-installation">AWS CLI installation</h3>
+<p><a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">Following instructions from AWS</a></p>
+<p><strong>Note: If you already have AWS CLI installed please still confirm by following step 3 below. Both instructions should run without an error message.</strong></p>
+<p>The following instructions are for MacOS users: 1. Run terminal command <code>curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"</code> 2. Run terminal command <code>sudo installer -pkg AWSCLIV2.pkg -target /</code> 3. Confirm AWS CLI has been installed: 1. Run terminal command <code>which aws</code> 2. Run terminal command <code>aws --version</code></p>
+</section>
+<section id="terraform-cli-installation" class="level3">
+<h3 class="anchored" data-anchor-id="terraform-cli-installation">Terraform CLI installation</h3>
+<p><strong>Note: If you already have homebrew installed please confirm by running <code>brew --version</code>, no error message should occur.</strong></p>
+<p>To install terraform on MacOS we will be using homebrew. If you do not have homebrew installed on your computer please follow the installation instructions <a href="https://brew.sh/">here</a>, before continuing.</p>
+<p>Based on Terraform CLI installation instructions provided <a href="https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli">here</a>. 1. Run terminal command <code>brew tap hashicorp/tap</code> 2. Run terminal command <code>brew install hashicorp/tap/terraform</code> 3. Run terminal command <code>brew update</code> 4. Run terminal command <code>brew upgrade hashicorp/tap/terraform</code></p>
+<p>If this has been unsuccessful you might need to install xcode command line tools, try: - Run terminal command: <code>sudo xcode-select --install</code></p>
 </section>
 </section>
-<section id="r-installation-instructions" class="level1">
-<h1>R installation instructions</h1>
+<section id="assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="assumptions">Assumptions:</h2>
+<ul>
+<li>An AWS root user was created</li>
+<li>AWS root user has created an admin user group with “AdministratorAccess” permissions.</li>
+<li>AWS root user has created IAM users</li>
+<li>AWS root user has add IAM users to admin group</li>
+<li>AWS IAM users have their AWS AWS_ACCESS_KEY and AWS_SECRET_ACCESS_KEY</li>
+</ul>
+<p>To create an AWS root user visit aws.amazon.com.</p>
+<p>To create an AWS IAM user: - FIXIT: include screenshots for creating an IAM user with the correct admin permissions.</p>
+<p><strong>Note: If you created ANY AWS RESOURCES for ARTIS manually please delete these before continuing.</strong> These resources should</p>
+</section>
+<section id="aws-cli-setup" class="level2">
+<h2 class="anchored" data-anchor-id="aws-cli-setup">AWS CLI Setup</h2>
+<p>FIXIT: Explain what each terminal command is doing 1. Run terminal command: <code>export AWS_ACCESS_KEY=[YOUR_AWS_ACCESS_KEY]</code> 2. Run terminal command: <code>export AWS_SECRET_ACCESS_KEY=[YOUR_AWS_SECRET_ACCESS_KEY]</code> 3. Run terminal command: <code>export AWS_REGION=us-east-1</code> 4. Run terminal command <code>aws configure set aws_access_key_id "[YOUR_AWS_ACCESS_KEY]"</code> 5. Run terminal command <code>aws configure set aws_secret_access_key "[YOUR_AWS_SECRET_KEY]"</code></p>
+</section>
+<section id="python-installation" class="level2">
+<h2 class="anchored" data-anchor-id="python-installation">Python Installation</h2>
+<p><strong>Note: Please make sure that your terminal is currently in your working directory that should end in <code>artis-hpc</code>, by running the terminal command <code>pwd</code>.</strong></p>
 <ol type="1">
-<li>Click “Build” on the build tab on the top right hand side corner of RStudio.</li>
-<li>Click on the dropdown arrow in the “Install” subtab within the “Build” window.</li>
-<li>Click the option “Configure Build Tools…”</li>
-<li>Make sure options mirror the image below and click OK. <img src="./images/artis_r_build_config_options.png" class="img-fluid" alt="Build configuration options"></li>
-<li>Click on the dropdown arrow in the “Install” subtab and select the option “Clean and Install”</li>
+<li>Create a virtual environment, run terminal command:<code>python3 -m venv venv</code></li>
+<li>Open virtual environment, run terminal command: <code>source venv/bin/activate</code></li>
+<li>Install all required python modules, run terminal command: <code>pip3 install -r requirements.txt</code></li>
+<li>Check that all python modules have been downloaded, run terminal command <code>pip freeze</code> and check that all modules in the requirements.txt file are included.</li>
 </ol>
+<p>If an error occurs please follow these instructions: 1. Upgrade your version of pip by running terminal command: <code>pip install --upgrade pip</code> 2. Install all required python modules, run terminal command: <code>pip3 install -r requirements.txt</code> 3. If errors still occur install each python package in the requirements.txt file individually, run terminal command <code>pip3 install [PACKAGE NAME]</code> ie <code>pip3 install urllib3</code>.</p>
 </section>
-<section id="running-the-model" class="level1">
-<h1>Running the model</h1>
-<p>Running the demo for the ARTIS model should take approximately 10 minutes. To run the demo for ARTIS run the <code>02-artis-pipeline.R</code> script and then run the <code>04-build-artis-timeseries.R</code> script.</p>
+<section id="creating-aws-infrastructure-with-a-setup-file" class="level2">
+<h2 class="anchored" data-anchor-id="creating-aws-infrastructure-with-a-setup-file">Creating AWS Infrastructure with a setup file</h2>
+<p>Note: the <code>initial_setup.py</code> script will create all necessary AWS infrastructure, upload all model inputs to an AWS S3 bucket, and create and upload a docker image based on the ARTIS codebase. It will also submit jobs to the ARTIS HPC.</p>
+<ol type="1">
+<li>Open Docker Desktop</li>
+<li>Take note of any existing docker images and container relating to other projects, and delete all docker container relating to ARTIS, delete all docker images relating to ARTIS.</li>
+<li>Create AWS infrastructure, upload model inputs and ARTIS docker image, run terminal command: <code>python3 initial_setup.py -chip [YOUR CHIP INFRASTRUCTURE] -aws_access_key [YOUR AWS KEY] -aws_secret_key [YOUR AWS SECRET KEY] -s3 [S3 bucket name of your choice]  -ecr [Docker image repository name]</code>
+<ul>
+<li>If you are using an Apple Silicone chip (M1, M2, M3, etc) your chip will be “arm64”, otherwise for intel chips it will be “x86”</li>
+</ul></li>
+<li>Create AWS infrastructure, upload model inputs and ARTIS docker image, run terminal command: <code>python3 initial_setup.py -chip [YOUR CHIP INFRASTRUCTURE] -aws_access_key [YOUR AWS KEY] -aws_secret_key [YOUR AWS SECRET KEY] -s3 [S3 bucket name of your choice]  -ecr [Docker image repository name]</code>
+<ul>
+<li>Note: This will create the docker image from scratch. If you have an existing docker image you would like to use include the <code>-di [existing docker image name]</code> with the command.
+<ul>
+<li><code>python3 initial_setup.py -chip [YOUR CHIP INFRASTRUCTURE] -aws_access_key [YOUR AWS KEY] -aws_secret_key [YOUR AWS SECRET KEY] -s3 [S3 bucket name of your choice]  -ecr [Docker image repository name] -di [existing docker image name]:latest</code></li>
+</ul></li>
+</ul></li>
+</ol>
+<p>Example: - If you are creating the docker image from scratch <strong>(If you change any R code for ARTIS you will have to recreate a docker image)</strong>: - <code>python3 initial_setup.py -chip arm64 -aws_access_key abc1234 -aws_secret_key secretabc1234 -s3 myname-artis-s3 -ecr myname-artis-image</code> - If you have an existing docker image (for example only need to re-upload a new set of model inputs): - <code>python3 initial_setup.py -chip arm64 -aws_access_key abc1234 -aws_secret_key secretabc1234 -s3 myname-artis-s3 -ecr myname-artis-image -di myname-artis-image:latest</code></p>
+<p><strong>Note:</strong> If terraform states that it created all resources however when you log into the AWS console to confirm cannot see them, they have most likely been created as part of another account. Run <code>terraform destroy -auto-approve</code>on the command line. Confirmed you have followed the AWS CLI set up instructions with the correct set of keys (AWS access key and AWS secret access key).</p>
 </section>
-<section id="outputs" class="level1">
-<h1>Outputs</h1>
-<p>The outputs of the demo will appear in the “demo/outputs” directory. Within this folder “demo/outputs/custom_ts” will contain all the final files that if run on the full model inputs would be used to create the results of the ARTIS research paper.</p>
-<p>Please find below descriptions of main files: - “demo/outputs/custom_ts/mid_custom_ts.csv”: This is the demo version of the main ARTIS trade records table. - “demo/outputs/custom_ts/summary_consumption_midpoint.csv”: This is the demo version of the main ARTIS seafood consumption records table.</p>
 </section>
-<section id="methods-and-workflow" class="level1">
-<h1>Methods and Workflow</h1>
-<section id="high-level-overview" class="level2">
-<h2 class="anchored" data-anchor-id="high-level-overview">High level overview</h2>
-<p>The following diagrams describes how ARTIS trade records are obtained.</p>
-<p><img src="./images/disaggregating_trade_records.png" class="img-fluid" alt="Disaggregating Trade Records"> <img src="./images/building_trade_records_back_up.png" class="img-fluid" alt="Aggregating Trade Records back up"> <img src="./images/consumption_workflow.png" class="img-fluid" alt="Consumption Workflow"></p>
-</section>
-<section id="code-workflows" class="level2">
-<h2 class="anchored" data-anchor-id="code-workflows">Code workflows</h2>
-<p>The following diagrams describe the how the codebase follows the workflow illustrated above.</p>
-<p><img src="./images/model_inputs_creation.png" class="img-fluid" alt="Cleaning data diagram"> <img src="./images/country_mass_balance_solution_creation.png" class="img-fluid" alt="Mass balance solutions"> <img src="./images/create_artis_codeflow.png" class="img-fluid" alt="Creating ARTIS codeflow"></p>
+<section id="download-results-clean-up-aws-and-docker-environments" class="level1">
+<h1>Download results, Clean up AWS and Docker environments</h1>
+<ol type="1">
+<li>Download “outputs” folder from AWS, run terminal command <code>python3 s3_download.py</code></li>
+<li>Destroy all AWS resources and dependencies created, run terminal command <code>terraform destroy</code></li>
+<li>Open Docker Desktop app and delete all containers created</li>
+<li>Open Docker Desktop app and delete all images created</li>
+<li>Close python environment, run terminal command: <code>deactivate</code></li>
+</ol>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -927,18 +954,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../artis-run-model/run-aws.html" class="pagination-link" aria-label="Running on AWS">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Running on AWS</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../artis-infrastructure/index.html" class="pagination-link" aria-label="Distribution Infrastructure">
-        <span class="nav-page-text">Distribution Infrastructure</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -947,7 +962,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/edit/main/artis-run-model/run-locally.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/edit/main/external-content/artis-hpc-readme.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with :fish <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

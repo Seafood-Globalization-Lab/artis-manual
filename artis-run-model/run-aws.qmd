@@ -1,3 +1,0 @@
-# Running on AWS
-
-Pull from https://github.com/Seafood-Globalization-Lab/artis-hpc/blob/main/README.md
