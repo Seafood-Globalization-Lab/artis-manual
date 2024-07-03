@@ -1,5 +1,7 @@
 project: 
   type: website
+  pre-render: import-external-content.R
+  execute-dir: project
   
 website: 
   page-navigation: true
@@ -13,20 +15,17 @@ website:
     left: "&copy; CC-By Openscapes, 2024"
     
   sidebar:
-    logo: "images/Seafood-Globalization-Lab_Logo_Full-color_Square.png"
+    logo: "images/Lab_Logo_Full_Color_Icon.png"
     pinned: true
     align: center
     image-width: 20em
     tools: 
       - icon: globe
-        href: https://openscapes.org
-        text: "Openscapes.org"
+        href: http://seafood-globalization-lab.weebly.com/
+        text: "Lab website"
       - icon: github
-        href: https://github.com/openscapes/quarto-website-tutorial
-        text: "Quarto website tutorial"
-      - icon: twitter
-        href: https://twitter.com/openscapes
-        text: "Openscapes Twitter"         
+        href: https://github.com/Seafood-Globalization-Lab
+        text: "Lab Github"
 
     style: "docked"
     search: true
