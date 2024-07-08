@@ -244,6 +244,9 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="what-does-it-mean-when-a-scientific-name-is-not-a-true-species-name" class="level2">
 <h2 class="anchored" data-anchor-id="what-does-it-mean-when-a-scientific-name-is-not-a-true-species-name">What does it mean when a scientific name is not a true species name?</h2>
+<p>The ARTIS model disaggregates reported aquatic resource products (e.g., frozen salmon filets) into species/species groups based on two pieces of information: 1) reported production data, and 2) the lowest taxonomic resolution of the code.</p>
+<p>For the first piece, the mass balance portion of the model estimates the species/species group mix within each domestically-produced product code. We also estimate the processing and re-export of imported products. This allows us to estimate the share of exports sourced from domestic versus foreign production and by using the bilateral trade data, we can trace products back to the country of harvest. The species/species group mix within the code can then be assigned. Consequently, if a country reports production of “bivalvia,” then bivalvia will appear in the trade network.</p>
+<p>For the second source of taxonomic resolution, we look at all species that fall within a code and identify the lowest common taxonomic name. All exports identified as “error” receive this name. We also have an additional column that can be joined to ARTIS so that these names can be used in place of the model specified name when the lowest taxonomic name for the code is more detailed than the name based on the production data. Note though that if these improved names are used, domestic exports can exceed domestic production.</p>
 </section>
 <section id="why-dont-the-trade-totals-match-what-a-country-reports" class="level2">
 <h2 class="anchored" data-anchor-id="why-dont-the-trade-totals-match-what-a-country-reports">Why don’t the trade totals match what a country reports?</h2>
