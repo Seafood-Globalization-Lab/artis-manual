@@ -1,2 +1,2 @@
-# quarto-site-template
-Example quarto site without R or Python!
+# Manual for Aquatic Resource Trade in Species (ARTIS) Model
+
