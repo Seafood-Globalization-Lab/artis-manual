@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>artis-model-readme – ARTIS Manual</title>
+<title>artis-database-readme – ARTIS Manual</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -225,22 +225,32 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#artis-model" id="toc-artis-model" class="nav-link active" data-scroll-target="#artis-model">artis-model</a></li>
-  <li><a href="#system-requirements" id="toc-system-requirements" class="nav-link" data-scroll-target="#system-requirements">System Requirements</a></li>
-  <li><a href="#installation-guide" id="toc-installation-guide" class="nav-link" data-scroll-target="#installation-guide">Installation Guide</a>
+  <li><a href="#artis-database" id="toc-artis-database" class="nav-link active" data-scroll-target="#artis-database">ARTIS Database</a>
   <ul class="collapse">
-  <li><a href="#creating-python-virtual-environment" id="toc-creating-python-virtual-environment" class="nav-link" data-scroll-target="#creating-python-virtual-environment">Creating python virtual environment</a></li>
+  <li><a href="#installations" id="toc-installations" class="nav-link" data-scroll-target="#installations">Installations</a></li>
+  <li><a href="#updating-cloud-heroku-database" id="toc-updating-cloud-heroku-database" class="nav-link" data-scroll-target="#updating-cloud-heroku-database">Updating Cloud (Heroku) Database</a>
+  <ul class="collapse">
+  <li><a href="#gathering-heroku-database-credentials" id="toc-gathering-heroku-database-credentials" class="nav-link" data-scroll-target="#gathering-heroku-database-credentials">Gathering Heroku database credentials:</a></li>
+  <li><a href="#creating-a-connection-between-the-heroku-database-and-pgadmin" id="toc-creating-a-connection-between-the-heroku-database-and-pgadmin" class="nav-link" data-scroll-target="#creating-a-connection-between-the-heroku-database-and-pgadmin">Creating a connection between the Heroku Database and pgadmin:</a></li>
+  <li><a href="#test-connection-to-heroku-database" id="toc-test-connection-to-heroku-database" class="nav-link" data-scroll-target="#test-connection-to-heroku-database">Test connection to Heroku database:</a></li>
+  <li><a href="#add-new-data-to-cloud-database" id="toc-add-new-data-to-cloud-database" class="nav-link" data-scroll-target="#add-new-data-to-cloud-database">Add new data to cloud database</a></li>
   </ul></li>
-  <li><a href="#r-installation-instructions" id="toc-r-installation-instructions" class="nav-link" data-scroll-target="#r-installation-instructions">R installation instructions</a></li>
-  <li><a href="#running-the-model" id="toc-running-the-model" class="nav-link" data-scroll-target="#running-the-model">Running the model</a></li>
-  <li><a href="#outputs" id="toc-outputs" class="nav-link" data-scroll-target="#outputs">Outputs</a></li>
-  <li><a href="#methods-and-workflow" id="toc-methods-and-workflow" class="nav-link" data-scroll-target="#methods-and-workflow">Methods and Workflow</a>
+  <li><a href="#directory-and-file-structure" id="toc-directory-and-file-structure" class="nav-link" data-scroll-target="#directory-and-file-structure">Directory and File Structure</a></li>
+  <li><a href="#database-structure" id="toc-database-structure" class="nav-link" data-scroll-target="#database-structure">Database Structure</a>
   <ul class="collapse">
-  <li><a href="#high-level-overview" id="toc-high-level-overview" class="nav-link" data-scroll-target="#high-level-overview">High level overview</a></li>
-  <li><a href="#code-workflows" id="toc-code-workflows" class="nav-link" data-scroll-target="#code-workflows">Code workflows</a></li>
+  <li><a href="#artis-snet-table" id="toc-artis-snet-table" class="nav-link" data-scroll-target="#artis-snet-table">ARTIS snet table</a></li>
+  <li><a href="#production-table" id="toc-production-table" class="nav-link" data-scroll-target="#production-table">Production table</a></li>
+  <li><a href="#sau-production-table" id="toc-sau-production-table" class="nav-link" data-scroll-target="#sau-production-table">SAU Production table</a></li>
+  <li><a href="#baci-table" id="toc-baci-table" class="nav-link" data-scroll-target="#baci-table">Baci table</a></li>
+  <li><a href="#countries-table" id="toc-countries-table" class="nav-link" data-scroll-target="#countries-table">Countries table</a></li>
+  <li><a href="#nutrient-metadata-table" id="toc-nutrient-metadata-table" class="nav-link" data-scroll-target="#nutrient-metadata-table">Nutrient metadata table</a></li>
+  <li><a href="#complete-consumption-table" id="toc-complete-consumption-table" class="nav-link" data-scroll-target="#complete-consumption-table">Complete consumption table</a></li>
+  <li><a href="#code-max-resolved-taxa-table" id="toc-code-max-resolved-taxa-table" class="nav-link" data-scroll-target="#code-max-resolved-taxa-table">Code max resolved taxa table</a></li>
+  <li><a href="#products-table" id="toc-products-table" class="nav-link" data-scroll-target="#products-table">Products table</a></li>
+  </ul></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/edit/main/external-content/artis-model-readme.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/edit/main/external-content/artis-database-readme.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -248,111 +258,626 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="artis-model" class="level1">
-<h1>artis-model</h1>
+<section id="artis-database" class="level1">
+<h1>ARTIS Database</h1>
+<section id="installations" class="level2">
+<h2 class="anchored" data-anchor-id="installations">Installations</h2>
+<ol type="1">
+<li>Download PostgreSQL: https://www.postgresql.org/download/</li>
+<li>Download pgAdmin: https://www.pgadmin.org/download/</li>
+</ol>
 </section>
-<section id="system-requirements" class="level1">
-<h1>System Requirements</h1>
+<section id="updating-cloud-heroku-database" class="level2">
+<h2 class="anchored" data-anchor-id="updating-cloud-heroku-database">Updating Cloud (Heroku) Database</h2>
+<p><em>Reference: https://stackoverflow.com/questions/11769860/connect-to-a-heroku-database-with-pgadmin</em></p>
+<section id="gathering-heroku-database-credentials" class="level3">
+<h3 class="anchored" data-anchor-id="gathering-heroku-database-credentials">Gathering Heroku database credentials:</h3>
+<ol type="1">
+<li>Sign into the <a href="https://www.heroku.com/">Heroku platform</a></li>
+<li>Click on the “artis” app</li>
+</ol>
+<p><img src="./images/heroku_artis_app_page.png" class="img-fluid"></p>
+<ol start="3" type="1">
+<li>Click on the “Resources” tab <img src="./images/heroku_resources_page.png" class="img-fluid"></li>
+<li>Click on “Heroku Postgres” in the list of resources available (this should open a new browser tab) <img src="./images/heroku_postgres.png" class="img-fluid"></li>
+<li>Click on the “Credentials” tab <img src="./images/heroku_postgres_credentials_page.png" class="img-fluid"></li>
+<li>Click on the arrow by “default 1 app” (this should provide a drop down set of options and details)</li>
+<li>Click on the “show” button to reveal the password for the database</li>
+</ol>
+</section>
+<section id="creating-a-connection-between-the-heroku-database-and-pgadmin" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-connection-between-the-heroku-database-and-pgadmin">Creating a connection between the Heroku Database and pgadmin:</h3>
+<ol type="1">
+<li><p>Open pgAdmin</p></li>
+<li><p>Right click on the Server list on the left hand side</p></li>
+<li><p>Select Servers &gt; Register &gt; Server (this will open a new smaller window with additional settings) <img src="./images/pgAdmin_connect_server.png" class="img-fluid"></p></li>
+<li><p>Enter a server name (this will only be a local name reference) like “HEROKU_ARTIS” <img src="./images/pgAdmin_connect_server_general.png" class="img-fluid"></p></li>
+<li><p>Click on the “Connection” tab <img src="./images/pgAdmin_connection_tab.png" class="img-fluid"> The details needed to fill in the following information can be found on the Heroku credentials page we found earlier:</p></li>
+<li><p>Enter the host name under the “Host name/address”</p></li>
+<li><p>Enter the port number under the “Port” field</p></li>
+<li><p>Enter the database name under the “Maintenance database” field</p></li>
+<li><p>Enter the user name under the “Username” field</p></li>
+<li><p>Enter the password (make sure to click reveal in Heroku) under the “Password”</p></li>
+<li><p>Select Save password for future use</p></li>
+<li><p>Click on “Advanced” tab <img src="./images/pgAdmin_connection_advanced_tab.png" class="img-fluid"></p></li>
+<li><p>Enter the database name under the “DB restriction” field (There should now be a new database connection in your pgAdmin dropdown)</p></li>
+</ol>
+</section>
+<section id="test-connection-to-heroku-database" class="level3">
+<h3 class="anchored" data-anchor-id="test-connection-to-heroku-database">Test connection to Heroku database:</h3>
+<ol type="1">
+<li><p>Click on server connection you created earlier (this will appear under the server name you wrote in earlier, ie “HEROKU_ARTIS”)</p></li>
+<li><p>Click the arrow by the server connection name (this should create provide a drop down with options and the 1 database)</p></li>
+<li><p>Right-click on the database name in drop down options</p></li>
+<li><p>Select the “Query tool” option (this should open a window in pgAdmin) <img src="./images/pgAdmin_query_tool.png" class="img-fluid"></p></li>
+<li><p>Run the SQL command “SELECT * FROM users;” (this should return immediately, with a table of the users that have access to the ARTIS API)</p></li>
+</ol>
+</section>
+<section id="add-new-data-to-cloud-database" class="level3">
+<h3 class="anchored" data-anchor-id="add-new-data-to-cloud-database">Add new data to cloud database</h3>
+<ol type="1">
+<li>Find the tables drop down under the database connection options on the left hand side of pgAdmin <img src="./images/pgAdmin_tables_dropdown.png" class="img-fluid"></li>
+</ol>
+<p>Repeat the following instructions for each table you want to update:</p>
+<ol type="1">
+<li>If the table already exists:</li>
+</ol>
 <ul>
-<li>Platform: x86_64-apple-darwin17.0 (64-bit)</li>
-<li>Running under: macOS Ventura 13.3.1</li>
-<li>R version 4.2.2</li>
-<li>R packages:
+<li>Right click on the existing table and select the “Delete/Drop” option <img src="./images/pgAdmin_delete_table.png" class="img-fluid"></li>
+</ul>
+<ol start="2" type="1">
+<li><p>Right-click on the database name in drop down options</p></li>
+<li><p>Select the “Query tool” option (this should open a window in pgAdmin)</p></li>
+<li><p>Paste and run the SQL script for creating the table you are interested in updating</p></li>
+<li><p>Right-click the “Tables” dropdown and select “Refresh” <img src="./images/pgAdmin_tables_refresh.png" class="img-fluid"></p></li>
+<li><p>Right-click on the table you just re-created, and select “Import/Export Data” (this will open a new dialog box) <img src="./images/pgAdmin_table_import.png" class="img-fluid"></p></li>
+<li><p>Confirm the “Import” tab is selected and use the “Filename” field to find the table data you would like to include. <img src="./images/pgAdmin_import_general.png" class="img-fluid"></p></li>
+<li><p>Select the “Options” tab</p></li>
+<li><p>Confirm the “Header” toggle is activated and the “NULL Strings” field has the value “NA” <img src="./images/pgAdmin_import_options.png" class="img-fluid"></p></li>
+<li><p>Select the “Columns” tab</p></li>
+<li><p>Make sure the “record_id” column IS NOT part of the “Columns to import” field. If it is please delete this column from the list. <img src="./images/pgAdmin_import_columns.png" class="img-fluid"></p></li>
+</ol>
+</section>
+</section>
+<section id="directory-and-file-structure" class="level2">
+<h2 class="anchored" data-anchor-id="directory-and-file-structure">Directory and File Structure</h2>
 <ul>
-<li>readxl 1.4.1</li>
-<li>janitor 2.1.0</li>
-<li>countrycode 1.4.0</li>
-<li>doParallel 1.0.17</li>
-<li>iterators 1.0.14</li>
-<li>foreach 1.5.2</li>
-<li>slam 0.1-50</li>
-<li>Matrix 1.5-1</li>
-<li>magrittr 2.0.3</li>
-<li>data.table 1.14.6</li>
-<li>forcats 0.5.2</li>
-<li>stringr 1.5.0</li>
-<li>dplyr 1.0.10</li>
-<li>purrr 1.0.1</li>
-<li>readr 2.1.3</li>
-<li>tidyr 1.2.1</li>
-<li>tibble 3.1.8</li>
-<li>ggplot2 3.4.0</li>
-<li>tidyverse 1.3.2</li>
-<li>reticulate 1.26</li>
+<li>prep_db_files.R
+<ul>
+<li>Takes raw snet files to a database table</li>
 </ul></li>
-<li>Python version 3.10.9</li>
-<li>Python packages:
+<li>create_sql_tables
 <ul>
-<li>cvxopt 1.3.0</li>
-<li>daqp 0.5.1</li>
-<li>ecos 2.0.12</li>
-<li>numpy 1.24.3</li>
-<li>osqp 0.6.2.post9</li>
-<li>pip 22.3.1</li>
-<li>qdldl 0.1.7</li>
-<li>qpsolvers 3.4.0</li>
-<li>quadprog 0.1.11</li>
-<li>scipy 1.10.1</li>
-<li>scs 3.2.3</li>
-<li>setuptools 65.6.3</li>
+<li>SQL files to create the different tables</li>
 </ul></li>
 </ul>
 </section>
-<section id="installation-guide" class="level1">
-<h1>Installation Guide</h1>
-<p>This project uses Python 3.10.9 which can be downloaded <a href="https://www.python.org/downloads/release/python-3109/">here</a> and RStudio which can be downloaded <a href="https://posit.co/download/rstudio-desktop/">here</a>.</p>
-<p>It should take approximately 10 minutes to run this full installation.</p>
-<section id="creating-python-virtual-environment" class="level2">
-<h2 class="anchored" data-anchor-id="creating-python-virtual-environment">Creating python virtual environment</h2>
-<ol type="1">
-<li>Open the artis-model repository in RStudio.</li>
-<li>Click on the terminal tab.</li>
-<li>Type “pwd” in the terminal.</li>
-<li>Copy the result of the “pwd” terminal command.</li>
-<li>Type “python3 -m venv [RESULT FROM pwd]/venv” (ie. “python3 -m venv /home/artis-model/venv”)</li>
-<li>Type “source venv/bin/activate” in terminal.</li>
-<li>Type “pip3 install qpsolvers” in terminal.</li>
-<li>Type “pip3 install quadprog” in terminal.</li>
-<li>Type “pip3 install cvxopt” in terminal.</li>
-<li>Confirm you have successfully installed the packages qpsolvers, quadprog, cvxopt by running “pip list”.</li>
-<li>Type “deactivate” in terminal.</li>
-<li>Click on the Console tab.</li>
-</ol>
-<p>Note that you only need to install the solvers the first time you run this code. Warnings about the latest version of pip may also appear during the installation - these are okay, but errors are not.</p>
+<section id="database-structure" class="level2">
+<h2 class="anchored" data-anchor-id="database-structure">Database Structure</h2>
+<section id="artis-snet-table" class="level3">
+<h3 class="anchored" data-anchor-id="artis-snet-table">ARTIS snet table</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>exporter_iso3c</td>
+<td>ISO3C code for direct <strong><em>exporter</em></strong> country</td>
+</tr>
+<tr class="even">
+<td>importer_iso3c</td>
+<td>ISO3C code for direct <strong><em>importer</em></strong> country</td>
+</tr>
+<tr class="odd">
+<td>source_country_iso3c</td>
+<td>ISO3C code for the country that produced the specific product</td>
+</tr>
+<tr class="even">
+<td>dom_source</td>
+<td>Defines whether trade record was a “domestic export”, “foreign export” or “error export”</td>
+</tr>
+<tr class="odd">
+<td>hs6</td>
+<td>HS 6 digit code used to identify what product is being traded.</td>
+</tr>
+<tr class="even">
+<td>sciname</td>
+<td>species name traded under the specific HS product and 6-digit code.</td>
+</tr>
+<tr class="odd">
+<td>habitat</td>
+<td>classifies whether the specific species’ habitat <em>(marine/inland/unknown)</em>.</td>
+</tr>
+<tr class="even">
+<td>method</td>
+<td>defines method of production <em>(aquaculture/capture/unknown)</em>.</td>
+</tr>
+<tr class="odd">
+<td>product_weight_t</td>
+<td>product weight in tonnes.</td>
+</tr>
+<tr class="even">
+<td>live_weight_t</td>
+<td>live weight in tonnes.</td>
+</tr>
+<tr class="odd">
+<td>year</td>
+<td>year in which trade occured.</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>exporter_iso3c</th>
+<th>importer_iso3c</th>
+<th>source_country_iso3c</th>
+<th>dom_source</th>
+<th>hs6</th>
+<th>sciname</th>
+<th>habitat</th>
+<th>method</th>
+<th>product_weight_t</th>
+<th>live_weight_t</th>
+<th>year</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CAN</td>
+<td>USA</td>
+<td>CAN</td>
+<td>domestic export</td>
+<td>030212</td>
+<td>oncorhynchus keta</td>
+<td>marine</td>
+<td>capture</td>
+<td>870.34</td>
+<td>1131.45</td>
+<td>2017</td>
+</tr>
+<tr class="even">
+<td>CHL</td>
+<td>ITA</td>
+<td>PER</td>
+<td>foreign export</td>
+<td>230120</td>
+<td>engraulis ringens</td>
+<td>marine</td>
+<td>capture</td>
+<td>344.889</td>
+<td>1026.11</td>
+<td>2017</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Note:</em></strong></p>
+<ul>
+<li><p><strong><em>Domestic Export:</em></strong> An export where the specific product was produced in the same country as it was exported from.</p></li>
+<li><p><strong><em>Foreign Export:</em></strong> An export where a specific product is imported from a source country and then re-exported by another country.</p></li>
+<li><p><strong><em>Error Export:</em></strong> An export that cannot be explained by domestic or foreign export records nor production records.</p></li>
+</ul>
+</section>
+<section id="production-table" class="level3">
+<h3 class="anchored" data-anchor-id="production-table">Production table</h3>
+<p>This table has all FAO production records for all countries in ARTIS for 1996 - 2020.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>iso3c</td>
+<td>ISO3 code for the producing country</td>
+</tr>
+<tr class="even">
+<td>sciname</td>
+<td>species produced (matches with sciname column in sciname table)</td>
+</tr>
+<tr class="odd">
+<td>method</td>
+<td>production method <em>(aquaculture/capture/unknown)</em></td>
+</tr>
+<tr class="even">
+<td>habitat</td>
+<td>habitat where species resides <em>(marine/inland/unknown)</em></td>
+</tr>
+<tr class="odd">
+<td>live_weight_t</td>
+<td>Live weight in tonnes.</td>
+</tr>
+<tr class="even">
+<td>year</td>
+<td>Year species was produced.</td>
+</tr>
+</tbody>
+</table>
+<section id="sample-production-table-entry" class="level4">
+<h4 class="anchored" data-anchor-id="sample-production-table-entry">Sample Production table entry</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>iso3c</th>
+<th>sciname</th>
+<th>method</th>
+<th>habitat</th>
+<th>live_weight_t</th>
+<th>year</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SWE</td>
+<td>abramis brama</td>
+<td>capture</td>
+<td>inland</td>
+<td>7</td>
+<td>2006</td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
-<section id="r-installation-instructions" class="level1">
-<h1>R installation instructions</h1>
-<ol type="1">
-<li>Click “Build” on the build tab on the top right hand side corner of RStudio.</li>
-<li>Click on the dropdown arrow in the “Install” subtab within the “Build” window.</li>
-<li>Click the option “Configure Build Tools…”</li>
-<li>Make sure options mirror the image below and click OK. <img src="./images/artis_r_build_config_options.png" class="img-fluid" alt="Build configuration options"></li>
-<li>Click on the dropdown arrow in the “Install” subtab and select the option “Clean and Install”</li>
-</ol>
+<section id="sau-production-table" class="level3">
+<h3 class="anchored" data-anchor-id="sau-production-table">SAU Production table</h3>
+<p>This table has all SAU production records for all countries in ARTIS for 1996 - 2019. Note all production is marine capture.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>country_name_en</td>
+<td>Producing country name in english</td>
+</tr>
+<tr class="even">
+<td>country_iso3_alpha</td>
+<td>Producing country ISO3 3 letter code</td>
+</tr>
+<tr class="odd">
+<td>country_iso3_numeric</td>
+<td>Producing country ISO3 numeric code</td>
+</tr>
+<tr class="even">
+<td>eez</td>
+<td>Exclusive Economic Zone</td>
+</tr>
+<tr class="odd">
+<td>sector</td>
+<td>economic sector</td>
+</tr>
+<tr class="even">
+<td>sciname</td>
+<td>species produced (matches with sciname column in sciname table)</td>
+</tr>
+<tr class="odd">
+<td>year</td>
+<td>Year species was produced</td>
+</tr>
+<tr class="even">
+<td>live_weight_t</td>
+<td>Live weight in tonnes</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="running-the-model" class="level1">
-<h1>Running the model</h1>
-<p>Running the demo for the ARTIS model should take approximately 10 minutes. To run the demo for ARTIS run the <code>02-artis-pipeline.R</code> script and then run the <code>04-build-artis-timeseries.R</code> script.</p>
+<section id="baci-table" class="level3">
+<h3 class="anchored" data-anchor-id="baci-table">Baci table</h3>
+<p>This table has all BACI bilateral trade records for all countries in ARTIS for 1996 - 2020.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>exporter_iso3c</td>
+<td>ISO3 3 letter code for direct <strong><em>exporter</em></strong> country</td>
+</tr>
+<tr class="even">
+<td>importer_iso3c</td>
+<td>ISO3 3 letter code for direct <strong><em>importer</em></strong> country</td>
+</tr>
+<tr class="odd">
+<td>hs6</td>
+<td>HS 6 digit code used to identify what product is being traded</td>
+</tr>
+<tr class="even">
+<td>product_weight_t</td>
+<td>product weight in tonnes</td>
+</tr>
+<tr class="odd">
+<td>hs_version</td>
+<td>HS code version for the year used</td>
+</tr>
+<tr class="even">
+<td>year</td>
+<td>year trade occured</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="outputs" class="level1">
-<h1>Outputs</h1>
-<p>The outputs of the demo will appear in the “demo/outputs” directory. Within this folder “demo/outputs/custom_ts” will contain all the final files that if run on the full model inputs would be used to create the results of the ARTIS research paper.</p>
-<p>Please find below descriptions of main files: - “demo/outputs/custom_ts/mid_custom_ts.csv”: This is the demo version of the main ARTIS trade records table. - “demo/outputs/custom_ts/summary_consumption_midpoint.csv”: This is the demo version of the main ARTIS seafood consumption records table.</p>
+<section id="countries-table" class="level3">
+<h3 class="anchored" data-anchor-id="countries-table">Countries table</h3>
+<p>This table contains metadata about countries in the ARTIS database.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Column Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>iso3c</td>
+<td>ISO3 3 letter code for country</td>
+</tr>
+<tr class="even">
+<td>country_name</td>
+<td>Country name in english</td>
+</tr>
+<tr class="odd">
+<td>owid_region</td>
+<td>Country’s region as defined by Our World in Data</td>
+</tr>
+<tr class="even">
+<td>continent</td>
+<td>Country’s continent as defined by R countrycode package</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="methods-and-workflow" class="level1">
-<h1>Methods and Workflow</h1>
-<section id="high-level-overview" class="level2">
-<h2 class="anchored" data-anchor-id="high-level-overview">High level overview</h2>
-<p>The following diagrams describes how ARTIS trade records are obtained.</p>
-<p><img src="./images/disaggregating_trade_records.png" class="img-fluid" alt="Disaggregating Trade Records"> <img src="./images/building_trade_records_back_up.png" class="img-fluid" alt="Aggregating Trade Records back up"> <img src="./images/consumption_workflow.png" class="img-fluid" alt="Consumption Workflow"></p>
+<section id="nutrient-metadata-table" class="level3">
+<h3 class="anchored" data-anchor-id="nutrient-metadata-table">Nutrient metadata table</h3>
+<p>This table contains the nutrient content per 100g of the species in the ARTIS database.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Column Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>sciname</td>
+<td>species scientific name</td>
+</tr>
+<tr class="even">
+<td>calcium_mg</td>
+<td>calcium content (mg) per 100 g of species</td>
+</tr>
+<tr class="odd">
+<td>iron_mg</td>
+<td>iron content (mg) per 100 g of species</td>
+</tr>
+<tr class="even">
+<td>protein_g</td>
+<td>protein content (g) per 100 g of species</td>
+</tr>
+<tr class="odd">
+<td>fattyacids_g</td>
+<td>fatty acid content (g) per 100 g of species</td>
+</tr>
+<tr class="even">
+<td>vitamina_mcg</td>
+<td>vitamin a content (mcg) per 100 g of species</td>
+</tr>
+<tr class="odd">
+<td>vitaminb12_mcg</td>
+<td>vitamin b12 content (mcg) per 100 g of species</td>
+</tr>
+<tr class="even">
+<td>zinc_mg</td>
+<td>zinc content (mg) per 100 g of species</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="code-workflows" class="level2">
-<h2 class="anchored" data-anchor-id="code-workflows">Code workflows</h2>
-<p>The following diagrams describe the how the codebase follows the workflow illustrated above.</p>
-<p><img src="./images/model_inputs_creation.png" class="img-fluid" alt="Cleaning data diagram"> <img src="./images/country_mass_balance_solution_creation.png" class="img-fluid" alt="Mass balance solutions"> <img src="./images/create_artis_codeflow.png" class="img-fluid" alt="Creating ARTIS codeflow"></p>
+<section id="complete-consumption-table" class="level3">
+<h3 class="anchored" data-anchor-id="complete-consumption-table">Complete consumption table</h3>
+<p>This table contains consumption estimates from trade.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>iso3c</td>
+<td>ISO3 3 letter code of consuming country</td>
+</tr>
+<tr class="even">
+<td>hs6</td>
+<td>HS 6 digit code used to identify what product is being consumed</td>
+</tr>
+<tr class="odd">
+<td>sciname</td>
+<td>species scientific name</td>
+</tr>
+<tr class="even">
+<td>method</td>
+<td>production method <em>(aquaculture/capture/unknown)</em></td>
+</tr>
+<tr class="odd">
+<td>habitat</td>
+<td>habitat where species resides <em>(marine/inland/unknown)</em></td>
+</tr>
+<tr class="even">
+<td>source_country_iso3c</td>
+<td>ISO3 3 letter code of country of origin</td>
+</tr>
+<tr class="odd">
+<td>dom_source</td>
+<td>Defines whether trade record was a “domestic export”, “foreign export” or “error export”</td>
+</tr>
+<tr class="even">
+<td>hs_version</td>
+<td>HS code version for the year</td>
+</tr>
+<tr class="odd">
+<td>population</td>
+<td>population of consuming country (sourced from FAO)</td>
+</tr>
+<tr class="even">
+<td>year</td>
+<td>year of consumption</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="code-max-resolved-taxa-table" class="level3">
+<h3 class="anchored" data-anchor-id="code-max-resolved-taxa-table">Code max resolved taxa table</h3>
+<p>This is a conversion table to resolve a scientific name from higher order taxa (family, order, class etc) to a more specific species based on the HS product and HS version used.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hs_version</td>
+<td>HS code version for the year</td>
+</tr>
+<tr class="even">
+<td>hs6</td>
+<td>species scientific name</td>
+</tr>
+<tr class="odd">
+<td>sciname</td>
+<td>original scientific name determined by production records</td>
+</tr>
+<tr class="even">
+<td>sciname_hs_modified</td>
+<td>more specific/resolved scientific name given hs version and hs product</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="products-table" class="level3">
+<h3 class="anchored" data-anchor-id="products-table">Products table</h3>
+<p>This table contains information about what each HS 6-digit code represents.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hs6</td>
+<td>HS 6-digit product code</td>
+</tr>
+<tr class="even">
+<td>description</td>
+<td>Product description</td>
+</tr>
+<tr class="odd">
+<td>presentation</td>
+<td>Product form <strong><em>(fillet, whole, fats and oils, non-fish, non-fmp form, other body parts, other meat, livers and roes)</em></strong></td>
+</tr>
+<tr class="even">
+<td>state</td>
+<td>Product state <strong><em>(live, frozen, preserved, fresh, not for humans, reduced)</em></strong></td>
+</tr>
+</tbody>
+</table>
+<section id="sample-products-table-entry" class="level4">
+<h4 class="anchored" data-anchor-id="sample-products-table-entry">Sample products table entry</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>hs6</th>
+<th>description</th>
+<th>presentation</th>
+<th>state</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>030212</td>
+<td>Fish; Pacific salmon (oncorhynchus spp.), Atlantic salmon (salmo salar), Danube salmon (hucho hucho), fresh or chilled (excluding fillets, livers, roes and other fish meat of heading no. 0304)</td>
+<td>whole</td>
+<td>fresh</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
+</section>
 </section>
 </section>
 
@@ -929,7 +1454,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/edit/main/external-content/artis-model-readme.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/edit/main/external-content/artis-database-readme.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with :fish <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
