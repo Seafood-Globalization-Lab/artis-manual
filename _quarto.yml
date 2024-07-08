@@ -43,8 +43,8 @@ website:
           - artis-our-model/est-consumption.qmd
       - section: artis-run-model/index.qmd
         contents:
+          - artis-run-model/run-locally.qmd        
           - artis-run-model/run-aws.qmd
-          - artis-run-model/run-locally.qmd
       - section: artis-infrastructure/index.qmd
         contents: 
           - artis-infrastructure/sql.qmd
