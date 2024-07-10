@@ -1,79 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://artisdata.weebly.com/index.html</loc>
+    <lastmod>2024-07-10T22:08:12.419Z</lastmod>
+  </url>
+  <url>
     <loc>https://artisdata.weebly.com/external-content/artis-hpc-readme.html</loc>
-    <lastmod>2024-07-10T04:25:36.748Z</lastmod>
-  </url>
-  <url>
-    <loc>https://artisdata.weebly.com/external-content/artis-model-readme.html</loc>
-    <lastmod>2024-07-10T04:25:36.748Z</lastmod>
-  </url>
-  <url>
-    <loc>https://artisdata.weebly.com/artis-about.html</loc>
-    <lastmod>2024-07-10T04:25:36.724Z</lastmod>
-  </url>
-  <url>
-    <loc>https://artisdata.weebly.com/artis-our-model/disagg-trade.html</loc>
-    <lastmod>2024-07-10T04:25:36.736Z</lastmod>
-  </url>
-  <url>
-    <loc>https://artisdata.weebly.com/artis-our-model/data-inputs.html</loc>
-    <lastmod>2024-07-10T04:25:36.736Z</lastmod>
-  </url>
-  <url>
-    <loc>https://artisdata.weebly.com/artis-run-model/run-aws.html</loc>
-    <lastmod>2024-07-10T04:25:36.748Z</lastmod>
-  </url>
-  <url>
-    <loc>https://artisdata.weebly.com/artis-run-model/index.html</loc>
-    <lastmod>2024-07-10T04:25:36.748Z</lastmod>
-  </url>
-  <url>
-    <loc>https://artisdata.weebly.com/visualize-data.html</loc>
-    <lastmod>2024-07-10T04:25:36.768Z</lastmod>
-  </url>
-  <url>
-    <loc>https://artisdata.weebly.com/artis-infrastructure/archive.html</loc>
-    <lastmod>2024-07-10T04:25:36.724Z</lastmod>
-  </url>
-  <url>
-    <loc>https://artisdata.weebly.com/artis-infrastructure/sql.html</loc>
-    <lastmod>2024-07-10T04:25:36.736Z</lastmod>
-  </url>
-  <url>
-    <loc>https://artisdata.weebly.com/artis-infrastructure/api.html</loc>
-    <lastmod>2024-07-10T04:25:36.724Z</lastmod>
-  </url>
-  <url>
-    <loc>https://artisdata.weebly.com/artis-infrastructure/index.html</loc>
-    <lastmod>2024-07-10T04:25:36.736Z</lastmod>
+    <lastmod>2024-07-10T22:08:12.399Z</lastmod>
   </url>
   <url>
     <loc>https://artisdata.weebly.com/artis-faq.html</loc>
-    <lastmod>2024-07-10T04:25:36.724Z</lastmod>
+    <lastmod>2024-07-10T22:08:12.375Z</lastmod>
   </url>
   <url>
     <loc>https://artisdata.weebly.com/artis-run-model/run-locally.html</loc>
-    <lastmod>2024-07-10T04:25:36.748Z</lastmod>
+    <lastmod>2024-07-10T22:08:12.399Z</lastmod>
   </url>
   <url>
-    <loc>https://artisdata.weebly.com/artis-our-model/est-consumption.html</loc>
-    <lastmod>2024-07-10T04:25:36.736Z</lastmod>
+    <loc>https://artisdata.weebly.com/artis-infrastructure/sql.html</loc>
+    <lastmod>2024-07-10T22:08:12.387Z</lastmod>
   </url>
   <url>
-    <loc>https://artisdata.weebly.com/artis-our-model/index.html</loc>
-    <lastmod>2024-07-10T04:25:36.736Z</lastmod>
+    <loc>https://artisdata.weebly.com/artis-infrastructure/api.html</loc>
+    <lastmod>2024-07-10T22:08:12.375Z</lastmod>
+  </url>
+  <url>
+    <loc>https://artisdata.weebly.com/visualize-data.html</loc>
+    <lastmod>2024-07-10T22:08:12.419Z</lastmod>
+  </url>
+  <url>
+    <loc>https://artisdata.weebly.com/artis-our-model/data-inputs.html</loc>
+    <lastmod>2024-07-10T22:08:12.387Z</lastmod>
   </url>
   <url>
     <loc>https://artisdata.weebly.com/artis-our-model/est-trade-net.html</loc>
-    <lastmod>2024-07-10T04:25:36.736Z</lastmod>
+    <lastmod>2024-07-10T22:08:12.387Z</lastmod>
   </url>
   <url>
-    <loc>https://artisdata.weebly.com/index.html</loc>
-    <lastmod>2024-07-10T04:25:36.768Z</lastmod>
+    <loc>https://artisdata.weebly.com/artis-our-model/est-consumption.html</loc>
+    <lastmod>2024-07-10T22:08:12.387Z</lastmod>
+  </url>
+  <url>
+    <loc>https://artisdata.weebly.com/artis-our-model/index.html</loc>
+    <lastmod>2024-07-10T22:08:12.387Z</lastmod>
+  </url>
+  <url>
+    <loc>https://artisdata.weebly.com/artis-infrastructure/archive.html</loc>
+    <lastmod>2024-07-10T22:08:12.375Z</lastmod>
+  </url>
+  <url>
+    <loc>https://artisdata.weebly.com/artis-infrastructure/index.html</loc>
+    <lastmod>2024-07-10T22:08:12.387Z</lastmod>
+  </url>
+  <url>
+    <loc>https://artisdata.weebly.com/artis-run-model/run-aws.html</loc>
+    <lastmod>2024-07-10T22:08:12.399Z</lastmod>
+  </url>
+  <url>
+    <loc>https://artisdata.weebly.com/artis-run-model/index.html</loc>
+    <lastmod>2024-07-10T22:08:12.399Z</lastmod>
   </url>
   <url>
     <loc>https://artisdata.weebly.com/external-content/artis-database-readme.html</loc>
-    <lastmod>2024-07-10T04:25:36.748Z</lastmod>
+    <lastmod>2024-07-10T22:08:12.399Z</lastmod>
+  </url>
+  <url>
+    <loc>https://artisdata.weebly.com/external-content/artis-model-readme.html</loc>
+    <lastmod>2024-07-10T22:08:12.399Z</lastmod>
   </url>
 </urlset>

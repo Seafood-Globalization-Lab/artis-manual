@@ -29,7 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./artis-about.html" rel="next">
+<link href="./artis-our-model/index.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -117,12 +117,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Welcome</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./artis-about.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">About us</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./artis-our-model/index.html" class="sidebar-item-text sidebar-link">
@@ -135,19 +129,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./artis-our-model/data-inputs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Production</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./artis-our-model/disagg-trade.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Disaggregating Reported Trade</span></a>
+ <span class="menu-text">Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./artis-our-model/est-trade-net.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">National mass-balance</span></a>
+ <span class="menu-text">Disaggregating Reported Trade</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -230,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Aquatic Resource Trade in Species (ARTIS) Manual</h1>
-<p class="subtitle lead">Everything about the data and pipeline</p>
+<p class="subtitle lead">user guide to the model, pipeline, and data</p>
 </div>
 
 
@@ -253,6 +241,19 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="images/artis_fig_V4.png" class="img-fluid figure-img"></p>
 <figcaption>Conceptual representation of problem ARTIS aims to address</figcaption>
 </figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="More resources">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+More resources
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>See the ARTIS website for additional information: <a href="https://artisdata.weebly.com/">ARTIS Website</a></p>
+</div>
 </div>
 
 
@@ -494,7 +495,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/artisdata\.weebly\.com\/");
+      var filterRegex = new RegExp("^(?:http:\/\/|https:\/\/)seafood-globalization-lab\.github\.io\/artis-manual.*");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -508,6 +509,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -826,8 +832,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./artis-about.html" class="pagination-link" aria-label="About us">
-        <span class="nav-page-text">About us</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./artis-our-model/index.html" class="pagination-link" aria-label="Our Model">
+        <span class="nav-page-text">Our Model</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

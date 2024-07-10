@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../artis-our-model/est-consumption.html" rel="next">
-<link href="../artis-our-model/disagg-trade.html" rel="prev">
+<link href="../artis-our-model/data-inputs.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -82,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../artis-our-model/index.html">Our Model</a></li><li class="breadcrumb-item"><a href="../artis-our-model/est-trade-net.html">National mass-balance</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../artis-our-model/index.html">Our Model</a></li><li class="breadcrumb-item"><a href="../artis-our-model/est-trade-net.html">Disaggregating Reported Trade</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -118,12 +147,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Welcome</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../artis-about.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">About us</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../artis-our-model/index.html" class="sidebar-item-text sidebar-link">
@@ -136,19 +159,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../artis-our-model/data-inputs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Production</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../artis-our-model/disagg-trade.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Disaggregating Reported Trade</span></a>
+ <span class="menu-text">Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../artis-our-model/est-trade-net.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">National mass-balance</span></a>
+ <span class="menu-text">Disaggregating Reported Trade</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -227,9 +244,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#national-mass-balance" id="toc-national-mass-balance" class="nav-link active" data-scroll-target="#national-mass-balance">National mass-balance</a></li>
+  <li><a href="#disaggregating-reported-trade" id="toc-disaggregating-reported-trade" class="nav-link active" data-scroll-target="#disaggregating-reported-trade">Disaggregating Reported Trade</a>
+  <ul class="collapse">
+  <li><a href="#national-mass-balance" id="toc-national-mass-balance" class="nav-link" data-scroll-target="#national-mass-balance">National mass-balance</a></li>
   <li><a href="#converting-the-product-trade-network-to-a-species-trade-network" id="toc-converting-the-product-trade-network-to-a-species-trade-network" class="nav-link" data-scroll-target="#converting-the-product-trade-network-to-a-species-trade-network">Converting the product trade network to a species trade network</a></li>
   <li><a href="#network-post-estimation-processing" id="toc-network-post-estimation-processing" class="nav-link" data-scroll-target="#network-post-estimation-processing">Network post-estimation processing</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/edit/main/artis-our-model/est-trade-net.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -239,9 +259,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Estimating species bilateral trade flows occurs in two steps: first, solving the national production-trade mass balance, and second, converting reported commodity trade flow estimates to species trade flow estimates based on the estimated species mix going into each domestic and foreign exported commodity.</p>
-<section id="national-mass-balance" class="level1">
-<h1>National mass-balance</h1>
+<section id="disaggregating-reported-trade" class="level1">
+<h1>Disaggregating Reported Trade</h1>
+<p>Estimating species bilateral trade flows occurs in two steps:</p>
+<ol type="1">
+<li>Solving the national production-trade mass balance</li>
+<li>Converting reported commodity trade flow estimates to species trade flow estimates based on the estimated species mix going into each domestic and foreign exported commodity.</li>
+</ol>
+<section id="national-mass-balance" class="level2">
+<h2 class="anchored" data-anchor-id="national-mass-balance">National mass-balance</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../images/artis_method_V4-02.png" class="img-fluid figure-img"></p>
@@ -249,14 +275,14 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>We start with the fact that exports must equal production and imports, minus consumption. Since exports are reported as commodities, we solve this mass balance problem in terms of commodities. Production data are reported for each species, so we estimate the elements of a matrix that represents the proportion of production going into each commodity. Since an imported commodity can be processed and exported as a different commodity, we also estimate the proportion of each import being converted into a different commodity. Then for a given country,</p>
-<pre><code>e = V_1∘X⋅p+V_2∘W⋅g-c+ϵ</code></pre>
-<p>If n is the number of species and m is the number of commodities, then: V_1 is a sparse (m×n) matrix with product conversion factors corresponding to the unknowns in X; X is a sparse (m×n) matrix of the proportion of each species in each commodity; p is a vector of domestic species production (n×1); V_2 is a sparse (m×m) matrix with product conversion factors corresponding to the entries of W; W is a (m×m) matrix of the processed imported commodities; g be a vector of imports (m×1), c is a vector of domestic consumption (m×1), and; ϵ is a vector of error terms (m×1).</p>
+<p><span class="math inline">\(e = V_{1} \circ X \cdot p + V_{2} \circ W \cdot g - c + \epsilon\)</span></p>
+<p>If n is the number of species and m is the number of commodities, then: <span class="math inline">\(V_{1}\)</span> is a sparse (<span class="math inline">\(m\)</span>×<span class="math inline">\(n\)</span>) matrix with product conversion factors corresponding to the unknowns in <span class="math inline">\(X\)</span>; <span class="math inline">\(X\)</span> is a sparse (<span class="math inline">\(m\)</span>×<span class="math inline">\(n\)</span>) matrix of the proportion of each species in each commodity; <span class="math inline">\(p\)</span> is a vector of domestic species production (<span class="math inline">\(n\)</span>×<span class="math inline">\(1\)</span>); <span class="math inline">\(V_{2}\)</span> is a sparse (<span class="math inline">\(m\)</span>×<span class="math inline">\(m\)</span>) matrix with product conversion factors corresponding to the entries of <span class="math inline">\(W\)</span>; <span class="math inline">\(W\)</span> is a (<span class="math inline">\(m\)</span>×<span class="math inline">\(m\)</span>) matrix of the processed imported commodities; <span class="math inline">\(g\)</span> be a vector of imports (<span class="math inline">\(m\)</span>×<span class="math inline">\(1\)</span>), <span class="math inline">\(c\)</span> is a vector of domestic consumption (<span class="math inline">\(m\)</span>×<span class="math inline">\(1\)</span>), and; <span class="math inline">\(\epsilon\)</span> is a vector of error terms (<span class="math inline">\(m\)</span>×<span class="math inline">\(1\)</span>).</p>
 <p>We compiled reported values for V_1, V_2, e, p and g, and estimate the entries of X, W, c, and ϵ. We first converted this problem to a system of linear equations. Using the property that vec(ABC)=(C^T⊗A)vec(B), we can create A_b=(y^T⊗D_m)D_V, where D_m is a diagonal matrix of ones, with dimension m and D_V is a diagonal matrix with the elements of vec(V). The vector of unknowns is then x_b=vec(Z). We then solve this system of equations with a quadratic optimization solver such that the mass balance equalities are satisfied, trade codes with higher species resolution in X are prioritized, the elements of X, W, and c are otherwise relatively even (i.e., we assume an even distribution of production among commodities unless the data suggests otherwise), that ϵ is as small as possible (i.e., minimize the error), and all unknowns are greater than or equal to zero.</p>
 <p>Positive error terms represent situations where reported production and imports cannot explain exports. This can occur due to under- or un-reported production or imports, over-reporting of exports, errors in the live weight conversion factors, or inconsistencies in the year production and trade are attributed to.</p>
 <p>We solve the mass-balance problem for each country-year-HS version combination using the Python package “solve_qp.” The estimated species mixes in national production (X), processing of imports (W) and the error term (ϵ) are passed to the next stage of the analysis.</p>
 </section>
-<section id="converting-the-product-trade-network-to-a-species-trade-network" class="level1">
-<h1>Converting the product trade network to a species trade network</h1>
+<section id="converting-the-product-trade-network-to-a-species-trade-network" class="level2">
+<h2 class="anchored" data-anchor-id="converting-the-product-trade-network-to-a-species-trade-network">Converting the product trade network to a species trade network</h2>
 <p>First, we compute the mix of species going into each trade code for each country’s domestic exports. To do this, we reweight X so it represents the proportion of each species in each code rather than the proportion of production of a species going into each product. Each country’s estimated X matrix is multiplied by p to get the mass of each species in each commodity. The total mass of each commodity is found by summing all the species volume grouped by commodity and the proportion of each species within a commodity is then calculated by dividing all volumes by their respective commodity mass totals.</p>
 <p>Each country’s exports can be sourced from domestic production, imported products that are subsequently exported, with or without processing (i.e., foreign exports), or from an unknown source (i.e., error exports). Since the mix of these sources cannot be derived from the mass balance equation alone, we calculate a range for sourcing following33. We calculate the maximum possible domestic exports by taking the minimum between the domestic production and total exports. Similarly, we calculated the maximum volume of exports sourced from imports, by taking the minimum between each product’s imports (accounting for processing estimated by W) and exports. The minimum domestic exports are calculated as the minimum between production and the difference in exports and the maximum calculated foreign exports, with the remainder as error exports (minimum foreign exports are calculated in an analogous way). The above results represent midpoint estimates.</p>
 <ol start="2" type="1">
@@ -289,8 +315,8 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
-<section id="network-post-estimation-processing" class="level1">
-<h1>Network post-estimation processing</h1>
+<section id="network-post-estimation-processing" class="level2">
+<h2 class="anchored" data-anchor-id="network-post-estimation-processing">Network post-estimation processing</h2>
 <p>Once the species trade flow network is built, we remove all volumes traded below 0.1 tonnes, as the multiplication by small proportions generates overly specific, and likely unrealistic, small flows.</p>
 <p>Next, to generate a complete time series, we need to compile estimates from across the HS versions. All HS versions are reported since they have been created, for example HS96 reports trade from 1996 until the present. However, the more recent HS versions generally include more specific trade codes and therefore are preferred over older versions. It takes a few years before an HS version is fully adopted, resulting in lower total trade volumes for the first few years an HS version is available compared to the previous HS versions. To provide the most accurate representation of trade, we create a continuous time series by adopting the most recent HS version available after its total trade has met up with the total trade reported under previous HS versions. This results in HS96 being used for 1996 - 2004, HS02 for 2004 - 2009, HS07 for 2010 - 2012 and HS12 for 2013 - 2020.</p>
 <div class="quarto-figure quarto-figure-center">
@@ -300,9 +326,22 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>To check the reasonability of estimated trade flows, we first confirmed that all trade flows sum to the original BACI trade flows when grouped by exporter, importer, year, HS code and expressed as product weight. Note that some flows are slightly lower due to the 0.1 tonne threshold (maximum difference of 72 tonnes representing a percent difference of 0.19%). Second, we confirmed that the estimates from the mass balance problem satisfy the problem constraints. Third, we checked that domestic exports of species in live weight equivalent do not exceed production of that species. Fourth, we confirmed that exports of foreign source do not exceed imports of that species. Only 1.4% of cases across all years showed a country’s foreign export of a species exceeded the total import of that species.</p>
-<p>Note: The original text this section is based on is from Gephart et al.&nbsp;(2024) <em>Nature Communications</em> [add link]. Please reference that paper when referencing this information: [Insert reference]</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The original text this section is based on is from Gephart et al.&nbsp;(2024) <em>Nature Communications</em> [add link]. Please reference that paper when referencing this information: [Insert reference]</p>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -542,7 +581,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/artisdata\.weebly\.com\/");
+      var filterRegex = new RegExp("^(?:http:\/\/|https:\/\/)seafood-globalization-lab\.github\.io\/artis-manual.*");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -556,6 +595,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -872,8 +916,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../artis-our-model/disagg-trade.html" class="pagination-link" aria-label="Disaggregating Reported Trade">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Disaggregating Reported Trade</span>
+      <a href="../artis-our-model/data-inputs.html" class="pagination-link" aria-label="Data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Data</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

@@ -118,12 +118,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Welcome</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../artis-about.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">About us</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../artis-our-model/index.html" class="sidebar-item-text sidebar-link">
@@ -136,19 +130,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../artis-our-model/data-inputs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Production</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../artis-our-model/disagg-trade.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Disaggregating Reported Trade</span></a>
+ <span class="menu-text">Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../artis-our-model/est-trade-net.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">National mass-balance</span></a>
+ <span class="menu-text">Disaggregating Reported Trade</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1124,7 +1112,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/artisdata\.weebly\.com\/");
+      var filterRegex = new RegExp("^(?:http:\/\/|https:\/\/)seafood-globalization-lab\.github\.io\/artis-manual.*");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -1138,6 +1126,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
