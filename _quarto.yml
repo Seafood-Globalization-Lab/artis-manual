@@ -33,8 +33,6 @@ website:
     contents:
       - href: index.qmd
         text: Welcome
-      - href: artis-about.qmd
-        text: About us
       - section: artis-our-model/index.qmd
         contents:
           - artis-our-model/data-inputs.qmd

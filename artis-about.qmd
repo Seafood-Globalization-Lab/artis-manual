@@ -1,9 +1,0 @@
----
-title: "About Us"
----
-
-{{< lipsum 1 >}}
-
-## Section
-
-{{< lipsum 2 >}}
