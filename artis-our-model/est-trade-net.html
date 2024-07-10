@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.53">
+<meta name="generator" content="quarto-1.5.54">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -242,6 +242,12 @@ ul.task-list li input[type="checkbox"] {
 <p>Estimating species bilateral trade flows occurs in two steps: first, solving the national production-trade mass balance, and second, converting reported commodity trade flow estimates to species trade flow estimates based on the estimated species mix going into each domestic and foreign exported commodity.</p>
 <section id="national-mass-balance" class="level1">
 <h1>National mass-balance</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/artis_method_V4-02.png" class="img-fluid figure-img"></p>
+<figcaption>Stylized representation of mass-balance problem</figcaption>
+</figure>
+</div>
 <p>We start with the fact that exports must equal production and imports, minus consumption. Since exports are reported as commodities, we solve this mass balance problem in terms of commodities. Production data are reported for each species, so we estimate the elements of a matrix that represents the proportion of production going into each commodity. Since an imported commodity can be processed and exported as a different commodity, we also estimate the proportion of each import being converted into a different commodity. Then for a given country,</p>
 <pre><code>e = V_1∘X⋅p+V_2∘W⋅g-c+ϵ</code></pre>
 <p>If n is the number of species and m is the number of commodities, then: V_1 is a sparse (m×n) matrix with product conversion factors corresponding to the unknowns in X; X is a sparse (m×n) matrix of the proportion of each species in each commodity; p is a vector of domestic species production (n×1); V_2 is a sparse (m×m) matrix with product conversion factors corresponding to the entries of W; W is a (m×m) matrix of the processed imported commodities; g be a vector of imports (m×1), c is a vector of domestic consumption (m×1), and; ϵ is a vector of error terms (m×1).</p>
@@ -263,6 +269,12 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>For these three estimates (maximum, minimum and midpoint) we calculate the domestic and foreign weights by dividing domestic export values and foreign export values by total export. We then distribute each country’s exports into domestic, foreign and error exports by multiplying exports by domestic, foreign and error proportions (Fig S8). For each export source, we apply a different species mix to each HS code based on the estimated source country. For domestic exports, we use the exporting country’s estimated X matrix (Fig S9). For error exports, the geographical origin is unknown and may arise from unreported production, so we cannot meaningfully assign a species mix to the code. Consequently, we identify the lowest taxonomic resolution common to all species within the code and assign that name to the trade flow.</p>
 <p>For foreign exports, we trace the origins back in the supply chain a maximum of three steps (i.e., producer to intermediate exporter to final exporter to final importer), with any remaining foreign export or flows less than 1 tonne left as “unknown” source (Supplementary Fig. Fig S88). The small flows left unresolved comprise around 1% of total trade (Supplementary Fig. 8Fig S10). To link an export of foreign origin to its source country, we use a reweighted version of W to estimate the original imported product codes and connect those to their source country, using a proportional breakdown of each country’s imports of that code. Foreign exports of one country that originated from foreign exports of another country are isolated and undergo the process above to identify the source country. The species mix for foreign trade flows are based on either the source country’s estimated X matrix or the method described above for error exports (Supplementary Fig.9Fig S9).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/artis_method_V4-03.png" class="img-fluid figure-img"></p>
+<figcaption>Stylized representation of conversion of product trade network to species trade network</figcaption>
+</figure>
+</div>
 </section>
 <section id="network-post-estimation-processing" class="level1">
 <h1>Network post-estimation processing</h1>

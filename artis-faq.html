@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.53">
+<meta name="generator" content="quarto-1.5.54">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -276,7 +276,14 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="why-are-there-sudden-spikes" class="level2">
 <h2 class="anchored" data-anchor-id="why-are-there-sudden-spikes">Why are there sudden spikes?</h2>
-<p>There are two common causes of artificial spikes. The first is related to improved resolution in a country’s production data. If a country previously reported production at the genus level, for example, but then starts reporting production at the species level, it could create a spike in the trade associated with the species name. In this case, one could look for a corresponding drop in the genus level data. The second reason is related to change in the HS code system. HS codes are updated every 5 years. To create a continuous time series, we default to providing</p>
+<p>There are two common causes of artificial spikes. The first is related to improved resolution in a country’s production data. If a country previously reported production at the genus level, for example, but then starts reporting production at the species level, it could create a spike in the trade associated with the species name. In this case, one could look for a corresponding drop in the genus level data.</p>
+<p>The second reason is related to change in the HS code system. HS codes are updated every 5 years. To create a continuous time series, we default to selecting one HS version for each year. There are slight lags in reporting under each new HS version (see figure below), so our custom time series adopts the most recent version once the newer version’s reporting approximately sums to the previous version’s reporting. However, changes in the set of HS product codes can create artificial spikes in time series. For example, if a species is traded under a broad code, it may not be well identified in the model, but if that species then gets a more specific code under a new HS version, the model will be able to distinguish that it is in fact that species being traded.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/si_fig7_compare_hsversions.png" class="img-fluid figure-img"></p>
+<figcaption>Comparison of trade totals by HS version</figcaption>
+</figure>
+</div>
 </section>
 <section id="why-are-there-multiple-rows-for-a-single-hs-product-code-in-the-code-descriptions-metadata-file" class="level2">
 <h2 class="anchored" data-anchor-id="why-are-there-multiple-rows-for-a-single-hs-product-code-in-the-code-descriptions-metadata-file">Why are there multiple rows for a single HS product code in the code descriptions metadata file?</h2>
