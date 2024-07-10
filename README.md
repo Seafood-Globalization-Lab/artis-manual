@@ -1,2 +1,2 @@
-# Manual for Aquatic Resource Trade in Species (ARTIS) Model
+# Manual for the Aquatic Resource Trade in Species (ARTIS) Model
 
