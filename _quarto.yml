@@ -47,6 +47,8 @@ website:
           - artis-infrastructure/sql.qmd
           - artis-infrastructure/api.qmd
           - artis-infrastructure/archive.qmd
+      - href: explore-artis.qmd
+        text: exploreARTIS package
       - href: artis-faq.qmd
         text: FAQs
 
