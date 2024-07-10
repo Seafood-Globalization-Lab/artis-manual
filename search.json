@@ -146,6 +146,16 @@
     ]
   },
   {
+    "objectID": "artis-faq.html#why-are-some-seafood-products-missing",
+    "href": "artis-faq.html#why-are-some-seafood-products-missing",
+    "title": "ARTIS Manual",
+    "section": "Why are some seafood products missing?",
+    "text": "Why are some seafood products missing?\nThe primary set of seafood products that are not included are those considered byproducts or co-products of another seafood product (e.g., caviar, shark fins, offal, etc.). This is necessary to avoid double counting. Since all products must be converted into its live weight equivalent to solve the mass-balance problem, converting both a primary product and its coproduct back to its full live weight equivalent would result in the fish being counted twice. Of course in principle, if one knew how often the primary product and coproduct are both produced (over space and time), then both products could be included without double counting. However, to the best of our knowledge such information is not currently available.",
+    "crumbs": [
+      "FAQs"
+    ]
+  },
+  {
     "objectID": "artis-faq.html#is-there-price-data-available",
     "href": "artis-faq.html#is-there-price-data-available",
     "title": "ARTIS Manual",

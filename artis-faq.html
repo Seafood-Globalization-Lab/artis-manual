@@ -221,6 +221,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#what-is-the-effect-of-products-in-transit-through-an-intermediate-country" id="toc-what-is-the-effect-of-products-in-transit-through-an-intermediate-country" class="nav-link" data-scroll-target="#what-is-the-effect-of-products-in-transit-through-an-intermediate-country">What is the effect of products in transit through an intermediate country?</a></li>
   <li><a href="#why-are-there-sudden-spikes" id="toc-why-are-there-sudden-spikes" class="nav-link" data-scroll-target="#why-are-there-sudden-spikes">Why are there sudden spikes?</a></li>
   <li><a href="#why-are-there-multiple-rows-for-a-single-hs-product-code-in-the-code-descriptions-metadata-file" id="toc-why-are-there-multiple-rows-for-a-single-hs-product-code-in-the-code-descriptions-metadata-file" class="nav-link" data-scroll-target="#why-are-there-multiple-rows-for-a-single-hs-product-code-in-the-code-descriptions-metadata-file">Why are there multiple rows for a single HS product code in the code descriptions metadata file?</a></li>
+  <li><a href="#why-are-some-seafood-products-missing" id="toc-why-are-some-seafood-products-missing" class="nav-link" data-scroll-target="#why-are-some-seafood-products-missing">Why are some seafood products missing?</a></li>
   <li><a href="#is-there-price-data-available" id="toc-is-there-price-data-available" class="nav-link" data-scroll-target="#is-there-price-data-available">Is there price data available?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/edit/main/artis-faq.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -276,6 +277,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="why-are-there-multiple-rows-for-a-single-hs-product-code-in-the-code-descriptions-metadata-file" class="level2">
 <h2 class="anchored" data-anchor-id="why-are-there-multiple-rows-for-a-single-hs-product-code-in-the-code-descriptions-metadata-file">Why are there multiple rows for a single HS product code in the code descriptions metadata file?</h2>
 <p>Products table check why there are duplicates (usually caused by multiple presentations or states associated with one code, 030719, H5 probably HS12, 20 codes with 2 states or duplicates). Duplicates should be removed before joining.</p>
+</section>
+<section id="why-are-some-seafood-products-missing" class="level2">
+<h2 class="anchored" data-anchor-id="why-are-some-seafood-products-missing">Why are some seafood products missing?</h2>
+<p>The primary set of seafood products that are not included are those considered byproducts or co-products of another seafood product (e.g., caviar, shark fins, offal, etc.). This is necessary to avoid double counting. Since all products must be converted into its live weight equivalent to solve the mass-balance problem, converting both a primary product and its coproduct back to its full live weight equivalent would result in the fish being counted twice. Of course in principle, if one knew how often the primary product and coproduct are both produced (over space and time), then both products could be included without double counting. However, to the best of our knowledge such information is not currently available.</p>
 </section>
 <section id="is-there-price-data-available" class="level2">
 <h2 class="anchored" data-anchor-id="is-there-price-data-available">Is there price data available?</h2>
