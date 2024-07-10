@@ -36,7 +36,6 @@ website:
       - section: artis-our-model/index.qmd
         contents:
           - artis-our-model/data-inputs.qmd
-          - artis-our-model/disagg-trade.qmd
           - artis-our-model/est-trade-net.qmd
           - artis-our-model/est-consumption.qmd
       - section: artis-run-model/index.qmd
@@ -50,6 +49,9 @@ website:
           - artis-infrastructure/archive.qmd
       - href: artis-faq.qmd
         text: FAQs
+
+link-external-newwindow: true
+link-external-filter: '^(?:http:\/\/|https:\/\/)seafood-globalization-lab\.github\.io\/artis-manual.*'
 
 
 format:
