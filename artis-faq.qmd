@@ -36,6 +36,9 @@ The second reason is related to change in the HS code system. HS codes are updat
 ## Why are there multiple rows for a single HS product code in the code descriptions metadata file? 
 Products table check why there are duplicates (usually caused by multiple presentations or states associated with one code, 030719, H5 probably HS12, 20 codes with 2 states or duplicates). Duplicates should be removed before joining. 
 
+## Why are some seafood products missing? 
+The primary set of seafood products that are not included are those considered byproducts or co-products of another seafood product (e.g., caviar, shark fins, offal, etc.). This is necessary to avoid double counting. Since all products must be converted into its live weight equivalent to solve the mass-balance problem, converting both a primary product and its coproduct back to its full live weight equivalent would result in the fish being counted twice. Of course in principle, if one knew how often the primary product and coproduct are both produced (over space and time), then both products could be included without double counting. However, to the best of our knowledge such information is not currently available. 
+
 ## Is there price data available? 
 Price data generally refers to a single transaction, as the price of a product varies throughout a year (or month or even a day). True price data does exist for some products (e.g., through [Urner Barry](https://www.urnerbarry.com/Markets#seafood)), but people sometimes mean they are looking for unit value data (value/volume) as a proxy for the average price over the period. This can be generated from UN Comtrade or BACI data and we do have an ancillary file containing these values. However, we have not yet included this information in the core database because the data has not been fully explored yet. 
 
