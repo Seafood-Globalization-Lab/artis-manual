@@ -25,7 +25,7 @@ if(!dir.exists(file.path("artis-run-model", "images"))){
 
 
 
-# Copy content from artis-hpc github repo -------------------------------------------
+# Copy content from artis-hpc github repo ------------------------------------
 
 # Artis HPC Repo README - download if it doesn't exist
 if(!file.exists(file.path("external-content", 
@@ -57,8 +57,50 @@ if(!dir.exists(file.path("artis-infrastructure", "images"))){
 }
 
 
+# Copy content from artis-API github repo -------------------------------
 
-# Pull external images (all repos above) ----------------------------------------------
+# Artis API Repo README - download if it doesn't exist
+if(!file.exists(file.path("external-content", 
+                          "artis-api-readme.md"))){
+  download.file("https://raw.githubusercontent.com/Seafood-Globalization-Lab/ARTIS-API/main/readme.md", 
+                file.path("external-content", 
+                          "artis-api-readme.md"))
+  message("downloaded artis-api readme into external-content/ dir")
+}
+
+# Artis API Repo README table documentation - download if it doesn't exist
+if(!file.exists(file.path("external-content", 
+                          "artis-api-making_requests.md"))){
+  download.file("https://raw.githubusercontent.com/Seafood-Globalization-Lab/ARTIS-API/main/making_requests.md", 
+                file.path("external-content", 
+                          "artis-api-making_requests.md"))
+  message("downloaded artis-api making_requests into external-content/ dir")
+}
+
+if(!file.exists(file.path("external-content", 
+                          "artis-api-table_outlines.md"))){
+  download.file("https://raw.githubusercontent.com/Seafood-Globalization-Lab/ARTIS-API/main/table_outlines.md", 
+                file.path("external-content", 
+                          "artis-api-table_outlines.md"))
+  message("downloaded artis-api table_outlines into external-content/ dir")
+}
+
+# Use "artis-infrastructure" directory to store associated README.md images
+
+
+# Copy content from exploreARTIS github repo -------------------------------
+
+# Artis Model Repo README - download if it doesn't exist
+if(!file.exists(file.path("external-content", 
+                          "exploreARTIS-readme.md"))){
+  download.file("https://raw.githubusercontent.com/Seafood-Globalization-Lab/exploreARTIS/main/README.md", 
+                file.path("external-content", 
+                          "exploreARTIS-readme.md"))
+  message("downloaded exploreARTIS readme into external-content/ dir")
+}
+
+
+# Pull external images (all repos above) ---------------------------------------
 # run shell script to import images folder from repos
 system(file.path("scripts", "get_images.sh"))
 
