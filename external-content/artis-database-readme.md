@@ -18,9 +18,13 @@
 3. Click on the "Resources" tab
 ![](./images/heroku_resources_page.png)
 4. Click on "Heroku Postgres" in the list of resources available (this should open a new browser tab)
-![](./images/heroku_postgres.png)
+<p align="center">
+  <img src="./images/heroku_postgres.png" alt="drawing" width="75%"/>
+</p>
 5. Click on the "Credentials" tab
-![](./images/heroku_postgres_credentials_page.png)
+<p align="center">
+  <img src="./images/heroku_postgres_credentials_page.png" alt="drawing" width="50%"/>
+</p>
 6. Click on the arrow by "default 1 app" (this should provide a drop down set of options and details)
 7. Click on the "show" button to reveal the password for the database
 
@@ -29,13 +33,17 @@
 1. Open pgAdmin
 2. Right click on the Server list on the left hand side
 3. Select Servers > Register > Server (this will open a new smaller window with additional settings)
-![](./images/pgAdmin_connect_server.png)
-
+<p align="center">
+  <img src="./images/pgAdmin_connect_server.png" alt="drawing" width="50%"/>
+</p>
 4. Enter a server name (this will only be a local name reference) like "HEROKU_ARTIS"
-![](./images/pgAdmin_connect_server_general.png)
-
+<p align="center">
+  <img src="./images/pgAdmin_connect_server_general.png" alt="drawing" width="50%"/>
+</p>
 5. Click on the "Connection" tab
-![](./images/pgAdmin_connection_tab.png)
+<p align="center">
+  <img src="./images/pgAdmin_connection_tab.png" alt="drawing" width="50%"/>
+</p>
 The details needed to fill in the following information can be found on the Heroku credentials page we found earlier:
 
 6. Enter the host name under the "Host name/address"
@@ -45,8 +53,9 @@ The details needed to fill in the following information can be found on the Hero
 10. Enter the password (make sure to click reveal in Heroku) under the "Password"
 11. Select Save password for future use
 12. Click on "Advanced" tab
-![](./images/pgAdmin_connection_advanced_tab.png)
-
+<p align="center">
+  <img src="./images/pgAdmin_connection_advanced_tab.png" alt="drawing" width="50%"/>
+</p>
 13. Enter the database name under the "DB restriction" field
 (There should now be a new database connection in your pgAdmin dropdown)
 
@@ -55,41 +64,49 @@ The details needed to fill in the following information can be found on the Hero
 2. Click the arrow by the server connection name (this should create provide a drop down with options and the 1 database)
 3. Right-click on the database name in drop down options
 4. Select the "Query tool" option (this should open a window in pgAdmin)
-![](./images/pgAdmin_query_tool.png)
-
-
+<p align="center">
+  <img src="./images/pgAdmin_query_tool.png" alt="drawing" width="30%"/>
+</p>
 5. Run the SQL command "SELECT * FROM users;" (this should return immediately, with a table of the users that have access to the ARTIS API)
-
 
 ### Add new data to cloud database
 1. Find the tables drop down under the database connection options on the left hand side of pgAdmin
-![](./images/pgAdmin_tables_dropdown.png)
+<p align="center">
+  <img src="./images/pgAdmin_tables_dropdown.png" alt="drawing" width="30%"/>
+</p>
 
 Repeat the following instructions for each table you want to update:
 
 1. If the table already exists:
  - Right click on the existing table and select the "Delete/Drop" option
- ![](./images/pgAdmin_delete_table.png)
- 
+<p align="center">
+  <img src="./images/pgAdmin_delete_table.png" alt="drawing" width="30%"/>
+</p>
 2. Right-click on the database name in drop down options
 3. Select the "Query tool" option (this should open a window in pgAdmin)
 4. Paste and run the SQL script for creating the table you are interested in updating
 5. Right-click the "Tables" dropdown and select "Refresh"
-![](./images/pgAdmin_tables_refresh.png)
-
+<p align="center">
+  <img src="./images/pgAdmin_tables_refresh.png" alt="drawing" width="30%"/>
+</p>
 6. Right-click on the table you just re-created, and select "Import/Export Data" (this will open a new dialog box)
-![](./images/pgAdmin_table_import.png)
-
+<p align="center">
+  <img src="./images/pgAdmin_table_import.png" alt="drawing" width="30%"/>
+</p>
 7. Confirm the "Import" tab is selected and use the "Filename" field to find the table data you would like to include.
-![](./images/pgAdmin_import_general.png)
-
-9. Select the "Options" tab
-8. Confirm the "Header" toggle is activated and the "NULL Strings" field has the value "NA"
-![](./images/pgAdmin_import_options.png)
-
-9. Select the "Columns" tab
-10. Make sure the "record_id" column IS NOT part of the "Columns to import" field. If it is please delete this column from the list.
-![](./images/pgAdmin_import_columns.png)
+<p align="center">
+  <img src="./images/pgAdmin_import_general.png" alt="drawing" width="50%"/>
+</p>
+8. Select the "Options" tab
+9. Confirm the "Header" toggle is activated and the "NULL Strings" field has the value "NA"
+<p align="center">
+  <img src="./images/pgAdmin_import_options.png" alt="drawing" width="50%"/>
+</p>
+10. Select the "Columns" tab
+11. Make sure the "record_id" column IS NOT part of the "Columns to import" field. If it is please delete this column from the list.
+<p align="center">
+  <img src="./images/pgAdmin_import_columns.png" alt="drawing" width="50%"/>
+</p>
 
 ## Directory and File Structure
 
