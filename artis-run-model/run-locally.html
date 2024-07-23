@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.54">
+<meta name="generator" content="quarto-1.5.55">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -201,6 +201,12 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../explore-artis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">exploreARTIS package</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../artis-faq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQs</span></a>
   </div>
@@ -216,19 +222,19 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#running-locally" id="toc-running-locally" class="nav-link active" data-scroll-target="#running-locally">Running Locally</a></li>
-  <li><a href="#artis-model" id="toc-artis-model" class="nav-link" data-scroll-target="#artis-model">artis-model</a></li>
-  <li><a href="#system-requirements" id="toc-system-requirements" class="nav-link" data-scroll-target="#system-requirements">System Requirements</a></li>
-  <li><a href="#installation-guide" id="toc-installation-guide" class="nav-link" data-scroll-target="#installation-guide">Installation Guide</a>
+  <li><a href="#artis-model" id="toc-artis-model" class="nav-link" data-scroll-target="#artis-model">ARTIS Model</a>
   <ul class="collapse">
+  <li><a href="#installation-guide" id="toc-installation-guide" class="nav-link" data-scroll-target="#installation-guide">Installation Guide</a></li>
   <li><a href="#creating-python-virtual-environment" id="toc-creating-python-virtual-environment" class="nav-link" data-scroll-target="#creating-python-virtual-environment">Creating python virtual environment</a></li>
-  </ul></li>
   <li><a href="#r-installation-instructions" id="toc-r-installation-instructions" class="nav-link" data-scroll-target="#r-installation-instructions">R installation instructions</a></li>
-  <li><a href="#running-the-model" id="toc-running-the-model" class="nav-link" data-scroll-target="#running-the-model">Running the model</a></li>
+  <li><a href="#running-the-model-demo" id="toc-running-the-model-demo" class="nav-link" data-scroll-target="#running-the-model-demo">Running the model demo</a></li>
   <li><a href="#outputs" id="toc-outputs" class="nav-link" data-scroll-target="#outputs">Outputs</a></li>
   <li><a href="#methods-and-workflow" id="toc-methods-and-workflow" class="nav-link" data-scroll-target="#methods-and-workflow">Methods and Workflow</a>
   <ul class="collapse">
   <li><a href="#high-level-overview" id="toc-high-level-overview" class="nav-link" data-scroll-target="#high-level-overview">High level overview</a></li>
   <li><a href="#code-workflows" id="toc-code-workflows" class="nav-link" data-scroll-target="#code-workflows">Code workflows</a></li>
+  </ul></li>
+  <li><a href="#system-requirements" id="toc-system-requirements" class="nav-link" data-scroll-target="#system-requirements">System Requirements</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/edit/main/artis-run-model/run-locally.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -243,10 +249,69 @@ ul.task-list li input[type="checkbox"] {
 <h1>Running Locally</h1>
 </section>
 <section id="artis-model" class="level1">
-<h1>artis-model</h1>
+<h1>ARTIS Model</h1>
+<p>The ARTIS model codebase. This repository contains the demo version and the full model.</p>
+<section id="installation-guide" class="level2">
+<h2 class="anchored" data-anchor-id="installation-guide">Installation Guide</h2>
+<p>This project uses Python 3.10.9 which can be downloaded <a href="https://www.python.org/downloads/release/python-3109/">here</a> and RStudio which can be downloaded <a href="https://posit.co/download/rstudio-desktop/">here</a>.</p>
+<p>It should take approximately 10 minutes to run this full installation.</p>
 </section>
-<section id="system-requirements" class="level1">
-<h1>System Requirements</h1>
+<section id="creating-python-virtual-environment" class="level2">
+<h2 class="anchored" data-anchor-id="creating-python-virtual-environment">Creating python virtual environment</h2>
+<p><em>NOTE</em>: This protocol may not be successful for every individual local machine. The interaction in package versions and computer architecture (<em>i.e.</em> arm64 M1, M2 chips) may complicate this virtual environment set up. We are working on setting up a portable docker image to increase the reproducibility of this code.</p>
+<ol type="1">
+<li>Open the artis-model repository in RStudio.</li>
+<li>Click on the terminal tab.</li>
+<li>Type <code>pwd</code> in the terminal.</li>
+<li>Copy the result of the “pwd” terminal command.</li>
+<li>Type <code>python3 -m venv [RESULT FROM pwd]/venv</code> (ie. <code>python3 -m venv /home/artis-model/venv</code>)</li>
+<li>Type <code>source venv/bin/activate</code> in terminal.</li>
+<li>Type <code>pip3 install qpsolvers</code> in terminal.</li>
+<li>Type <code>pip3 install quadprog</code> in terminal.</li>
+<li>Type <code>pip3 install cvxopt</code> in terminal.</li>
+<li>Confirm you have successfully installed the packages qpsolvers, quadprog, cvxopt by running <code>pip list</code>.</li>
+<li>Type <code>deactivate</code> in terminal.</li>
+<li>Click on the Console tab.</li>
+</ol>
+<p><em>Note</em>: You only need to install the solvers the first time you run this code. Warnings about the latest version of pip may also appear during the installation - these are okay, but errors are not.</p>
+</section>
+<section id="r-installation-instructions" class="level2">
+<h2 class="anchored" data-anchor-id="r-installation-instructions">R installation instructions</h2>
+<ol type="1">
+<li>Click “Build” on the build tab on the top right hand side corner of RStudio.</li>
+<li>Click on the dropdown arrow in the “Install” subtab within the “Build” window.</li>
+<li>Click the option “Configure Build Tools…”</li>
+<li>Make sure options mirror the image below and click OK.
+<p align="center">
+<img src="./images/artis_r_build_config_options.png" alt="drawing" width="75%">
+</p></li>
+<li>Click on the dropdown arrow in the “Install” subtab and select the option “Clean and Install”</li>
+</ol>
+</section>
+<section id="running-the-model-demo" class="level2">
+<h2 class="anchored" data-anchor-id="running-the-model-demo">Running the model demo</h2>
+<p>Running the demo for the ARTIS model should take approximately 10 minutes. To run the demo for ARTIS run the <code>02-artis-pipeline.R</code> script and then run the <code>04-build-artis-timeseries.R</code> script.</p>
+</section>
+<section id="outputs" class="level2">
+<h2 class="anchored" data-anchor-id="outputs">Outputs</h2>
+<p>The outputs of the demo will appear in the <code>demo/outputs</code> directory. Within this folder <code>demo/outputs/custom_ts</code> will contain all the final files that if run on the full model inputs would be used to create the results of the ARTIS research paper.</p>
+<p>Please find below descriptions of main files: - <code>demo/outputs/custom_ts/mid_custom_ts.csv</code>: This is the demo version of the main ARTIS trade records table. - <code>demo/outputs/custom_ts/summary_consumption_midpoint.csv</code>: This is the demo version of the main ARTIS seafood consumption records table.</p>
+</section>
+<section id="methods-and-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="methods-and-workflow">Methods and Workflow</h2>
+<section id="high-level-overview" class="level3">
+<h3 class="anchored" data-anchor-id="high-level-overview">High level overview</h3>
+<p>The following diagrams describes how ARTIS trade records are obtained.</p>
+<p><img src="./images/disaggregating_trade_records.png" class="img-fluid" alt="Disaggregating Trade Records"> <img src="./images/building_trade_records_back_up.png" class="img-fluid" alt="Aggregating Trade Records back up"> <img src="./images/consumption_workflow.png" class="img-fluid" alt="Consumption Workflow"></p>
+</section>
+<section id="code-workflows" class="level3">
+<h3 class="anchored" data-anchor-id="code-workflows">Code workflows</h3>
+<p>The following diagrams describe the how the codebase follows the workflow illustrated above.</p>
+<p><img src="./images/model_inputs_creation.png" class="img-fluid" alt="Cleaning data diagram"> <img src="./images/country_mass_balance_solution_creation.png" class="img-fluid" alt="Mass balance solutions"> <img src="./images/create_artis_codeflow.png" class="img-fluid" alt="Creating ARTIS codeflow"></p>
+</section>
+</section>
+<section id="system-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="system-requirements">System Requirements</h2>
 <ul>
 <li>Platform: x86_64-apple-darwin17.0 (64-bit)</li>
 <li>Running under: macOS Ventura 13.3.1</li>
@@ -291,60 +356,6 @@ ul.task-list li input[type="checkbox"] {
 <li>setuptools 65.6.3</li>
 </ul></li>
 </ul>
-</section>
-<section id="installation-guide" class="level1">
-<h1>Installation Guide</h1>
-<p>This project uses Python 3.10.9 which can be downloaded <a href="https://www.python.org/downloads/release/python-3109/">here</a> and RStudio which can be downloaded <a href="https://posit.co/download/rstudio-desktop/">here</a>.</p>
-<p>It should take approximately 10 minutes to run this full installation.</p>
-<section id="creating-python-virtual-environment" class="level2">
-<h2 class="anchored" data-anchor-id="creating-python-virtual-environment">Creating python virtual environment</h2>
-<ol type="1">
-<li>Open the artis-model repository in RStudio.</li>
-<li>Click on the terminal tab.</li>
-<li>Type “pwd” in the terminal.</li>
-<li>Copy the result of the “pwd” terminal command.</li>
-<li>Type “python3 -m venv [RESULT FROM pwd]/venv” (ie. “python3 -m venv /home/artis-model/venv”)</li>
-<li>Type “source venv/bin/activate” in terminal.</li>
-<li>Type “pip3 install qpsolvers” in terminal.</li>
-<li>Type “pip3 install quadprog” in terminal.</li>
-<li>Type “pip3 install cvxopt” in terminal.</li>
-<li>Confirm you have successfully installed the packages qpsolvers, quadprog, cvxopt by running “pip list”.</li>
-<li>Type “deactivate” in terminal.</li>
-<li>Click on the Console tab.</li>
-</ol>
-<p>Note that you only need to install the solvers the first time you run this code. Warnings about the latest version of pip may also appear during the installation - these are okay, but errors are not.</p>
-</section>
-</section>
-<section id="r-installation-instructions" class="level1">
-<h1>R installation instructions</h1>
-<ol type="1">
-<li>Click “Build” on the build tab on the top right hand side corner of RStudio.</li>
-<li>Click on the dropdown arrow in the “Install” subtab within the “Build” window.</li>
-<li>Click the option “Configure Build Tools…”</li>
-<li>Make sure options mirror the image below and click OK. <img src="./images/artis_r_build_config_options.png" class="img-fluid" alt="Build configuration options"></li>
-<li>Click on the dropdown arrow in the “Install” subtab and select the option “Clean and Install”</li>
-</ol>
-</section>
-<section id="running-the-model" class="level1">
-<h1>Running the model</h1>
-<p>Running the demo for the ARTIS model should take approximately 10 minutes. To run the demo for ARTIS run the <code>02-artis-pipeline.R</code> script and then run the <code>04-build-artis-timeseries.R</code> script.</p>
-</section>
-<section id="outputs" class="level1">
-<h1>Outputs</h1>
-<p>The outputs of the demo will appear in the “demo/outputs” directory. Within this folder “demo/outputs/custom_ts” will contain all the final files that if run on the full model inputs would be used to create the results of the ARTIS research paper.</p>
-<p>Please find below descriptions of main files: - “demo/outputs/custom_ts/mid_custom_ts.csv”: This is the demo version of the main ARTIS trade records table. - “demo/outputs/custom_ts/summary_consumption_midpoint.csv”: This is the demo version of the main ARTIS seafood consumption records table.</p>
-</section>
-<section id="methods-and-workflow" class="level1">
-<h1>Methods and Workflow</h1>
-<section id="high-level-overview" class="level2">
-<h2 class="anchored" data-anchor-id="high-level-overview">High level overview</h2>
-<p>The following diagrams describes how ARTIS trade records are obtained.</p>
-<p><img src="./images/disaggregating_trade_records.png" class="img-fluid" alt="Disaggregating Trade Records"> <img src="./images/building_trade_records_back_up.png" class="img-fluid" alt="Aggregating Trade Records back up"> <img src="./images/consumption_workflow.png" class="img-fluid" alt="Consumption Workflow"></p>
-</section>
-<section id="code-workflows" class="level2">
-<h2 class="anchored" data-anchor-id="code-workflows">Code workflows</h2>
-<p>The following diagrams describe the how the codebase follows the workflow illustrated above.</p>
-<p><img src="./images/model_inputs_creation.png" class="img-fluid" alt="Cleaning data diagram"> <img src="./images/country_mass_balance_solution_creation.png" class="img-fluid" alt="Mass balance solutions"> <img src="./images/create_artis_codeflow.png" class="img-fluid" alt="Creating ARTIS codeflow"></p>
 
 
 </section>

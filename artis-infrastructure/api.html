@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.54">
+<meta name="generator" content="quarto-1.5.55">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -201,6 +201,12 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../explore-artis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">exploreARTIS package</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../artis-faq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQs</span></a>
   </div>
@@ -216,6 +222,12 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#api" id="toc-api" class="nav-link active" data-scroll-target="#api">API</a></li>
+  <li><a href="#artis-aquatic-resource-trade-in-species-api" id="toc-artis-aquatic-resource-trade-in-species-api" class="nav-link" data-scroll-target="#artis-aquatic-resource-trade-in-species-api">ARTIS Aquatic Resource Trade in Species API</a>
+  <ul class="collapse">
+  <li><a href="#about-artis" id="toc-about-artis" class="nav-link" data-scroll-target="#about-artis">About ARTIS</a></li>
+  <li><a href="#description-files" id="toc-description-files" class="nav-link" data-scroll-target="#description-files">Description Files</a></li>
+  <li><a href="#artis-database-tables" id="toc-artis-database-tables" class="nav-link" data-scroll-target="#artis-database-tables">ARTIS Database Tables</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/edit/main/artis-infrastructure/api.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -227,9 +239,49 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="api" class="level1">
 <h1>API</h1>
-<p>Pull from https://github.com/Seafood-Globalization-Lab/ARTIS-API/blob/main/readme.md (note: this one likely needs updated)</p>
+</section>
+<section id="artis-aquatic-resource-trade-in-species-api" class="level1">
+<h1>ARTIS Aquatic Resource Trade in Species API</h1>
+<p>This API processes requests for the ARTIS database.</p>
+<section id="about-artis" class="level2">
+<h2 class="anchored" data-anchor-id="about-artis">About ARTIS</h2>
+<p>Food systems have become increasingly globalized, with over a quarter of all food now traded internationally. Seafood is among the most highly traded foods and it is becoming increasingly globalized, with trade doubling in recent decades. At the same time, seafood is now widely recognized as a critical source of nutrition. Thus, social and environmental threats to local seafood production, including environmental extremes, price impacts of market integration, networked risks, and increased availability of processed foods, must be evaluated in the context of global trade. These issues are paralleled by similar questions for other natural resources and are central to global food systems research. However, our collective understanding of the environmental and human outcomes of food system globalization is limited by a fundamental gap between production and trade data. We bridge this gap in the Aquatic Resource Trade in Species (ARTIS) database by providing the first global estimates of seafood species and nutrient trade flows from 1996–2020.</p>
+<p><em>(Taken from https://artisdata.weebly.com/)</em></p>
+<hr>
+</section>
+<section id="description-files" class="level2">
+<h2 class="anchored" data-anchor-id="description-files">Description Files</h2>
+<p>The files below contain the documentation for what types of requests (examples and sample responses) can be made to the ARTIS API.</p>
+<ul>
+<li><a href="table_outlines.md">table_outlines.md</a>
+<ul>
+<li>Formats and structures for all tables accessible from the ARTIS API</li>
+</ul></li>
+<li><a href="making_requests.md">making_requests.md</a>
+<ul>
+<li>Structure for how to make requests</li>
+<li>Sample requests</li>
+<li>Sample responses</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="artis-database-tables" class="level2">
+<h2 class="anchored" data-anchor-id="artis-database-tables">ARTIS Database Tables</h2>
+<ul>
+<li>Main ARTIS snet</li>
+<li>Supplemental Tables
+<ul>
+<li>sciname <em>(species taxonomic information)</em></li>
+<li>production <em>(FAO production data)</em></li>
+<li>products <em>(HS code descriptions and classification)</em></li>
+<li>countries <em>(country metadata ie iso3 codes, regions)</em></li>
+<li>baci <em>(BACI trade bilateral trade data)</em></li>
+</ul></li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
