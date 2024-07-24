@@ -1,2 +1,19 @@
 # Running the Model
 
+There are 2 avenues to run the ARTIS model: 
+
+1) on your local computer or
+2) on a HPC (high performance computer) 
+  - See the [artis-hpc](https://github.com/Seafood-Globalization-Lab/artis-hpc) Github repository for instructions and documentation.
+
+and 2 sources to obtain the model and model inputs:
+
+1) The Knowledge Network for Biocomplexity (KNB) data repository
+  - .zip file containing the model code, input data, and docker image in appropriate architecture
+  - long term storage of stable model release (with DOI) used for research products
+2) Github `Seafood-Globalization-Lab/artis-model` repository
+  - latest model code
+  - development version of the model -- may not be stable
+  - does not include input data or docker image
+  
+  **We highly recommend using the KNB repository for stable model releases.**

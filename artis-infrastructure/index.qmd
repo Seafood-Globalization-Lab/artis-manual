@@ -1,10 +1,41 @@
 # Distribution Infrastructure
 
-Welcome to the Distribution Infrastructure page of the ARTIS Manual. This section explains the computing resources and infrastructure used in our data pipeline. We utilize high-performance computing clusters, cloud-based storage, and advanced data processing algorithms to integrate and analyze seafood supply chain data. These resources help us create a comprehensive database that supports our research and operational needs.
+Several computing resources and infrastructure are used in the ARTIS data pipeline. We utilize cloud high-performance computing, cloud-based storage, and local machines to integrate and analyze seafood supply chain data. These resources help us create the ARTIS database that is available at two access points.
 
-In the Distribution Infrastructure section, we describe the key computing resources that support the ARTIS model and database. Our pipeline uses powerful servers and scalable cloud platforms to manage and process large datasets. These technologies allow us to handle complex data workflows efficiently, producing accurate insights into global seafood distribution patterns and maintaining a reliable database.
-
-The Distribution Infrastructure page outlines the computing resources that power our ARTIS model and database. We use a combination of on-premises and cloud-based systems to handle extensive data processing tasks. High-performance computing and data management tools help us capture, store, and analyze seafood supply chain information. This infrastructure ensures the integrity and accessibility of our database for stakeholders in the seafood industry.
-
+The schematic below depicts how components of the ARTIS pipeline fit together. Blue boxes represent processes on local machines, green represent data access points, yellow represents cloud HPC and purple represents cloud database storage.
 
 ![](../images/artis_lucidchart_inf.png)
+
+## Pipeline component descriptions and details:
+
+Original Raw Data
+: Trade data from FAO, UN Comtrade, and Sea Around Us
+
+Clean Data
+: Data cleaned and standardized in R and Python scripts and used in `model_inputs/` folder in ARTIS model
+
+ARTIS Model
+: A model that estimates the seafood trade flows and consumption
+
+
+
+
+## Github Code Repositories:
+
+artis-model
+: Release version of model code [link here](https://github.com/Seafood-Globalization-Lab/artis-model)
+
+artis-development
+: Private development version of model code [link here](https://github.com/jagephart/ARTIS)
+
+artis-hpc
+: High-performance computing scripts for running model on Amazon Web Services [link here](https://github.com/Seafood-Globalization-Lab/artis-hpc)
+
+artis-database
+: Scripts for creating and maintaining the Postgres database in the cloud and locally [link here](https://github.com/Seafood-Globalization-Lab/artis-hpc)
+
+artis-API
+: Scripts for creating and maintaining the ARTIS API to website [link here](https://github.com/Seafood-Globalization-Lab/artis-hpc)
+
+knb-submit
+: Scripts for submitting data to the KNB data repository [link here](https://github.com/Seafood-Globalization-Lab/artis-hpc)
