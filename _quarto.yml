@@ -9,12 +9,14 @@ website:
   site-url: "https://artisdata.weebly.com/" 
   repo-url: https://github.com/Seafood-Globalization-Lab/artis-manual
   repo-actions: [edit, issue]
+  back-to-top-navigation: true
   
   page-footer:
-    right: "This page is built with :fish [Quarto](https://quarto.org/)."
-    left: "&copy; CC-By Openscapes, 2024"
+    right: "This website is built with the [Openscapes website tutorial](https://github.com/Openscapes/quarto-website-tutorial) in [Quarto](https://quarto.org/)."
+    left: "&copy; CC-BY-4.0, 2024"
     
   sidebar:
+    title: "ARTIS Manual"
     logo: "images/Lab_Logo_Full_Color_Square.png"
     pinned: true
     align: center
@@ -24,8 +26,11 @@ website:
         href: http://seafood-globalization-lab.weebly.com/
         text: "Lab website"
       - icon: github
-        href: https://github.com/Seafood-Globalization-Lab
-        text: "Lab Github"
+        menu:
+          - text: Manual Source Code
+            href: https://github.com/Seafood-Globalization-Lab/artis-manual
+          - text: "Lab Github"
+            href: https://github.com/Seafood-Globalization-Lab
 
     style: "docked"
     search: true
