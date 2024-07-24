@@ -1,3 +1,10 @@
 # Distribution Infrastructure
 
+Welcome to the Distribution Infrastructure page of the ARTIS Manual. This section explains the computing resources and infrastructure used in our data pipeline. We utilize high-performance computing clusters, cloud-based storage, and advanced data processing algorithms to integrate and analyze seafood supply chain data. These resources help us create a comprehensive database that supports our research and operational needs.
+
+In the Distribution Infrastructure section, we describe the key computing resources that support the ARTIS model and database. Our pipeline uses powerful servers and scalable cloud platforms to manage and process large datasets. These technologies allow us to handle complex data workflows efficiently, producing accurate insights into global seafood distribution patterns and maintaining a reliable database.
+
+The Distribution Infrastructure page outlines the computing resources that power our ARTIS model and database. We use a combination of on-premises and cloud-based systems to handle extensive data processing tasks. High-performance computing and data management tools help us capture, store, and analyze seafood supply chain information. This infrastructure ensures the integrity and accessibility of our database for stakeholders in the seafood industry.
+
+
 ![](../images/artis_lucidchart_inf.png)
