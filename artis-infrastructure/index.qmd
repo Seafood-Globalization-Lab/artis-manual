@@ -1,24 +1,38 @@
 # Distribution Infrastructure
 
-Several computing resources and infrastructure are used in the ARTIS data pipeline and distribution. We utilize cloud high-performance computing, cloud-based storage, and local machines to integrate and analyze seafood supply chain data. These resources help us create the ARTIS database that is available at two access points.
+Several computing resources and infrastructure are used in the ARTIS data pipeline and distribution. We utilize cloud high-performance computing, cloud-based storage, and local machines to integrate and analyze aquatic resource trade data. These computing resources create the ARTIS database that is openly available at two access points: KNB data repository and the ARTIS website (under development).
 
-The schematic below depicts how components of the ARTIS pipeline fit together. Blue boxes represent processes on local machines, green represent data access points, yellow represents cloud HPC and purple represents cloud database storage.
+The schematic below depicts how components of the ARTIS pipeline fit together. 
+
+- Blue boxes -- processes on local machines
+- green boxes -- access points
+- yellow boxes -- cloud HPC
+- purple -- cloud database storage
 
 ![](../images/artis_lucidchart_inf.png)
 
-## Pipeline component descriptions and details:
+## Pipeline component details:
 
 Original Raw Data
-: Trade data from FAO, UN Comtrade, and Sea Around Us
+: FAO global production, UN Comtrade, BACI, Sea Around Us, FishBase, and SeaLifeBase data contained in the `artis-model/model_inputs_raw/` directory
 
 Clean Data
-: Data cleaned and standardized in R and Python scripts and used in `model_inputs/` folder in ARTIS model
+: Data cleaned and standardized in R and Python scripts and used in `artis-model/model_inputs/` directory
 
 ARTIS Model
-: A model that estimates the seafood trade flows and consumption
+: A model that estimates the aquatic resource trade flows and consumption
 
+ARTIS Outputs
+: Model results of trade flows and consumption tables stored in the ARTIS database found in the `artis-model/outputs/` directory
 
+pgAdmin
+: Opensource application for managing PostgreSQL (a open source object-relational database system)
 
+KNB
+: Knowledge Network for Biocomplexity data repository 
+
+Heroku
+: Cloud hosting platform supporting the ARTIS API - being migrated to Vercel
 
 ## Github Code Repositories:
 
