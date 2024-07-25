@@ -107,7 +107,7 @@ git config core.sparseCheckout true
 
 # Create the sparse-checkout file and define the sparse-checkout path to include only the images directory
 mkdir -p .git/info
-echo "imgs/*" >> .git/info/sparse-checkout
+echo "images/*" >> .git/info/sparse-checkout
 
 # Pull the main branch from the remote repository
 git pull origin main
@@ -116,8 +116,8 @@ git pull origin main
 mkdir -p ../images
 
 # Move the files from the images directory to your R project directory
-if [ -d "imgs" ] && [ "$(ls -A imgs)" ]; then
-    mv imgs/* ../images/
+if [ -d "images" ] && [ "$(ls -A images)" ]; then
+    mv images/* ../images/
     echo "Files moved successfully."
 else
     echo "No files found in the images directory."
