@@ -279,14 +279,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
   <li><a href="#exploreartis-package-installation" id="toc-exploreartis-package-installation" class="nav-link" data-scroll-target="#exploreartis-package-installation">exploreARTIS Package installation</a></li>
   </ul></li>
-  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a>
+  <li><a href="#filtering-artis-data" id="toc-filtering-artis-data" class="nav-link" data-scroll-target="#filtering-artis-data">Filtering ARTIS data</a>
   <ul class="collapse">
-  <li><a href="#analyzing-volumes" id="toc-analyzing-volumes" class="nav-link" data-scroll-target="#analyzing-volumes">Analyzing volumes</a></li>
-  <li><a href="#analyzing-trade-partners" id="toc-analyzing-trade-partners" class="nav-link" data-scroll-target="#analyzing-trade-partners">Analyzing trade partners</a></li>
-  <li><a href="#analyzing-species-trends" id="toc-analyzing-species-trends" class="nav-link" data-scroll-target="#analyzing-species-trends">Analyzing Species Trends</a></li>
-  <li><a href="#visualizing-trade-networks" id="toc-visualizing-trade-networks" class="nav-link" data-scroll-target="#visualizing-trade-networks">Visualizing Trade Networks</a></li>
+  <li><a href="#bulk-artis-data" id="toc-bulk-artis-data" class="nav-link" data-scroll-target="#bulk-artis-data">Bulk ARTIS data</a></li>
+  <li><a href="#artis-data-frames-for-visualization" id="toc-artis-data-frames-for-visualization" class="nav-link" data-scroll-target="#artis-data-frames-for-visualization">ARTIS data frames for visualization</a></li>
   </ul></li>
-  <li><a href="#more-advanced-examples" id="toc-more-advanced-examples" class="nav-link" data-scroll-target="#more-advanced-examples">More advanced examples</a></li>
+  <li><a href="#visualization-examples" id="toc-visualization-examples" class="nav-link" data-scroll-target="#visualization-examples">Visualization examples</a>
+  <ul class="collapse">
+  <li><a href="#bar-charts" id="toc-bar-charts" class="nav-link" data-scroll-target="#bar-charts">Bar charts</a></li>
+  <li><a href="#line-and-area-plots" id="toc-line-and-area-plots" class="nav-link" data-scroll-target="#line-and-area-plots">Line and area plots</a></li>
+  <li><a href="#sankey-plots" id="toc-sankey-plots" class="nav-link" data-scroll-target="#sankey-plots">Sankey plots</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#chord-diagrams" id="toc-chord-diagrams" class="nav-link" data-scroll-target="#chord-diagrams">Chord diagrams</a>
+  <ul class="collapse">
+  <li><a href="#chloropleth-and-flow-arrow-maps" id="toc-chloropleth-and-flow-arrow-maps" class="nav-link" data-scroll-target="#chloropleth-and-flow-arrow-maps">Chloropleth and flow arrow maps</a></li>
+  <li><a href="#facetting" id="toc-facetting" class="nav-link" data-scroll-target="#facetting">Facetting</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/edit/main/explore-artis.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -313,7 +321,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>live_weight_t (double): Live weight (tonnes)</li>
 <li>hs_version (string): version of HS codes</li>
 <li>year (double): Year</li>
-<li>snet_est (string): Maximum / Midpoint / Minimum estimate for domestic export and foreign export calculation</li>
 </ul>
 <section id="installation" class="level2">
 <h2 class="anchored" data-anchor-id="installation">Installation</h2>
@@ -337,27 +344,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>After you install the exploreARTIS package, you can just load it with library(exploreARTIS). You will also need to reinstall the package whenever there are updates to the package code.</p>
 </section>
 </section>
-<section id="examples" class="level2">
-<h2 class="anchored" data-anchor-id="examples">Examples</h2>
-<p>Here are examples of all the types of plots that can be created with this package. (Assume that “artis” in this example is a variable that contains an artis dataset)</p>
-<section id="analyzing-volumes" class="level3">
-<h3 class="anchored" data-anchor-id="analyzing-volumes">Analyzing volumes</h3>
+<section id="filtering-artis-data" class="level2">
+<h2 class="anchored" data-anchor-id="filtering-artis-data">Filtering ARTIS data</h2>
+<section id="bulk-artis-data" class="level3">
+<h3 class="anchored" data-anchor-id="bulk-artis-data">Bulk ARTIS data</h3>
+<p>If you have downloaded bulk ARTIS data, it is generally split into separate csv files for each HS version and year combination. This is because the combined file is large and slow to load, sometimes causing users’ R sessions to crash. If you would like to combine files into a single data frame, you will need to pick which HS version-year combinations you would like to include. Then, you can decide if you would like to filter down any of the variabales (e.g., keep select exporters, species, etc.). Once you have made these decisions, you can use the example script “scripts/filter_bulk_artis.R” as a starting place to loop through the desired ARTIS files and filter based on your specified criteria. Note that this is not a function, but rather an example script with comments to facilitate customization for your own project.</p>
+</section>
+<section id="artis-data-frames-for-visualization" class="level3">
+<h3 class="anchored" data-anchor-id="artis-data-frames-for-visualization">ARTIS data frames for visualization</h3>
+<p>Once you have the ARTIS data frame you are using for your analysis, you may still want to filter it for specific visualizations. For example, you may be working with all trade for a given country but want to generate a plot for just one species. You can of course use any base R or tidyverse functions to filter the data, but we also provide a function in this package to filter any of the ARTIS variables: <code>r filter_artis()</code>. The filtered data frame can then be passed to any visualization function.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading library</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Bar chart visualizing seafood trade volumes by exporter</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_bar</span>(artis, <span class="at">bar_group =</span> <span class="st">"exporter_iso3c"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter ARTIS data to Chilean exports of Atlantic salmon in 2016-2020</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">filter_artis</span>(mini_artis, <span class="at">year =</span> <span class="dv">2016</span><span class="sc">:</span><span class="dv">2020</span>, <span class="at">exporter =</span> <span class="st">"CHL"</span>, <span class="at">species =</span> <span class="st">"salmo salar"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="visualization-examples" class="level2">
+<h2 class="anchored" data-anchor-id="visualization-examples">Visualization examples</h2>
+<p>Here are examples of all the types of plots that can be created with this package. (Assume that “mini_artis” in these examples is a variable that contains an ARTIS dataset).</p>
+<section id="bar-charts" class="level3">
+<h3 class="anchored" data-anchor-id="bar-charts">Bar charts</h3>
+<p><code>r plt_bar()</code> creates ranked bar plots, with bar categories indicated by the <code>r bar_group</code> argument. The number of bars to display can be controlled with <code>r top_n</code>. argument.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading library</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Bar chart visualizing seafood trade volumes by exporter</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_bar</span>(mini_artis, <span class="at">bar_group =</span> <span class="st">"exporter_iso3c"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/all_trade_export_bar.png" class="img-fluid figure-img"></p>
 <figcaption>Bar Chart - by exporter</figcaption>
 </figure>
 </div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading library</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Bar chart visualizing seafood trade volumes by exporter and filling by export source</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_bar</span>(artis, <span class="at">bar_group =</span> <span class="st">"exporter_iso3c"</span>, <span class="at">fill_type =</span> <span class="st">"dom_source"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Bar charts can optionally be filled by an ARTIS variable.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading library</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Bar chart visualizing seafood trade volumes by exporter and filling by export source</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_bar</span>(mini_artis, <span class="at">bar_group =</span> <span class="st">"exporter_iso3c"</span>, <span class="at">fill_type =</span> <span class="st">"dom_source"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/all_trade_export_dom_source_bar.png" class="img-fluid figure-img"></p>
@@ -365,14 +390,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </section>
-<section id="analyzing-trade-partners" class="level3">
-<h3 class="anchored" data-anchor-id="analyzing-trade-partners">Analyzing trade partners</h3>
-<p><strong>Note:</strong> you can visualize exporters and importers with the following functions. Adjust the trade_flow input variable accordingly from trade_flow = “export”, to trade_flow = “import”</p>
-<p>A line graph of all export partners in the ARTIS dataset</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading library</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_partner_line</span>(artis, <span class="at">trade_flow =</span> <span class="st">"export"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="line-and-area-plots" class="level3">
+<h3 class="anchored" data-anchor-id="line-and-area-plots">Line and area plots</h3>
+<p><code>r plot_ts()</code> creates time series line or area plots for any specified <code>r artis_var</code>. The <code>r plot.type</code> argument allows options of “line” (default) or “stacked” to change plot views. To keep the number of colors reasonable, the <code>r prop_flow_cutoff</code> argument groups lines falling below the cut-off into “other” and this can be adjusted to show more or fewer lines/fills.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading library</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_ts</span>(mini_artis, <span class="at">artis_var =</span> <span class="st">"exporter_iso3c"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/line_all_trade.png" class="img-fluid figure-img"></p>
@@ -380,10 +404,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <p>A stacked line graph of all export partners in the ARTIS dataset</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading library</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_partner_stacked</span>(artis, <span class="at">trade_flow =</span> <span class="st">"export"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading library</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_ts</span>(mini_artis, <span class="at">artis_var =</span> <span class="st">"exporter_iso3c"</span>, <span class="at">plot.type =</span> <span class="st">"stacked"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/line_stacked_all_trade.png" class="img-fluid figure-img"></p>
@@ -391,91 +415,101 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </section>
-<section id="analyzing-species-trends" class="level3">
-<h3 class="anchored" data-anchor-id="analyzing-species-trends">Analyzing Species Trends</h3>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading library</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_species_line</span>(artis, <span class="at">plot.title =</span> <span class="st">"Species Trends 1995 - 2019"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/all_trade_species_line.png" class="img-fluid figure-img"></p>
-<figcaption>Line Graph - all Species Trends</figcaption>
-</figure>
-</div>
+<section id="sankey-plots" class="level3">
+<h3 class="anchored" data-anchor-id="sankey-plots">Sankey plots</h3>
+<p><code>r plot_sankey()</code> creates a sankey plot to display flows among nodes across columns. This function is flexible in allowing the user to specify which data columns should be used to produce the colunns of the sankey plot. This function includes the argument <code>r prop_flow_cutoff</code> to control how many groups are included in “other” (which can help keep the larger flows readable). It also includes an argumen to drop the group “other” entirely if preferred.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading library</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_species_stacked</span>(artis)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/all_trade_species_stacked.png" class="img-fluid figure-img"></p>
-<figcaption>Stacked Line Graph - all Species Trends</figcaption>
-</figure>
-</div>
-</section>
-<section id="visualizing-trade-networks" class="level3">
-<h3 class="anchored" data-anchor-id="visualizing-trade-networks">Visualizing Trade Networks</h3>
-<p>Sankey Plots - This is a great way to visualize the seafood trade supply chain.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading library</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sankey plot of all seafood trade</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_sankey</span>(artis)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sankey plot of all seafood trade</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_sankey</span>(mini_artis, <span class="at">cols =</span> <span class="fu">c</span>(<span class="st">"sciname"</span>, <span class="st">"exporter_iso3c"</span>, <span class="st">"importer_iso3c"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/sankey_all_trade.png" class="img-fluid figure-img"></p>
 <figcaption>Sankey Plot - all seafood trade</figcaption>
 </figure>
 </div>
-<p>Chord Diagrams - This is a great way to visualize export and import trade flows.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading library</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Chord diagram of all seafood trade</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_chord</span>(artis)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+</section>
+<section id="chord-diagrams" class="level1">
+<h1>Chord diagrams</h1>
+<p><code>r plot_chord()</code> creates a chord diagram for visualizing flows among countries/regions.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading library</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Chord diagram of all seafood trade</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_chord</span>(mini_artis, <span class="at">region_colors =</span> region7_palette)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/all_trade_chord.png" class="img-fluid figure-img"></p>
 <figcaption>Chord Diagram - all seafood trade</figcaption>
 </figure>
 </div>
-<p>Map - This is a great way to visualize trade flows.</p>
+<p>Individual countries can be pulled out to highlight their trade by specifying the country/countries’ iso3c code(s) in the <code>r focal_country</code> argument.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading library</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Chord diagram of all seafood trade with Vietnam highlighted</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_chord</span>(mini_artis, <span class="at">focal_country =</span> <span class="st">"VNM"</span>, <span class="at">region_colors =</span> region7_palette)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/all_trade_chord_vnm.png" class="img-fluid figure-img"></p>
+<figcaption>Chord Diagram - all seafood trade</figcaption>
+</figure>
+</div>
+<section id="chloropleth-and-flow-arrow-maps" class="level3">
+<h3 class="anchored" data-anchor-id="chloropleth-and-flow-arrow-maps">Chloropleth and flow arrow maps</h3>
+<p><code>r plot_map()</code> creates maps that are optionally colored by <code>r country_fill</code> and optionally include flow arrows colored by flow volume with <code>r flow_arrows</code>. The number of arrows can be specified with <code>r n_flows</code>.</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading library</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Map of seafood exports from Chile</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_map</span>(artis, <span class="at">exporters =</span> <span class="st">"CHL"</span>, <span class="at">country_fill =</span> <span class="st">"import"</span>, <span class="at">flow_arrows =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Map of top seafood exports and flows</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_map</span>(mini_artis, <span class="at">country_fill =</span> <span class="st">"importer_iso3c"</span>, <span class="at">flow_arrows =</span> <span class="cn">TRUE</span>, <span class="at">arrow_label =</span> <span class="st">"Trade (live t)"</span>, <span class="at">fill_label =</span> <span class="st">"Import (live t)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/all_map_flows.png" class="img-fluid figure-img"></p>
+<figcaption>Map - All seafood trade</figcaption>
+</figure>
+</div>
+<p>Individual country’s trade flows can be isolated by filtering the importer or exporter column before passing it to the plot function.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading library</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Map of seafood exports from Chile</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>mini_artis <span class="sc">%&gt;%</span> <span class="fu">filter</span>(exporter_iso3c <span class="sc">==</span> <span class="st">"CHL"</span>) <span class="sc">%&gt;%</span> <span class="fu">plot_map</span>(<span class="at">country_fill =</span> <span class="st">"importer_iso3c"</span>, <span class="at">flow_arrows =</span> <span class="cn">TRUE</span>, <span class="at">arrow_label =</span> <span class="st">"Trade (live t)"</span>, <span class="at">fill_label =</span> <span class="st">"Import (live t)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/chl_map_flows.png" class="img-fluid figure-img"></p>
-<figcaption>Map - Chile seafood trade</figcaption>
+<figcaption>Map - Seafood exports from Chile</figcaption>
 </figure>
 </div>
 </section>
-</section>
-<section id="more-advanced-examples" class="level2">
-<h2 class="anchored" data-anchor-id="more-advanced-examples">More advanced examples</h2>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading libraries</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sankey plot of seafood produced by Chile</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Note we used the ISO 3 code, CHL, for Chile rather than its full country name</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_sankey</span>(artis, <span class="at">producers =</span> <span class="fu">c</span>(<span class="st">"CHL"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="facetting" class="level3">
+<h3 class="anchored" data-anchor-id="facetting">Facetting</h3>
+<p>Both <code>r plot_ts</code> and <code>r plot_bar</code> allow facetting by an ARTIS variable with the <code>r facet_variable</code> argument. If a facet variable is specified then <code>r facet_values</code> must also be defined, either as a number (the number of facets to create) or a vector (the specific facets to create).</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading libraries</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Area plot of top importers facetted by method</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_ts</span>(mini_artis, <span class="at">artis_var =</span> <span class="st">"importer_iso3c"</span>, <span class="at">plot.type =</span> <span class="st">"stacked"</span>, <span class="at">facet_variable =</span> <span class="st">"method"</span>, <span class="at">facet_values =</span> <span class="fu">c</span>(<span class="st">"capture"</span>, <span class="st">"aquaculture"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/sankey_chl_trade.png" class="img-fluid figure-img"></p>
-<figcaption>Sankey Plot - Chilean seafood trade</figcaption>
+<p><img src="images/area_plot_facetted.png" class="img-fluid figure-img"></p>
+<figcaption>Area plot - Top importers facetted by method</figcaption>
 </figure>
 </div>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading libraries</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Sankey plot of Atlantic Salmon trade</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Note we used the the scientific name "salmo salar" for Atlantic Salmon rather than its common name</span></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_sankey</span>(artis, <span class="at">species=</span> <span class="fu">c</span>(<span class="st">"salmo salar"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><img src="images/sankey_salmo_salar.png" class="img-fluid" alt="Sankey Plot - Atlantic Salmon trade"> # artis-exchange-planning</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># loading libraries</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(exploreARTIS)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Bar plot of top importers facetted by method</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_bar</span>(mini_artis, <span class="at">bar_group =</span> <span class="st">"importer_iso3c"</span>, <span class="at">facet_variable =</span> <span class="st">"method"</span>, <span class="at">facet_values =</span> <span class="fu">c</span>(<span class="st">"capture"</span>, <span class="st">"aquaculture"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/bar_plot_facetted.png" class="img-fluid figure-img"></p>
+<figcaption>Bar plot - Top importers facetted by method</figcaption>
+</figure>
+</div>
 
 
 </section>
