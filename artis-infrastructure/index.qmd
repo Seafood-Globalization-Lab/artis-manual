@@ -1,6 +1,6 @@
 # Distribution Infrastructure
 
-Several computing resources and infrastructure are used in the ARTIS data pipeline. We utilize cloud high-performance computing, cloud-based storage, and local machines to integrate and analyze seafood supply chain data. These resources help us create the ARTIS database that is available at two access points.
+Several computing resources and infrastructure are used in the ARTIS data pipeline and distribution. We utilize cloud high-performance computing, cloud-based storage, and local machines to integrate and analyze seafood supply chain data. These resources help us create the ARTIS database that is available at two access points.
 
 The schematic below depicts how components of the ARTIS pipeline fit together. Blue boxes represent processes on local machines, green represent data access points, yellow represents cloud HPC and purple represents cloud database storage.
 
