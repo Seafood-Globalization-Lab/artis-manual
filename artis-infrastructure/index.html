@@ -240,7 +240,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#distribution-infrastructure" id="toc-distribution-infrastructure" class="nav-link active" data-scroll-target="#distribution-infrastructure">Distribution Infrastructure</a>
   <ul class="collapse">
-  <li><a href="#pipeline-component-descriptions-and-details" id="toc-pipeline-component-descriptions-and-details" class="nav-link" data-scroll-target="#pipeline-component-descriptions-and-details">Pipeline component descriptions and details:</a></li>
+  <li><a href="#pipeline-component-details" id="toc-pipeline-component-details" class="nav-link" data-scroll-target="#pipeline-component-details">Pipeline component details:</a></li>
   <li><a href="#github-code-repositories" id="toc-github-code-repositories" class="nav-link" data-scroll-target="#github-code-repositories">Github Code Repositories:</a></li>
   </ul></li>
   </ul>
@@ -254,23 +254,45 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="distribution-infrastructure" class="level1">
 <h1>Distribution Infrastructure</h1>
-<p>Several computing resources and infrastructure are used in the ARTIS data pipeline and distribution. We utilize cloud high-performance computing, cloud-based storage, and local machines to integrate and analyze seafood supply chain data. These resources help us create the ARTIS database that is available at two access points.</p>
-<p>The schematic below depicts how components of the ARTIS pipeline fit together. Blue boxes represent processes on local machines, green represent data access points, yellow represents cloud HPC and purple represents cloud database storage.</p>
+<p>Several computing resources and infrastructure are used in the ARTIS data pipeline and distribution. We utilize cloud high-performance computing, cloud-based storage, and local machines to integrate and analyze aquatic resource trade data. These computing resources create the ARTIS database that is openly available at two access points: KNB data repository and the ARTIS website (under development).</p>
+<p>The schematic below depicts how components of the ARTIS pipeline fit together.</p>
+<ul>
+<li>Blue boxes – processes on local machines</li>
+<li>green boxes – access points</li>
+<li>yellow boxes – cloud HPC</li>
+<li>purple – cloud database storage</li>
+</ul>
 <p><img src="../images/artis_lucidchart_inf.png" class="img-fluid"></p>
-<section id="pipeline-component-descriptions-and-details" class="level2">
-<h2 class="anchored" data-anchor-id="pipeline-component-descriptions-and-details">Pipeline component descriptions and details:</h2>
+<section id="pipeline-component-details" class="level2">
+<h2 class="anchored" data-anchor-id="pipeline-component-details">Pipeline component details:</h2>
 <dl>
 <dt>Original Raw Data</dt>
 <dd>
-Trade data from FAO, UN Comtrade, and Sea Around Us
+FAO global production, UN Comtrade, BACI, Sea Around Us, FishBase, and SeaLifeBase data contained in the <code>artis-model/model_inputs_raw/</code> directory
 </dd>
 <dt>Clean Data</dt>
 <dd>
-Data cleaned and standardized in R and Python scripts and used in <code>model_inputs/</code> folder in ARTIS model
+Data cleaned and standardized in R and Python scripts and used in <code>artis-model/model_inputs/</code> directory
 </dd>
 <dt>ARTIS Model</dt>
 <dd>
-A model that estimates the seafood trade flows and consumption
+A model that estimates the aquatic resource trade flows and consumption
+</dd>
+<dt>ARTIS Outputs</dt>
+<dd>
+Model results of trade flows and consumption tables stored in the ARTIS database found in the <code>artis-model/outputs/</code> directory
+</dd>
+<dt>pgAdmin</dt>
+<dd>
+Opensource application for managing PostgreSQL (a open source object-relational database system)
+</dd>
+<dt>KNB</dt>
+<dd>
+Knowledge Network for Biocomplexity data repository
+</dd>
+<dt>Heroku</dt>
+<dd>
+Cloud hosting platform supporting the ARTIS API - being migrated to Vercel
 </dd>
 </dl>
 </section>
