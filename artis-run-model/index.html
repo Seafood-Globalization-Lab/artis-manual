@@ -95,15 +95,32 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../images/Lab_Logo_Full_Color_Icon.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../images/Lab_Logo_Full_Color_Square.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
-      <div class="sidebar-tools-main tools-wide">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">ARTIS Manual</a> 
+        <div class="sidebar-tools-main tools-wide">
     <a href="http://seafood-globalization-lab.weebly.com/" title="Lab website" class="quarto-navigation-tool px-1" aria-label="Lab website"><i class="bi bi-globe"></i></a>
-    <a href="https://github.com/Seafood-Globalization-Lab" title="Lab Github" class="quarto-navigation-tool px-1" aria-label="Lab Github"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/Seafood-Globalization-Lab/artis-manual">
+            Manual Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/Seafood-Globalization-Lab">
+            Lab Github
+            </a>
+          </li>
+      </ul>
+    </div>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
+    </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -233,11 +250,36 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="running-the-model" class="level1">
 <h1>Running the Model</h1>
+<p>There are 2 avenues to run the ARTIS model:</p>
+<ol type="1">
+<li>on your local computer or</li>
+<li>on a HPC (high performance computer)</li>
+</ol>
+<ul>
+<li>See the <a href="https://github.com/Seafood-Globalization-Lab/artis-hpc">artis-hpc</a> Github repository for instructions and documentation.</li>
+</ul>
+<p>and 2 sources to obtain the model and model inputs:</p>
+<ol type="1">
+<li>The Knowledge Network for Biocomplexity (KNB) data repository</li>
+</ol>
+<ul>
+<li>.zip file containing the model code, input data, and docker image in appropriate architecture</li>
+<li>long term storage of stable model release (with DOI) used for research products</li>
+</ul>
+<ol start="2" type="1">
+<li>Github <code>Seafood-Globalization-Lab/artis-model</code> repository</li>
+</ol>
+<ul>
+<li>latest model code</li>
+<li>development version of the model – may not be stable</li>
+<li>does not include input data or docker image</li>
+</ul>
+<p><strong>We highly recommend using the KNB repository for stable model releases.</strong></p>
 
 
 </section>
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -823,13 +865,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© CC-By Openscapes, 2024</p>
+<p>© CC-BY-4.0, 2024</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/edit/main/artis-run-model/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
-<p>This page is built with :fish <a href="https://quarto.org/">Quarto</a>.</p>
+<p>This website is built with the <a href="https://github.com/Openscapes/quarto-website-tutorial">Openscapes website tutorial</a> in <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
 </footer>
