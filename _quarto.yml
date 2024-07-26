@@ -56,6 +56,8 @@ website:
         text: exploreARTIS package
       - href: artis-faq.qmd
         text: FAQs
+      - href: artis-licences.qmd
+        text: Licences /& Citations
 
 link-external-newwindow: true
 link-external-filter: '^(?:http:\/\/|https:\/\/)seafood-globalization-lab\.github\.io\/artis-manual.*'
