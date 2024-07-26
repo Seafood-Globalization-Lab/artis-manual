@@ -2,8 +2,4 @@
 
 ---------
 
-::: {.callout-note title="Note"}
-The contents below come from the [artis-database repo](https://github.com/Seafood-Globalization-Lab/artis_database)
-:::
-
 {{< include ../external-content/artis-database-readme.md >}}
