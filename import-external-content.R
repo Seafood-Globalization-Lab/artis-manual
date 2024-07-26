@@ -99,6 +99,17 @@ if(!file.exists(file.path("external-content",
   message("downloaded exploreARTIS readme into external-content/ dir")
 }
 
+# Copy content from knb-submit github repo -------------------------------
+
+# Artis Model Repo README - download if it doesn't exist
+if(!file.exists(file.path("external-content", 
+                          "knb-submit-readme.md"))){
+  download.file("https://raw.githubusercontent.com/Seafood-Globalization-Lab/knb-submit/main/README.md", 
+                file.path("external-content", 
+                          "knb-submit-readme.md"))
+  message("downloaded knb-submit readme into external-content/ dir")
+}
+
 
 # Pull external images (all repos above) ---------------------------------------
 # run shell script to import images folder from repos
