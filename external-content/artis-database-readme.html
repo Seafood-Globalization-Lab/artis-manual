@@ -83,13 +83,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#artis-database" id="toc-artis-database" class="nav-link active" data-scroll-target="#artis-database">ARTIS Database</a>
+  <li><a href="#configuring-cloud-and-local-artis-databases" id="toc-configuring-cloud-and-local-artis-databases" class="nav-link active" data-scroll-target="#configuring-cloud-and-local-artis-databases">Configuring cloud and local ARTIS databases</a>
   <ul class="collapse">
   <li><a href="#installations" id="toc-installations" class="nav-link" data-scroll-target="#installations">Installations</a></li>
   <li><a href="#updating-cloud-heroku-database" id="toc-updating-cloud-heroku-database" class="nav-link" data-scroll-target="#updating-cloud-heroku-database">Updating Cloud (Heroku) Database</a>
   <ul class="collapse">
   <li><a href="#gathering-heroku-database-credentials" id="toc-gathering-heroku-database-credentials" class="nav-link" data-scroll-target="#gathering-heroku-database-credentials">Gathering Heroku database credentials:</a></li>
-  <li><a href="#creating-a-connection-between-the-heroku-database-and-pgadmin" id="toc-creating-a-connection-between-the-heroku-database-and-pgadmin" class="nav-link" data-scroll-target="#creating-a-connection-between-the-heroku-database-and-pgadmin">Creating a connection between the Heroku Database and pgadmin:</a></li>
+  </ul></li>
+  <li><a href="#setting-up-local-database" id="toc-setting-up-local-database" class="nav-link" data-scroll-target="#setting-up-local-database">Setting up local database</a>
+  <ul class="collapse">
+  <li><a href="#create-a-connection-between-the-heroku-database-and-local-pgadmin" id="toc-create-a-connection-between-the-heroku-database-and-local-pgadmin" class="nav-link" data-scroll-target="#create-a-connection-between-the-heroku-database-and-local-pgadmin">Create a connection between the Heroku Database and local pgadmin:</a></li>
   <li><a href="#test-connection-to-heroku-database" id="toc-test-connection-to-heroku-database" class="nav-link" data-scroll-target="#test-connection-to-heroku-database">Test connection to Heroku database:</a></li>
   <li><a href="#add-new-data-to-cloud-database" id="toc-add-new-data-to-cloud-database" class="nav-link" data-scroll-target="#add-new-data-to-cloud-database">Add new data to cloud database</a></li>
   </ul></li>
@@ -116,8 +119,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="artis-database" class="level1">
-<h1>ARTIS Database</h1>
+<section id="configuring-cloud-and-local-artis-databases" class="level1">
+<h1>Configuring cloud and local ARTIS databases</h1>
+<p>Instructions for seting up and managing cloud and local instances of the ARTIS database.</p>
+<ul>
+<li><a href="#installations">Installations</a></li>
+<li><a href="#updating-cloud-heroku-database">Cloud Database</a></li>
+<li><a href="#setting-up-local-database">Local Database</a></li>
+<li><a href="#directory-and-file-structure">Architecture</a></li>
+<li><a href="#database-structure">Database Structure</a></li>
+</ul>
+<p><strong>Please Note:</strong> We are migrating our cloud database from Heroku to Vercel and will update these instructions (2024-07-26)</p>
 <section id="installations" class="level2">
 <h2 class="anchored" data-anchor-id="installations">Installations</h2>
 <ol type="1">
@@ -149,8 +161,11 @@ ul.task-list li input[type="checkbox"] {
 <li>Click on the “show” button to reveal the password for the database</li>
 </ol>
 </section>
-<section id="creating-a-connection-between-the-heroku-database-and-pgadmin" class="level3">
-<h3 class="anchored" data-anchor-id="creating-a-connection-between-the-heroku-database-and-pgadmin">Creating a connection between the Heroku Database and pgadmin:</h3>
+</section>
+<section id="setting-up-local-database" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-local-database">Setting up local database</h2>
+<section id="create-a-connection-between-the-heroku-database-and-local-pgadmin" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-connection-between-the-heroku-database-and-local-pgadmin">Create a connection between the Heroku Database and local pgadmin:</h3>
 <ol type="1">
 <li><p>Open pgAdmin</p></li>
 <li><p>Right click on the Server list on the left hand side</p></li>
@@ -243,11 +258,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="directory-and-file-structure" class="level2">
 <h2 class="anchored" data-anchor-id="directory-and-file-structure">Directory and File Structure</h2>
 <ul>
-<li>prep_db_files.R
+<li><code>prep_db_files.R</code>
 <ul>
 <li>Takes raw snet files to a database table</li>
 </ul></li>
-<li>create_sql_tables
+<li><code>create_sql_tables</code>
 <ul>
 <li>SQL files to create the different tables</li>
 </ul></li>
