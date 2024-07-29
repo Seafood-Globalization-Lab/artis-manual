@@ -1,0 +1,48 @@
+# Citing & Licences
+
+The Seafood Globalization Lab recognizes the importance of publishing open-access datasets to accelerate high-impact solutions for complex human and environmental challenges. 
+We are committed to making our data available to the public and striving to following FAIR (Findability, Accessibility, Interoperability, and Reuse) principles for digital assets and Force11 data citation principles.
+
+## How to Cite
+
+**Please cite the ARTIS database as:**
+
+```markdown
+Jessica Gephart, Rahul Agrawal Bejarano, Althea Marks, & Kelvin Gorospe. (2024). Aquatic Resource Trade in Species (ARTIS). Knowledge Network for Biocomplexity. doi:10.5063/F1CZ35N7.
+```
+
+**Please cite the ARTIS input data and model as:**
+
+```markdown
+Jessica Gephart, Rahul Agrawal Bejarano, Althea Marks, & Kelvin Gorospe. (2024). ARTIS input data and model. Knowledge Network for Biocomplexity. doi:10.5063/F1862DXT.
+```
+
+Citing published datasets can:
+
+1) Increase transparency and reproducibility of the research.
+2) Publicize that data are available for reuse.
+3) Attribute credit to data creators when data are reused.
+
+## Licencing
+
+The ARTIS model and database are licensed under a Creative Commons Attribution (CC BY) license, which allows others to:
+
+- **Share:** Copy and redistribute the material in any medium or format.
+- **Adapt:** Remix, transform, and build upon the material for any purpose, even commercially.
+
+Attribution must be given to the original source, ensuring that credit is provided for the work. For more details on the license, please refer to the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+
+## FAIR principles^[Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). [https://doi.org/10.1038/sdata.2016.18](https://doi.org/10.1038/sdata.2016.18)] 
+
+- **Findable:** Easily discoverable by both humans and computers. We use rich metadata and assign unique identifiers to our datasets.
+- **Accessible:** Retrievable using standard protocols, ensuring that users can access our data in a straightforward manner.
+- **Interoperable:** Compatible with other datasets and tools, allowing for integration and analysis across different platforms and studies.
+- **Reusable:** Well-documented and licensed to facilitate reuse and repurposing by the scientific community and beyond.
+
+## Force11 Joint Declaration of Data Citation Principles ^[Data Citation Synthesis Group: Joint Declaration of Data Citation Principles. Martone M. (ed.) San Diego CA: FORCE11; 2014 [https://doi.org/10.25490/a97f-egyk](https://doi.org/10.25490/a97f-egyk)]
+
+These principles promote:
+
+- **Credit and Attribution:** Acknowledging the efforts of data creators and contributors.
+- **Evidence:** Providing a clear link between data and the claims they support.
+- **Unique Identifiers:** Ensuring that data can be reliably located and referenced.
