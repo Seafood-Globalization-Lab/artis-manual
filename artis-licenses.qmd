@@ -1,4 +1,4 @@
-# Citing & Licences
+# Citing & licenses
 
 The Seafood Globalization Lab recognizes the importance of publishing open-access datasets to accelerate high-impact solutions for complex human and environmental challenges. 
 We are committed to making our data available to the public and striving to following FAIR (Findability, Accessibility, Interoperability, and Reuse) principles for digital assets and Force11 data citation principles.
@@ -23,7 +23,7 @@ Citing published datasets can:
 2) Publicize that data are available for reuse.
 3) Attribute credit to data creators when data are reused.
 
-## Licencing
+## licensing
 
 The ARTIS model and database are licensed under a Creative Commons Attribution (CC BY) license, which allows others to:
 

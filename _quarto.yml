@@ -56,7 +56,7 @@ website:
         text: exploreARTIS package
       - href: artis-faq.qmd
         text: FAQs
-      - href: artis-licences.qmd
+      - href: artis-licenses.qmd
         text: Citing & Licences
 
 link-external-newwindow: true
