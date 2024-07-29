@@ -677,9 +677,9 @@
     ]
   },
   {
-    "objectID": "artis-licences.html",
-    "href": "artis-licences.html",
-    "title": "Citing & Licences",
+    "objectID": "artis-licenses.html",
+    "href": "artis-licenses.html",
+    "title": "Citing & licenses",
     "section": "",
     "text": "The Seafood Globalization Lab recognizes the importance of publishing open-access datasets to accelerate high-impact solutions for complex human and environmental challenges. We are committed to making our data available to the public and striving to following FAIR (Findability, Accessibility, Interoperability, and Reuse) principles for digital assets and Force11 data citation principles.\n\n\nPlease cite the ARTIS database as:\nJessica Gephart, Rahul Agrawal Bejarano, Althea Marks, & Kelvin Gorospe. (2024). Aquatic Resource Trade in Species (ARTIS). Knowledge Network for Biocomplexity. doi:10.5063/F1CZ35N7.\nPlease cite the ARTIS input data and model as:\nJessica Gephart, Rahul Agrawal Bejarano, Althea Marks, & Kelvin Gorospe. (2024). ARTIS input data and model. Knowledge Network for Biocomplexity. doi:10.5063/F1862DXT.\nCiting published datasets can:\n\nIncrease transparency and reproducibility of the research.\nPublicize that data are available for reuse.\nAttribute credit to data creators when data are reused.\n\n\n\n\nThe ARTIS model and database are licensed under a Creative Commons Attribution (CC BY) license, which allows others to:\n\nShare: Copy and redistribute the material in any medium or format.\nAdapt: Remix, transform, and build upon the material for any purpose, even commercially.\n\nAttribution must be given to the original source, ensuring that credit is provided for the work. For more details on the license, please refer to the Creative Commons Attribution 4.0 International License.\n\n\n\n\nFindable: Easily discoverable by both humans and computers. We use rich metadata and assign unique identifiers to our datasets.\nAccessible: Retrievable using standard protocols, ensuring that users can access our data in a straightforward manner.\nInteroperable: Compatible with other datasets and tools, allowing for integration and analysis across different platforms and studies.\nReusable: Well-documented and licensed to facilitate reuse and repurposing by the scientific community and beyond.\n\n\n\n\nThese principles promote:\n\nCredit and Attribution: Acknowledging the efforts of data creators and contributors.\nEvidence: Providing a clear link between data and the claims they support.\nUnique Identifiers: Ensuring that data can be reliably located and referenced.",
     "crumbs": [
@@ -687,9 +687,9 @@
     ]
   },
   {
-    "objectID": "artis-licences.html#how-to-cite",
-    "href": "artis-licences.html#how-to-cite",
-    "title": "Citing & Licences",
+    "objectID": "artis-licenses.html#how-to-cite",
+    "href": "artis-licenses.html#how-to-cite",
+    "title": "Citing & licenses",
     "section": "",
     "text": "Please cite the ARTIS database as:\nJessica Gephart, Rahul Agrawal Bejarano, Althea Marks, & Kelvin Gorospe. (2024). Aquatic Resource Trade in Species (ARTIS). Knowledge Network for Biocomplexity. doi:10.5063/F1CZ35N7.\nPlease cite the ARTIS input data and model as:\nJessica Gephart, Rahul Agrawal Bejarano, Althea Marks, & Kelvin Gorospe. (2024). ARTIS input data and model. Knowledge Network for Biocomplexity. doi:10.5063/F1862DXT.\nCiting published datasets can:\n\nIncrease transparency and reproducibility of the research.\nPublicize that data are available for reuse.\nAttribute credit to data creators when data are reused.",
     "crumbs": [
@@ -697,9 +697,9 @@
     ]
   },
   {
-    "objectID": "artis-licences.html#licencing",
-    "href": "artis-licences.html#licencing",
-    "title": "Citing & Licences",
+    "objectID": "artis-licenses.html#licensing",
+    "href": "artis-licenses.html#licensing",
+    "title": "Citing & licenses",
     "section": "",
     "text": "The ARTIS model and database are licensed under a Creative Commons Attribution (CC BY) license, which allows others to:\n\nShare: Copy and redistribute the material in any medium or format.\nAdapt: Remix, transform, and build upon the material for any purpose, even commercially.\n\nAttribution must be given to the original source, ensuring that credit is provided for the work. For more details on the license, please refer to the Creative Commons Attribution 4.0 International License.",
     "crumbs": [
@@ -707,9 +707,9 @@
     ]
   },
   {
-    "objectID": "artis-licences.html#fair-principles",
-    "href": "artis-licences.html#fair-principles",
-    "title": "Citing & Licences",
+    "objectID": "artis-licenses.html#fair-principles",
+    "href": "artis-licenses.html#fair-principles",
+    "title": "Citing & licenses",
     "section": "",
     "text": "Findable: Easily discoverable by both humans and computers. We use rich metadata and assign unique identifiers to our datasets.\nAccessible: Retrievable using standard protocols, ensuring that users can access our data in a straightforward manner.\nInteroperable: Compatible with other datasets and tools, allowing for integration and analysis across different platforms and studies.\nReusable: Well-documented and licensed to facilitate reuse and repurposing by the scientific community and beyond.",
     "crumbs": [
@@ -717,9 +717,9 @@
     ]
   },
   {
-    "objectID": "artis-licences.html#force11-joint-declaration-of-data-citation-principles",
-    "href": "artis-licences.html#force11-joint-declaration-of-data-citation-principles",
-    "title": "Citing & Licences",
+    "objectID": "artis-licenses.html#force11-joint-declaration-of-data-citation-principles",
+    "href": "artis-licenses.html#force11-joint-declaration-of-data-citation-principles",
+    "title": "Citing & licenses",
     "section": "",
     "text": "These principles promote:\n\nCredit and Attribution: Acknowledging the efforts of data creators and contributors.\nEvidence: Providing a clear link between data and the claims they support.\nUnique Identifiers: Ensuring that data can be reliably located and referenced.",
     "crumbs": [
@@ -727,9 +727,9 @@
     ]
   },
   {
-    "objectID": "artis-licences.html#footnotes",
-    "href": "artis-licences.html#footnotes",
-    "title": "Citing & Licences",
+    "objectID": "artis-licenses.html#footnotes",
+    "href": "artis-licenses.html#footnotes",
+    "title": "Citing & licenses",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nWilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18↩︎\nData Citation Synthesis Group: Joint Declaration of Data Citation Principles. Martone M. (ed.) San Diego CA: FORCE11; 2014 https://doi.org/10.25490/a97f-egyk↩︎",
     "crumbs": [
