@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -81,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./artis-licences.html">Licences &amp; Citations</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./artis-licences.html">Citing &amp; Licences</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -230,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./artis-licences.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Licences &amp; Citations</span></a>
+ <span class="menu-text">Citing &amp; Licences</span></a>
   </div>
 </li>
     </ul>
@@ -238,8 +272,20 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#citing-licences" id="toc-citing-licences" class="nav-link active" data-scroll-target="#citing-licences">Citing &amp; Licences</a>
+  <ul class="collapse">
+  <li><a href="#how-to-cite" id="toc-how-to-cite" class="nav-link" data-scroll-target="#how-to-cite">How to Cite</a></li>
+  <li><a href="#licencing" id="toc-licencing" class="nav-link" data-scroll-target="#licencing">Licencing</a></li>
+  <li><a href="#fair-principles" id="toc-fair-principles" class="nav-link" data-scroll-target="#fair-principles">FAIR principles</a></li>
+  <li><a href="#force11-joint-declaration-of-data-citation-principles" id="toc-force11-joint-declaration-of-data-citation-principles" class="nav-link" data-scroll-target="#force11-joint-declaration-of-data-citation-principles">Force11 Joint Declaration of Data Citation Principles </a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/edit/main/artis-licences.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -247,10 +293,61 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="citing-licences" class="level1">
+<h1>Citing &amp; Licences</h1>
+<p>The Seafood Globalization Lab recognizes the importance of publishing open-access datasets to accelerate high-impact solutions for complex human and environmental challenges. We are committed to making our data available to the public and striving to following FAIR (Findability, Accessibility, Interoperability, and Reuse) principles for digital assets and Force11 data citation principles.</p>
+<section id="how-to-cite" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-cite">How to Cite</h2>
+<p><strong>Please cite the ARTIS database as:</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Jessica Gephart, Rahul Agrawal Bejarano, Althea Marks, &amp; Kelvin Gorospe. (2024). Aquatic Resource Trade in Species (ARTIS). Knowledge Network for Biocomplexity. doi:10.5063/F1CZ35N7.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Please cite the ARTIS input data and model as:</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Jessica Gephart, Rahul Agrawal Bejarano, Althea Marks, &amp; Kelvin Gorospe. (2024). ARTIS input data and model. Knowledge Network for Biocomplexity. doi:10.5063/F1862DXT.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Citing published datasets can:</p>
+<ol type="1">
+<li>Increase transparency and reproducibility of the research.</li>
+<li>Publicize that data are available for reuse.</li>
+<li>Attribute credit to data creators when data are reused.</li>
+</ol>
+</section>
+<section id="licencing" class="level2">
+<h2 class="anchored" data-anchor-id="licencing">Licencing</h2>
+<p>The ARTIS model and database are licensed under a Creative Commons Attribution (CC BY) license, which allows others to:</p>
+<ul>
+<li><strong>Share:</strong> Copy and redistribute the material in any medium or format.</li>
+<li><strong>Adapt:</strong> Remix, transform, and build upon the material for any purpose, even commercially.</li>
+</ul>
+<p>Attribution must be given to the original source, ensuring that credit is provided for the work. For more details on the license, please refer to the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+</section>
+<section id="fair-principles" class="level2">
+<h2 class="anchored" data-anchor-id="fair-principles">FAIR principles<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
+<ul>
+<li><strong>Findable:</strong> Easily discoverable by both humans and computers. We use rich metadata and assign unique identifiers to our datasets.</li>
+<li><strong>Accessible:</strong> Retrievable using standard protocols, ensuring that users can access our data in a straightforward manner.</li>
+<li><strong>Interoperable:</strong> Compatible with other datasets and tools, allowing for integration and analysis across different platforms and studies.</li>
+<li><strong>Reusable:</strong> Well-documented and licensed to facilitate reuse and repurposing by the scientific community and beyond.</li>
+</ul>
+</section>
+<section id="force11-joint-declaration-of-data-citation-principles" class="level2">
+<h2 class="anchored" data-anchor-id="force11-joint-declaration-of-data-citation-principles">Force11 Joint Declaration of Data Citation Principles <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h2>
+<p>These principles promote:</p>
+<ul>
+<li><strong>Credit and Attribution:</strong> Acknowledging the efforts of data creators and contributors.</li>
+<li><strong>Evidence:</strong> Providing a clear link between data and the claims they support.</li>
+<li><strong>Unique Identifiers:</strong> Ensuring that data can be reliably located and referenced.</li>
+</ul>
 
 
+</section>
+</section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Wilkinson, M., Dumontier, M., Aalbersberg, I. et al.&nbsp;The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). <a href="https://doi.org/10.1038/sdata.2016.18">https://doi.org/10.1038/sdata.2016.18</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Data Citation Synthesis Group: Joint Declaration of Data Citation Principles. Martone M. (ed.) San Diego CA: FORCE11; 2014 <a href="https://doi.org/10.25490/a97f-egyk">https://doi.org/10.25490/a97f-egyk</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -837,7 +934,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/edit/main/artis-licences.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/edit/main/artis-licences.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/Seafood-Globalization-Lab/artis-manual/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This website is built with the <a href="https://github.com/Openscapes/quarto-website-tutorial">Openscapes website tutorial</a> in <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

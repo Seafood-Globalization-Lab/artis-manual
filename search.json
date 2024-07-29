@@ -4,7 +4,14 @@
     "href": "external-content/knb-submit-readme.html",
     "title": "Submit ARTIS to data repository",
     "section": "",
-    "text": "ARTIS uses the The Knowledge Network for Biocomplexity KNB data repository to archive and distribute stable releases of the model codebase and resulting database. Archiving, documenting and openly distributing ARTIS is a critical component in contributing to the larger open-science and reproducible science community. ARTIS uses KNB as an access point for anyone to download the ARTIS model codebase and clean inputs and output ARTIS database\nKNB is guided by FAIR (findable, accessible, interoperable, resuble) principles of data sharing and preservation and issues unique DOIs (digital object identifier) to each data package and every version of the package for long term access, transparency, and informative citations.\n\n\nKNB is a member of DataONE (Data Observation Network for Earth); a network of data repositories. KNB uses EML (Ecological Metadata Language) to document objects within a data packages which can be created via the website GUI (graphical user interface) or through a series of R packages rdataone and arcticdatautils.\nNote: a user will need an ORCiD to log into KNB.\nFor additional resources on how to submit data to KNB see the links below from NCEAS (National Center for Ecological Analysis and Synthesis) who develops and maintains DataONE and KNB.\n\nKNB and ADC Data Team Training\nData Team Reference Guide"
+    "text": "Long-term stable archive of model inpusts, model, database, and metadata\nOpen-acess distribution point\n\nARTIS uses the The Knowledge Network for Biocomplexity KNB data repository to archive and distribute stable releases of the model codebase and resulting database. Archiving, documenting and openly distributing ARTIS is a critical component in contributing to the larger open-science and reproducible science community. ARTIS uses KNB as an access point for anyone to download the ARTIS model codebase and clean inputs and output ARTIS database\nKNB is guided by FAIR (findable, accessible, interoperable, resuble) principles of data sharing and preservation and issues unique DOIs (digital object identifier) to each data package and every version of the package for long term access, transparency, and informative citations.\n\n\n\nKNB is a member of DataONE (Data Observation Network for Earth); a network of data repositories. KNB uses EML (Ecological Metadata Language) to document objects within a data packages which can be created via the website GUI (graphical user interface) or through a series of R packages rdataone and arcticdatautils.\nNote: a user will need an ORCiD to log into KNB.\nFor additional resources on how to submit data to KNB see the links below from NCEAS (National Center for Ecological Analysis and Synthesis) who develops and maintains DataONE and KNB.\n\nKNB and ADC Data Team Training\nData Team Reference Guide"
+  },
+  {
+    "objectID": "external-content/knb-submit-readme.html#purpose",
+    "href": "external-content/knb-submit-readme.html#purpose",
+    "title": "Submit ARTIS to data repository",
+    "section": "",
+    "text": "Long-term stable archive of model inpusts, model, database, and metadata\nOpen-acess distribution point\n\nARTIS uses the The Knowledge Network for Biocomplexity KNB data repository to archive and distribute stable releases of the model codebase and resulting database. Archiving, documenting and openly distributing ARTIS is a critical component in contributing to the larger open-science and reproducible science community. ARTIS uses KNB as an access point for anyone to download the ARTIS model codebase and clean inputs and output ARTIS database\nKNB is guided by FAIR (findable, accessible, interoperable, resuble) principles of data sharing and preservation and issues unique DOIs (digital object identifier) to each data package and every version of the package for long term access, transparency, and informative citations."
   },
   {
     "objectID": "external-content/knb-submit-readme.html#further-details-resources",
@@ -380,6 +387,17 @@
     ]
   },
   {
+    "objectID": "artis-infrastructure/archive.html#purpose",
+    "href": "artis-infrastructure/archive.html#purpose",
+    "title": "Archived Versions (KNB)",
+    "section": "Purpose",
+    "text": "Purpose\n\nLong-term stable archive of model inpusts, model, database, and metadata\nOpen-acess distribution point\n\nARTIS uses the The Knowledge Network for Biocomplexity KNB data repository to archive and distribute stable releases of the model codebase and resulting database. Archiving, documenting and openly distributing ARTIS is a critical component in contributing to the larger open-science and reproducible science community. ARTIS uses KNB as an access point for anyone to download the ARTIS model codebase and clean inputs and output ARTIS database\nKNB is guided by FAIR (findable, accessible, interoperable, resuble) principles of data sharing and preservation and issues unique DOIs (digital object identifier) to each data package and every version of the package for long term access, transparency, and informative citations.",
+    "crumbs": [
+      "Distribution Infrastructure",
+      "Archived Versions (KNB)"
+    ]
+  },
+  {
     "objectID": "artis-infrastructure/archive.html#further-details-resources",
     "href": "artis-infrastructure/archive.html#further-details-resources",
     "title": "Archived Versions (KNB)",
@@ -661,11 +679,61 @@
   {
     "objectID": "artis-licences.html",
     "href": "artis-licences.html",
-    "title": "ARTIS Manual",
+    "title": "Citing & Licences",
     "section": "",
-    "text": "Back to top",
+    "text": "The Seafood Globalization Lab recognizes the importance of publishing open-access datasets to accelerate high-impact solutions for complex human and environmental challenges. We are committed to making our data available to the public and striving to following FAIR (Findability, Accessibility, Interoperability, and Reuse) principles for digital assets and Force11 data citation principles.\n\n\nPlease cite the ARTIS database as:\nJessica Gephart, Rahul Agrawal Bejarano, Althea Marks, & Kelvin Gorospe. (2024). Aquatic Resource Trade in Species (ARTIS). Knowledge Network for Biocomplexity. doi:10.5063/F1CZ35N7.\nPlease cite the ARTIS input data and model as:\nJessica Gephart, Rahul Agrawal Bejarano, Althea Marks, & Kelvin Gorospe. (2024). ARTIS input data and model. Knowledge Network for Biocomplexity. doi:10.5063/F1862DXT.\nCiting published datasets can:\n\nIncrease transparency and reproducibility of the research.\nPublicize that data are available for reuse.\nAttribute credit to data creators when data are reused.\n\n\n\n\nThe ARTIS model and database are licensed under a Creative Commons Attribution (CC BY) license, which allows others to:\n\nShare: Copy and redistribute the material in any medium or format.\nAdapt: Remix, transform, and build upon the material for any purpose, even commercially.\n\nAttribution must be given to the original source, ensuring that credit is provided for the work. For more details on the license, please refer to the Creative Commons Attribution 4.0 International License.\n\n\n\n\nFindable: Easily discoverable by both humans and computers. We use rich metadata and assign unique identifiers to our datasets.\nAccessible: Retrievable using standard protocols, ensuring that users can access our data in a straightforward manner.\nInteroperable: Compatible with other datasets and tools, allowing for integration and analysis across different platforms and studies.\nReusable: Well-documented and licensed to facilitate reuse and repurposing by the scientific community and beyond.\n\n\n\n\nThese principles promote:\n\nCredit and Attribution: Acknowledging the efforts of data creators and contributors.\nEvidence: Providing a clear link between data and the claims they support.\nUnique Identifiers: Ensuring that data can be reliably located and referenced.",
     "crumbs": [
-      "Licences & Citations"
+      "Citing & Licences"
+    ]
+  },
+  {
+    "objectID": "artis-licences.html#how-to-cite",
+    "href": "artis-licences.html#how-to-cite",
+    "title": "Citing & Licences",
+    "section": "",
+    "text": "Please cite the ARTIS database as:\nJessica Gephart, Rahul Agrawal Bejarano, Althea Marks, & Kelvin Gorospe. (2024). Aquatic Resource Trade in Species (ARTIS). Knowledge Network for Biocomplexity. doi:10.5063/F1CZ35N7.\nPlease cite the ARTIS input data and model as:\nJessica Gephart, Rahul Agrawal Bejarano, Althea Marks, & Kelvin Gorospe. (2024). ARTIS input data and model. Knowledge Network for Biocomplexity. doi:10.5063/F1862DXT.\nCiting published datasets can:\n\nIncrease transparency and reproducibility of the research.\nPublicize that data are available for reuse.\nAttribute credit to data creators when data are reused.",
+    "crumbs": [
+      "Citing & Licences"
+    ]
+  },
+  {
+    "objectID": "artis-licences.html#licencing",
+    "href": "artis-licences.html#licencing",
+    "title": "Citing & Licences",
+    "section": "",
+    "text": "The ARTIS model and database are licensed under a Creative Commons Attribution (CC BY) license, which allows others to:\n\nShare: Copy and redistribute the material in any medium or format.\nAdapt: Remix, transform, and build upon the material for any purpose, even commercially.\n\nAttribution must be given to the original source, ensuring that credit is provided for the work. For more details on the license, please refer to the Creative Commons Attribution 4.0 International License.",
+    "crumbs": [
+      "Citing & Licences"
+    ]
+  },
+  {
+    "objectID": "artis-licences.html#fair-principles",
+    "href": "artis-licences.html#fair-principles",
+    "title": "Citing & Licences",
+    "section": "",
+    "text": "Findable: Easily discoverable by both humans and computers. We use rich metadata and assign unique identifiers to our datasets.\nAccessible: Retrievable using standard protocols, ensuring that users can access our data in a straightforward manner.\nInteroperable: Compatible with other datasets and tools, allowing for integration and analysis across different platforms and studies.\nReusable: Well-documented and licensed to facilitate reuse and repurposing by the scientific community and beyond.",
+    "crumbs": [
+      "Citing & Licences"
+    ]
+  },
+  {
+    "objectID": "artis-licences.html#force11-joint-declaration-of-data-citation-principles",
+    "href": "artis-licences.html#force11-joint-declaration-of-data-citation-principles",
+    "title": "Citing & Licences",
+    "section": "",
+    "text": "These principles promote:\n\nCredit and Attribution: Acknowledging the efforts of data creators and contributors.\nEvidence: Providing a clear link between data and the claims they support.\nUnique Identifiers: Ensuring that data can be reliably located and referenced.",
+    "crumbs": [
+      "Citing & Licences"
+    ]
+  },
+  {
+    "objectID": "artis-licences.html#footnotes",
+    "href": "artis-licences.html#footnotes",
+    "title": "Citing & Licences",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nWilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18↩︎\nData Citation Synthesis Group: Joint Declaration of Data Citation Principles. Martone M. (ed.) San Diego CA: FORCE11; 2014 https://doi.org/10.25490/a97f-egyk↩︎",
+    "crumbs": [
+      "Citing & Licences"
     ]
   },
   {
