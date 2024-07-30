@@ -260,15 +260,23 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="distribution-infrastructure" class="level1">
 <h1>Distribution Infrastructure</h1>
-<p>Several computing resources and infrastructure are used in the ARTIS data pipeline and distribution. We utilize cloud high-performance computing, cloud-based storage, and local machines to integrate and analyze aquatic resource trade data. These computing resources create the ARTIS database that is openly available at two access points: KNB data repository and the ARTIS website (under development).</p>
-<p>The schematic below depicts how components of the ARTIS pipeline fit together.</p>
+<p>Several computing resources and infrastructure are used in the ARTIS data pipeline and distribution. We utilize cloud high-performance computing, cloud-based storage, and local machines to ingest and analyze aquatic resource trade data. These computing resources create the ARTIS database that is openly available for download at two access points:</p>
+<ul>
+<li>KNB data repository
+<ul>
+<li>ARTIS dataset - <a href="https://doi.org/10.5063/F1CZ35N7">https://doi.org/10.5063/F1CZ35N7</a></li>
+<li>ARTIS inputs and model - <a href="https://doi.org/10.5063/F1862DXT">https://doi.org/10.5063/F1862DXT</a></li>
+</ul></li>
+<li><a href="https://urldefense.com/v3/__https://artis-nu.vercel.app__;!!K-Hz7m0Vt54!lRgTLW5izYHJS3GR35_ziGwnBaPIkDO-THMoxuWEoCa14fznUSM1tp1JSXmKswmQowbHEcs2JIZb1qk$">ARTIS website</a> (in beta)</li>
+</ul>
+<p>The schematic below depicts the ARTIS pipeline.</p>
+<p><img src="../images/artis_lucidchart_inf.png" class="img-fluid"></p>
 <ul>
 <li>Blue boxes – processes on local machines</li>
 <li>green boxes – access points</li>
 <li>yellow boxes – cloud HPC</li>
 <li>purple – cloud database storage</li>
 </ul>
-<p><img src="../images/artis_lucidchart_inf.png" class="img-fluid"></p>
 <section id="pipeline-component-details" class="level2">
 <h2 class="anchored" data-anchor-id="pipeline-component-details">Pipeline component details:</h2>
 <dl>
@@ -296,12 +304,6 @@ Opensource application for managing PostgreSQL (a open source object-relational 
 <dd>
 Knowledge Network for Biocomplexity data repository - database and model distribution point
 </dd>
-</dl>
-<ul>
-<li>ARTIS dataset - <a href="https://doi.org/10.5063/F1CZ35N7">https://doi.org/10.5063/F1CZ35N7</a></li>
-<li>ARTIS inputs and model - <a href="https://doi.org/10.5063/F1862DXT">https://doi.org/10.5063/F1862DXT</a></li>
-</ul>
-<dl>
 <dt>Heroku</dt>
 <dd>
 Cloud hosting platform supporting the ARTIS API - being migrated to Vercel
