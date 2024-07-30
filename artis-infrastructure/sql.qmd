@@ -1,5 +1,9 @@
 # SQL Database
 
+The ARTIS dataset uses relational databases in two capacities: cloud-based storage and local storage. The cloud-based database acts as a central repository for the ARTIS dataset that supplies the ARTIS website query tools and local databases. The local database is a copy of the cloud-based database that is stored on the user's local machine for faster and offline queries and analysis. 
+
+Below are the setup instructions for both the cloud-based and local databases (from the `artis_database` Github repo README).
+
 ---------
 
 {{< include ../external-content/artis-database-readme.md >}}

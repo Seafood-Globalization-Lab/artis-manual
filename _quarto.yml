@@ -49,9 +49,9 @@ website:
           - artis-run-model/run-aws.qmd
       - section: artis-infrastructure/index.qmd
         contents: 
+          - artis-infrastructure/archive.qmd
           - artis-infrastructure/sql.qmd
           - artis-infrastructure/api.qmd
-          - artis-infrastructure/archive.qmd
       - href: explore-artis.qmd
         text: exploreARTIS package
       - href: artis-faq.qmd
