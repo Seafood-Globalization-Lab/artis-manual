@@ -413,7 +413,7 @@
     "href": "artis-infrastructure/index.html",
     "title": "Distribution Infrastructure",
     "section": "",
-    "text": "Several computing resources and infrastructure are used in the ARTIS data pipeline and distribution. We utilize cloud high-performance computing, cloud-based storage, and local machines to ingest and analyze aquatic resource trade data. These computing resources create the ARTIS database that is openly available for download at two access points:\n\nKNB data repository\n\nARTIS dataset - https://doi.org/10.5063/F1CZ35N7\nARTIS inputs and model - https://doi.org/10.5063/F1862DXT\n\nARTIS website (in beta)\n\nThe schematic below depicts the ARTIS pipeline.\n\n\nBlue boxes – processes on local machines\ngreen boxes – access points\nyellow boxes – cloud HPC\npurple – cloud database storage\n\n\n\n\nOriginal Raw Data\n\nFAO global production, UN Comtrade, BACI, Sea Around Us, FishBase, and SeaLifeBase data contained in the artis-model/model_inputs_raw/ directory\n\nClean Data\n\nData cleaned and standardized in R and Python scripts and used in artis-model/model_inputs/ directory\n\nARTIS Model\n\nA model that estimates the aquatic resource trade flows and consumption\n\nARTIS Outputs\n\nModel results of trade flows and consumption tables stored in the ARTIS database found in the artis-model/outputs/ directory\n\npgAdmin\n\nOpensource application for managing PostgreSQL (a open source object-relational database system)\n\nKNB\n\nKnowledge Network for Biocomplexity data repository - database and model distribution point\n\nHeroku\n\nCloud hosting platform supporting the ARTIS API - being migrated to Vercel\n\n\n\n\n\n\nartis-model\n\nRelease version of model code link here\n\nartis-development\n\nPrivate development version of model code link here\n\nartis-hpc\n\nHigh-performance computing scripts for running model on Amazon Web Services link here\n\nartis-database\n\nScripts for creating and maintaining the Postgres database in the cloud and locally link here\n\nartis-API\n\nScripts for creating and maintaining the ARTIS API to website link here\n\nknb-submit\n\nScripts for submitting data to the KNB data repository link here",
+    "text": "Several computing resources and infrastructure are used in the ARTIS data pipeline and distribution. We utilize cloud high-performance computing, cloud-based storage, and local machines to ingest and analyze aquatic resource trade data. These computing resources create the ARTIS database that is openly available for download at two access points:\n\nKNB data repository (recommended for bulk access)\n\nARTIS dataset - https://doi.org/10.5063/F1CZ35N7\nARTIS inputs and model - https://doi.org/10.5063/F1862DXT\n\nARTIS website (in beta)\n\nThe schematic below depicts the ARTIS pipeline.\n\n\nBlue boxes – processes on local machines\ngreen boxes – access points\nyellow boxes – cloud HPC\npurple – cloud database storage\n\n\n\n\nOriginal Raw Data\n\nFAO global production, UN Comtrade, BACI, Sea Around Us, FishBase, and SeaLifeBase data contained in the artis-model/model_inputs_raw/ directory\n\nClean Data\n\nData cleaned and standardized in R and Python scripts and used in artis-model/model_inputs/ directory\n\nARTIS Model\n\nA model that estimates the aquatic resource trade flows and consumption\n\nARTIS Outputs\n\nModel results of trade flows and consumption tables stored in the ARTIS database found in the artis-model/outputs/ directory\n\npgAdmin\n\nOpensource application for managing PostgreSQL (a open source object-relational database system)\n\nKNB\n\nKnowledge Network for Biocomplexity data repository - database and model distribution point\n\nHeroku\n\nCloud hosting platform supporting the ARTIS API - being migrated to Vercel\n\n\n\n\n\n\nartis-model\n\nRelease version of model code link here\n\nartis-development\n\nPrivate development version of model code link here\n\nartis-hpc\n\nHigh-performance computing scripts for running model on Amazon Web Services link here\n\nartis-database\n\nScripts for creating and maintaining the Postgres database in the cloud and locally link here\n\nartis-API\n\nScripts for creating and maintaining the ARTIS API to website link here\n\nknb-submit\n\nScripts for submitting data to the KNB data repository link here",
     "crumbs": [
       "Distribution Infrastructure"
     ]
@@ -569,6 +569,17 @@
     "crumbs": [
       "Distribution Infrastructure",
       "API"
+    ]
+  },
+  {
+    "objectID": "artis-infrastructure/sql.html",
+    "href": "artis-infrastructure/sql.html",
+    "title": "SQL Database",
+    "section": "",
+    "text": "The ARTIS dataset uses relational databases in two capacities: cloud-based storage and local storage. The cloud-based database acts as a central repository for the ARTIS dataset that supplies the ARTIS website query tools and local databases. The local database is a copy of the cloud-based database that is stored on the user’s local machine for faster and offline queries and analysis.\nBelow are the setup instructions for both the cloud-based and local databases (from the artis_database Github repo README).",
+    "crumbs": [
+      "Distribution Infrastructure",
+      "SQL Database"
     ]
   },
   {
