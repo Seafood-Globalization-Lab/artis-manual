@@ -1,15 +1,22 @@
 # Distribution Infrastructure
 
-Several computing resources and infrastructure are used in the ARTIS data pipeline and distribution. We utilize cloud high-performance computing, cloud-based storage, and local machines to integrate and analyze aquatic resource trade data. These computing resources create the ARTIS database that is openly available at two access points: KNB data repository and the ARTIS website (under development).
+Several computing resources and infrastructure are used in the ARTIS data pipeline and distribution. We utilize cloud high-performance computing, cloud-based storage, and local machines to ingest and analyze aquatic resource trade data. 
+These computing resources create the ARTIS database that is openly available for download at two access points: 
 
-The schematic below depicts how components of the ARTIS pipeline fit together. 
+- KNB data repository
+  - ARTIS dataset - [https://doi.org/10.5063/F1CZ35N7](https://doi.org/10.5063/F1CZ35N7)
+  - ARTIS inputs and model - [https://doi.org/10.5063/F1862DXT](https://doi.org/10.5063/F1862DXT)
+- [ARTIS website](https://urldefense.com/v3/__https://artis-nu.vercel.app__;!!K-Hz7m0Vt54!lRgTLW5izYHJS3GR35_ziGwnBaPIkDO-THMoxuWEoCa14fznUSM1tp1JSXmKswmQowbHEcs2JIZb1qk$) (in beta) 
+
+
+The schematic below depicts the ARTIS pipeline. 
+
+![](../images/artis_lucidchart_inf.png)
 
 - Blue boxes -- processes on local machines
 - green boxes -- access points
 - yellow boxes -- cloud HPC
 - purple -- cloud database storage
-
-![](../images/artis_lucidchart_inf.png)
 
 ## Pipeline component details:
 
@@ -30,9 +37,6 @@ pgAdmin
 
 KNB
 : Knowledge Network for Biocomplexity data repository - database and model distribution point
-
-  - ARTIS dataset - [https://doi.org/10.5063/F1CZ35N7](https://doi.org/10.5063/F1CZ35N7)
-  - ARTIS inputs and model - [https://doi.org/10.5063/F1862DXT](https://doi.org/10.5063/F1862DXT)
 
 Heroku
 : Cloud hosting platform supporting the ARTIS API - being migrated to Vercel
