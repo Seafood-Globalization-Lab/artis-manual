@@ -413,7 +413,7 @@
     "href": "artis-infrastructure/index.html",
     "title": "Distribution Infrastructure",
     "section": "",
-    "text": "Several computing resources and infrastructure are used in the ARTIS data pipeline and distribution. We utilize cloud high-performance computing, cloud-based storage, and local machines to integrate and analyze aquatic resource trade data. These computing resources create the ARTIS database that is openly available at two access points: KNB data repository and the ARTIS website (under development).\nThe schematic below depicts how components of the ARTIS pipeline fit together.\n\nBlue boxes – processes on local machines\ngreen boxes – access points\nyellow boxes – cloud HPC\npurple – cloud database storage\n\n\n\n\n\nOriginal Raw Data\n\nFAO global production, UN Comtrade, BACI, Sea Around Us, FishBase, and SeaLifeBase data contained in the artis-model/model_inputs_raw/ directory\n\nClean Data\n\nData cleaned and standardized in R and Python scripts and used in artis-model/model_inputs/ directory\n\nARTIS Model\n\nA model that estimates the aquatic resource trade flows and consumption\n\nARTIS Outputs\n\nModel results of trade flows and consumption tables stored in the ARTIS database found in the artis-model/outputs/ directory\n\npgAdmin\n\nOpensource application for managing PostgreSQL (a open source object-relational database system)\n\nKNB\n\nKnowledge Network for Biocomplexity data repository\n\nHeroku\n\nCloud hosting platform supporting the ARTIS API - being migrated to Vercel\n\n\n\n\n\n\nartis-model\n\nRelease version of model code link here\n\nartis-development\n\nPrivate development version of model code link here\n\nartis-hpc\n\nHigh-performance computing scripts for running model on Amazon Web Services link here\n\nartis-database\n\nScripts for creating and maintaining the Postgres database in the cloud and locally link here\n\nartis-API\n\nScripts for creating and maintaining the ARTIS API to website link here\n\nknb-submit\n\nScripts for submitting data to the KNB data repository link here",
+    "text": "Several computing resources and infrastructure are used in the ARTIS data pipeline and distribution. We utilize cloud high-performance computing, cloud-based storage, and local machines to integrate and analyze aquatic resource trade data. These computing resources create the ARTIS database that is openly available at two access points: KNB data repository and the ARTIS website (under development).\nThe schematic below depicts how components of the ARTIS pipeline fit together.\n\nBlue boxes – processes on local machines\ngreen boxes – access points\nyellow boxes – cloud HPC\npurple – cloud database storage\n\n\n\n\n\nOriginal Raw Data\n\nFAO global production, UN Comtrade, BACI, Sea Around Us, FishBase, and SeaLifeBase data contained in the artis-model/model_inputs_raw/ directory\n\nClean Data\n\nData cleaned and standardized in R and Python scripts and used in artis-model/model_inputs/ directory\n\nARTIS Model\n\nA model that estimates the aquatic resource trade flows and consumption\n\nARTIS Outputs\n\nModel results of trade flows and consumption tables stored in the ARTIS database found in the artis-model/outputs/ directory\n\npgAdmin\n\nOpensource application for managing PostgreSQL (a open source object-relational database system)\n\nKNB\n\nKnowledge Network for Biocomplexity data repository - database and model distribution point\n\n\n\nARTIS dataset - https://doi.org/10.5063/F1CZ35N7\nARTIS inputs and model - https://doi.org/10.5063/F1862DXT\n\n\nHeroku\n\nCloud hosting platform supporting the ARTIS API - being migrated to Vercel\n\n\n\n\n\n\nartis-model\n\nRelease version of model code link here\n\nartis-development\n\nPrivate development version of model code link here\n\nartis-hpc\n\nHigh-performance computing scripts for running model on Amazon Web Services link here\n\nartis-database\n\nScripts for creating and maintaining the Postgres database in the cloud and locally link here\n\nartis-API\n\nScripts for creating and maintaining the ARTIS API to website link here\n\nknb-submit\n\nScripts for submitting data to the KNB data repository link here",
     "crumbs": [
       "Distribution Infrastructure"
     ]
@@ -423,7 +423,7 @@
     "href": "artis-infrastructure/index.html#pipeline-component-details",
     "title": "Distribution Infrastructure",
     "section": "",
-    "text": "Original Raw Data\n\nFAO global production, UN Comtrade, BACI, Sea Around Us, FishBase, and SeaLifeBase data contained in the artis-model/model_inputs_raw/ directory\n\nClean Data\n\nData cleaned and standardized in R and Python scripts and used in artis-model/model_inputs/ directory\n\nARTIS Model\n\nA model that estimates the aquatic resource trade flows and consumption\n\nARTIS Outputs\n\nModel results of trade flows and consumption tables stored in the ARTIS database found in the artis-model/outputs/ directory\n\npgAdmin\n\nOpensource application for managing PostgreSQL (a open source object-relational database system)\n\nKNB\n\nKnowledge Network for Biocomplexity data repository\n\nHeroku\n\nCloud hosting platform supporting the ARTIS API - being migrated to Vercel",
+    "text": "Original Raw Data\n\nFAO global production, UN Comtrade, BACI, Sea Around Us, FishBase, and SeaLifeBase data contained in the artis-model/model_inputs_raw/ directory\n\nClean Data\n\nData cleaned and standardized in R and Python scripts and used in artis-model/model_inputs/ directory\n\nARTIS Model\n\nA model that estimates the aquatic resource trade flows and consumption\n\nARTIS Outputs\n\nModel results of trade flows and consumption tables stored in the ARTIS database found in the artis-model/outputs/ directory\n\npgAdmin\n\nOpensource application for managing PostgreSQL (a open source object-relational database system)\n\nKNB\n\nKnowledge Network for Biocomplexity data repository - database and model distribution point\n\n\n\nARTIS dataset - https://doi.org/10.5063/F1CZ35N7\nARTIS inputs and model - https://doi.org/10.5063/F1862DXT\n\n\nHeroku\n\nCloud hosting platform supporting the ARTIS API - being migrated to Vercel",
     "crumbs": [
       "Distribution Infrastructure"
     ]
@@ -679,61 +679,61 @@
   {
     "objectID": "artis-licenses.html",
     "href": "artis-licenses.html",
-    "title": "Citing & licenses",
+    "title": "Citing & Licenses",
     "section": "",
-    "text": "The Seafood Globalization Lab recognizes the importance of publishing open-access datasets to accelerate high-impact solutions for complex human and environmental challenges. We are committed to making our data available to the public and striving to following FAIR (Findability, Accessibility, Interoperability, and Reuse) principles for digital assets and Force11 data citation principles.\n\n\nPlease cite the ARTIS database as:\nJessica Gephart, Rahul Agrawal Bejarano, Althea Marks, & Kelvin Gorospe. (2024). Aquatic Resource Trade in Species (ARTIS). Knowledge Network for Biocomplexity. doi:10.5063/F1CZ35N7.\nPlease cite the ARTIS input data and model as:\nJessica Gephart, Rahul Agrawal Bejarano, Althea Marks, & Kelvin Gorospe. (2024). ARTIS input data and model. Knowledge Network for Biocomplexity. doi:10.5063/F1862DXT.\nCiting published datasets can:\n\nIncrease transparency and reproducibility of the research.\nPublicize that data are available for reuse.\nAttribute credit to data creators when data are reused.\n\n\n\n\nThe ARTIS model and database are licensed under a Creative Commons Attribution (CC BY) license, which allows others to:\n\nShare: Copy and redistribute the material in any medium or format.\nAdapt: Remix, transform, and build upon the material for any purpose, even commercially.\n\nAttribution must be given to the original source, ensuring that credit is provided for the work. For more details on the license, please refer to the Creative Commons Attribution 4.0 International License.\n\n\n\n\nFindable: Easily discoverable by both humans and computers. We use rich metadata and assign unique identifiers to our datasets.\nAccessible: Retrievable using standard protocols, ensuring that users can access our data in a straightforward manner.\nInteroperable: Compatible with other datasets and tools, allowing for integration and analysis across different platforms and studies.\nReusable: Well-documented and licensed to facilitate reuse and repurposing by the scientific community and beyond.\n\n\n\n\nThese principles promote:\n\nCredit and Attribution: Acknowledging the efforts of data creators and contributors.\nEvidence: Providing a clear link between data and the claims they support.\nUnique Identifiers: Ensuring that data can be reliably located and referenced.",
+    "text": "The Seafood Globalization Lab recognizes the importance of publishing open-access datasets to accelerate high-impact solutions for complex human and environmental challenges. We are committed to making our data available to the public and striving to following FAIR (Findability, Accessibility, Interoperability, and Reuse) principles for digital assets and Force11 data citation principles.\n\n\nPlease cite the ARTIS database as:\nJessica Gephart, Rahul Agrawal Bejarano, Althea Marks, & Kelvin Gorospe. (2024). Aquatic Resource Trade in Species (ARTIS). Knowledge Network for Biocomplexity. doi:10.5063/F1CZ35N7.\nPlease cite the ARTIS input data and model as:\nJessica Gephart, Rahul Agrawal Bejarano, Althea Marks, & Kelvin Gorospe. (2024). ARTIS input data and model. Knowledge Network for Biocomplexity. doi:10.5063/F1862DXT.\nCiting datasets can:\n\nIncrease transparency and reproducibility of the research.\nPublicize that data are available for reuse.\nAttribute credit to data creators when data are reused.\n\n\n\n\nThe ARTIS model and database are licensed under a Creative Commons Attribution 4.0 International License (CC BY) license, which allows others to:\n\nShare: Copy and redistribute the material in any medium or format.\nAdapt: Remix, transform, and build upon the material for any purpose, even commercially.\n\nAttribution must be given to the original source, ensuring that credit is provided for the work.\n\n\n\n\nFindable: Easily discoverable by both humans and computers. We use rich metadata and assign unique identifiers to our datasets.\nAccessible: Retrievable using standard protocols, ensuring that users can access our data in a straightforward manner.\nInteroperable: Compatible with other datasets and tools, allowing for integration and analysis across different platforms and studies.\nReusable: Well-documented and licensed to facilitate reuse and repurposing by the scientific community and beyond.\n\n\n\n\nThese principles promote:\n\nCredit and Attribution: Acknowledging the efforts of data creators and contributors.\nEvidence: Providing a clear link between data and the claims they support.\nUnique Identifiers: Ensuring that data can be reliably located and referenced.",
     "crumbs": [
-      "Citing & Licences"
+      "Citing & Licenses"
     ]
   },
   {
     "objectID": "artis-licenses.html#how-to-cite",
     "href": "artis-licenses.html#how-to-cite",
-    "title": "Citing & licenses",
+    "title": "Citing & Licenses",
     "section": "",
-    "text": "Please cite the ARTIS database as:\nJessica Gephart, Rahul Agrawal Bejarano, Althea Marks, & Kelvin Gorospe. (2024). Aquatic Resource Trade in Species (ARTIS). Knowledge Network for Biocomplexity. doi:10.5063/F1CZ35N7.\nPlease cite the ARTIS input data and model as:\nJessica Gephart, Rahul Agrawal Bejarano, Althea Marks, & Kelvin Gorospe. (2024). ARTIS input data and model. Knowledge Network for Biocomplexity. doi:10.5063/F1862DXT.\nCiting published datasets can:\n\nIncrease transparency and reproducibility of the research.\nPublicize that data are available for reuse.\nAttribute credit to data creators when data are reused.",
+    "text": "Please cite the ARTIS database as:\nJessica Gephart, Rahul Agrawal Bejarano, Althea Marks, & Kelvin Gorospe. (2024). Aquatic Resource Trade in Species (ARTIS). Knowledge Network for Biocomplexity. doi:10.5063/F1CZ35N7.\nPlease cite the ARTIS input data and model as:\nJessica Gephart, Rahul Agrawal Bejarano, Althea Marks, & Kelvin Gorospe. (2024). ARTIS input data and model. Knowledge Network for Biocomplexity. doi:10.5063/F1862DXT.\nCiting datasets can:\n\nIncrease transparency and reproducibility of the research.\nPublicize that data are available for reuse.\nAttribute credit to data creators when data are reused.",
     "crumbs": [
-      "Citing & Licences"
+      "Citing & Licenses"
     ]
   },
   {
-    "objectID": "artis-licenses.html#licensing",
-    "href": "artis-licenses.html#licensing",
-    "title": "Citing & licenses",
+    "objectID": "artis-licenses.html#licenses",
+    "href": "artis-licenses.html#licenses",
+    "title": "Citing & Licenses",
     "section": "",
-    "text": "The ARTIS model and database are licensed under a Creative Commons Attribution (CC BY) license, which allows others to:\n\nShare: Copy and redistribute the material in any medium or format.\nAdapt: Remix, transform, and build upon the material for any purpose, even commercially.\n\nAttribution must be given to the original source, ensuring that credit is provided for the work. For more details on the license, please refer to the Creative Commons Attribution 4.0 International License.",
+    "text": "The ARTIS model and database are licensed under a Creative Commons Attribution 4.0 International License (CC BY) license, which allows others to:\n\nShare: Copy and redistribute the material in any medium or format.\nAdapt: Remix, transform, and build upon the material for any purpose, even commercially.\n\nAttribution must be given to the original source, ensuring that credit is provided for the work.",
     "crumbs": [
-      "Citing & Licences"
+      "Citing & Licenses"
     ]
   },
   {
     "objectID": "artis-licenses.html#fair-principles",
     "href": "artis-licenses.html#fair-principles",
-    "title": "Citing & licenses",
+    "title": "Citing & Licenses",
     "section": "",
     "text": "Findable: Easily discoverable by both humans and computers. We use rich metadata and assign unique identifiers to our datasets.\nAccessible: Retrievable using standard protocols, ensuring that users can access our data in a straightforward manner.\nInteroperable: Compatible with other datasets and tools, allowing for integration and analysis across different platforms and studies.\nReusable: Well-documented and licensed to facilitate reuse and repurposing by the scientific community and beyond.",
     "crumbs": [
-      "Citing & Licences"
+      "Citing & Licenses"
     ]
   },
   {
     "objectID": "artis-licenses.html#force11-joint-declaration-of-data-citation-principles",
     "href": "artis-licenses.html#force11-joint-declaration-of-data-citation-principles",
-    "title": "Citing & licenses",
+    "title": "Citing & Licenses",
     "section": "",
     "text": "These principles promote:\n\nCredit and Attribution: Acknowledging the efforts of data creators and contributors.\nEvidence: Providing a clear link between data and the claims they support.\nUnique Identifiers: Ensuring that data can be reliably located and referenced.",
     "crumbs": [
-      "Citing & Licences"
+      "Citing & Licenses"
     ]
   },
   {
     "objectID": "artis-licenses.html#footnotes",
     "href": "artis-licenses.html#footnotes",
-    "title": "Citing & licenses",
+    "title": "Citing & Licenses",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nWilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18↩︎\nData Citation Synthesis Group: Joint Declaration of Data Citation Principles. Martone M. (ed.) San Diego CA: FORCE11; 2014 https://doi.org/10.25490/a97f-egyk↩︎",
     "crumbs": [
-      "Citing & Licences"
+      "Citing & Licenses"
     ]
   },
   {
@@ -806,7 +806,27 @@
     "href": "artis-run-model/index.html",
     "title": "Running the Model",
     "section": "",
-    "text": "Running the Model\nThere are 2 avenues to run the ARTIS model:\n\non your local computer or\non a HPC (high performance computer)\n\n\nSee the artis-hpc Github repository for instructions and documentation.\n\nand 2 sources to obtain the model and model inputs:\n\nThe Knowledge Network for Biocomplexity (KNB) data repository\n\n\n.zip file containing the model code, input data, and docker image in appropriate architecture\nlong term storage of stable model release (with DOI) used for research products\n\n\nGithub Seafood-Globalization-Lab/artis-model repository\n\n\nlatest model code\ndevelopment version of the model – may not be stable\ndoes not include input data or docker image\n\nWe highly recommend using the KNB repository for stable model releases.\n\n\n\n\n Back to top",
+    "text": "Local computer\n\nSee the next pages for instructions (from the artis-model Github repo)\n\nAmazon Web Services (AWS)\n\nSee the next pages for instructions (from artis-hpc Github repo).\n\n\n\n\n\n\nThe Knowledge Network for Biocomplexity (KNB) data repository\n\nhttps://doi.org/10.5063/F1862DXT\nRecomended access / download point\n.zip file containing the model code and cleaned input data\nStable model release (with DOI) used for research products\nWill include Docker image in future version\n\nGithub Seafood-Globalization-Lab/artis-model repository\n\nartis-model Contains the latest released model codebase\nDoes NOT contain model inputs",
+    "crumbs": [
+      "Running the Model"
+    ]
+  },
+  {
+    "objectID": "artis-run-model/index.html#two-avenues-to-run-artis-model",
+    "href": "artis-run-model/index.html#two-avenues-to-run-artis-model",
+    "title": "Running the Model",
+    "section": "",
+    "text": "Local computer\n\nSee the next pages for instructions (from the artis-model Github repo)\n\nAmazon Web Services (AWS)\n\nSee the next pages for instructions (from artis-hpc Github repo).",
+    "crumbs": [
+      "Running the Model"
+    ]
+  },
+  {
+    "objectID": "artis-run-model/index.html#two-ways-to-obtain-artis-model-and-model-inputs",
+    "href": "artis-run-model/index.html#two-ways-to-obtain-artis-model-and-model-inputs",
+    "title": "Running the Model",
+    "section": "",
+    "text": "The Knowledge Network for Biocomplexity (KNB) data repository\n\nhttps://doi.org/10.5063/F1862DXT\nRecomended access / download point\n.zip file containing the model code and cleaned input data\nStable model release (with DOI) used for research products\nWill include Docker image in future version\n\nGithub Seafood-Globalization-Lab/artis-model repository\n\nartis-model Contains the latest released model codebase\nDoes NOT contain model inputs",
     "crumbs": [
       "Running the Model"
     ]
