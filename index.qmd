@@ -7,6 +7,9 @@ Food systems have become increasingly globalized, with over a quarter of all foo
 
 ![Conceptual representation of problem ARTIS aims to address](images/artis_fig_V4.png)
 
+The ARTIS database has received support from the National Science Foundation (HNDS-I # 2121238), Oceana, Seafood Watch, and the Environmental Defense Fund
+
+
 ::: {.callout-note title="More resources"}
 See the ARTIS website for additional information: [ARTIS Website](https://artisdata.weebly.com/)
 :::
