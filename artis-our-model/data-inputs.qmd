@@ -24,6 +24,7 @@ For each country-year-HS version combination, we estimate the proportion of each
 
 Species production to commodity assignment is a many-to-many matching problem, wherein one commodity can consist of multiple species and one species can be converted to multiple commodities. All taxonomic names reported in the FAO production data were matched to HS 6-digit codes based on the code descriptions and HS system hierarchy. 
 The first matching step required dividing all taxonomic groups into the broad commodity groups at the 4-digit level (fish, crustaceans, molluscs and aquatic invertebrates). Within each of these groups, taxonomic groups were matched based on 6 types of matching categories:  
+
 1.	Explicit taxa match - Scientific names are matched based on taxonomic information provided in the code description
 2.	NEC match - All remaining unmatched species within the 4-digit level are assigned to the “not elsewhere considered” (NEC) code
 3.	NEC by taxa match - When a code description signifies an NEC group, but limits this based on a taxonomic category (e.g., Salmonidae, N.E.C.), the NEC grouping occurs at this level, rather than the broad NEC match
